@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         resturantsTableView.delegate = self
         resturantsTableView.dataSource = self
         resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
-        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
+        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true))
         resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
         resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
     }
@@ -65,6 +65,14 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
       
   
        cell.nameCell.text = resturants[indexPath.row].name
+        cell.deliveryTimeCell.text = resturants[indexPath.row].deliveryTime
+        cell.ratingCell.text = resturants[indexPath.row].rating
+        cell.cuisineCell.text = resturants[indexPath.row].cuisine
+        cell.logoCell.image = resturants[indexPath.row].logo
+        cell.imageCell.image = resturants[indexPath.row].image
+       
+        cell.offerCell.text = resturants[indexPath.row].theOffer
+        
         return cell
       
     }

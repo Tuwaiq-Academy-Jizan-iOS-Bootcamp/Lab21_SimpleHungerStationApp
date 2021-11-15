@@ -8,6 +8,13 @@
 import UIKit
 class ResturntCell : UITableViewCell{
     @IBOutlet weak var nameCell: UILabel!
+    @IBOutlet weak var deliveryTimeCell: UILabel!
+    
+    @IBOutlet weak var ratingCell: UILabel!
+    @IBOutlet weak var cuisineCell: UILabel!
+    @IBOutlet weak var logoCell: UIImageView!
+    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var offerCell: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
