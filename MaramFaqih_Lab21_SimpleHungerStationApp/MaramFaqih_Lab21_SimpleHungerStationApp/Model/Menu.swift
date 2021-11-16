@@ -8,13 +8,9 @@
 import Foundation
 import UIKit
  struct Menu{
-    var name : String
-    var logo : UIImage
-    var image : UIImage
-    var cuisine : String
-    var deliveryTime :String
-    var rating : String
-    var theOffer : String
-    var trackingStatus : Bool
-    //var menu :
+    var mealName : String
+    var mealImage : UIImage
+
+    var mealPrice : String
+    
 }

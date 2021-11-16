@@ -18,8 +18,9 @@
 		EED23FFD2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FFC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */; };
 		EED2400C2742DD49005E4258 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400B2742DD49005E4258 /* Resturant.swift */; };
 		EED2400F2742E9A7005E4258 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400E2742E9A7005E4258 /* Menu.swift */; };
-		EED240112742EED6005E4258 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED240102742EED5005E4258 /* ResturantCell.swift */; };
 		EED2401327438437005E4258 /* ResturantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2401227438436005E4258 /* ResturantView.swift */; };
+		EED240192743CA01005E4258 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED240182743CA01005E4258 /* MenuCell.swift */; };
+		EED2401B2743CB15005E4258 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2401A2743CB14005E4258 /* ResturantCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,9 @@
 		EED23FFC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EED2400B2742DD49005E4258 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		EED2400E2742E9A7005E4258 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		EED240102742EED5005E4258 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
 		EED2401227438436005E4258 /* ResturantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantView.swift; sourceTree = "<group>"; };
+		EED240182743CA01005E4258 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../Controller/MenuCell.swift; sourceTree = "<group>"; };
+		EED2401A2743CB14005E4258 /* ResturantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +160,8 @@
 			children = (
 				EED2400E2742E9A7005E4258 /* Menu.swift */,
 				EED2400B2742DD49005E4258 /* Resturant.swift */,
-				EED240102742EED5005E4258 /* ResturantCell.swift */,
+				EED2401A2743CB14005E4258 /* ResturantCell.swift */,
+				EED240182743CA01005E4258 /* MenuCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,7 +302,8 @@
 				EED23FDA2742C004005E4258 /* AppDelegate.swift in Sources */,
 				EED2400F2742E9A7005E4258 /* Menu.swift in Sources */,
 				EED2400C2742DD49005E4258 /* Resturant.swift in Sources */,
-				EED240112742EED6005E4258 /* ResturantCell.swift in Sources */,
+				EED240192743CA01005E4258 /* MenuCell.swift in Sources */,
+				EED2401B2743CB15005E4258 /* ResturantCell.swift in Sources */,
 				EED23FDC2742C005005E4258 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@ import UIKit
 
 class ResturantView: UIViewController {
     
+    @IBOutlet weak var menuTibleView: UITableView!
     
     
     @IBOutlet weak var resturantDeliveryTime: UILabel!
@@ -28,6 +29,7 @@ class ResturantView: UIViewController {
    
     var cuisineSelectedT = ""
     var offerSelectedT = ""
+    var menuSelectedT : [Menu]=[]
    var logoSelectedT = UIImage(named: "herfyLogo")
    var imageSelectedT = UIImage(named: "herfyLogo")
     
@@ -43,6 +45,9 @@ class ResturantView: UIViewController {
        resturantOffer.text =  offerSelectedT
          resturantLogo.image =  logoSelectedT
         resturantImage.image =  imageSelectedT
+        print(menuSelectedT)
+        menuTibleView.delegate = self
+        menuTibleView.dataSource = self
     }
     
 
@@ -56,4 +61,25 @@ class ResturantView: UIViewController {
     }
     */
 
+}
+extension ResturantView: UITableViewDelegate , UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuSelectedT.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toCellMenu", for: indexPath ) as! MenuCell
+        cell.mealNameCell.text = menuSelectedT[indexPath.row].mealName
+        cell.priceMealCell.text = menuSelectedT[indexPath.row].mealPrice
+        cell.imageMenuCell.image = menuSelectedT[indexPath.row].mealImage
+       return cell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+        
+    }
+    
+     
+    
 }
