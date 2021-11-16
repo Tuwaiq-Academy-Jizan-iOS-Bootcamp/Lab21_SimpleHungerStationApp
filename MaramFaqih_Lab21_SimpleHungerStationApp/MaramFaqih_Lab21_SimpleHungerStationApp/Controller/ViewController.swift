@@ -14,6 +14,15 @@ class ViewController: UIViewController {
     var headers : [String] = []
     var resturants : [Resturant] = []
     
+     var nameSelected = ""
+     var deliveryTimeSelected = ""
+     var ratingSelected = ""
+    
+     var cuisineSelected = ""
+     var offerSelected = ""
+    var logoSelected = UIImage(named: "herfyLogo")
+    var imageSelected = UIImage(named: "herfyLogo")
+    
     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +35,8 @@ class ViewController: UIViewController {
         resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
         resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true))
         resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
-        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true))
+        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true))
+      
     }
 
 
@@ -51,9 +61,21 @@ class ViewController: UIViewController {
                 index = 0
             }
         headerImageView.image=UIImage(named: headers[index])
-     
-        
     }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destintionToDetails = segue.destination as! ResturantView
+
+
+            destintionToDetails.nameSelectedT =  nameSelected
+            destintionToDetails.deliveryTimeSelectedT =  deliveryTimeSelected
+            destintionToDetails.ratingSelectedT =  ratingSelected
+            destintionToDetails.cuisineSelectedT =  cuisineSelected
+            destintionToDetails.offerSelectedT =  offerSelected
+            destintionToDetails.logoSelectedT =  logoSelected
+            destintionToDetails.imageSelectedT =  imageSelected
+
+        }
+    
 }
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +101,17 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = resturants[indexPath.row]
+        nameSelected = cell.name
+        deliveryTimeSelected = cell.deliveryTime
+        ratingSelected = cell.rating
+        cuisineSelected = cell.cuisine
+        offerSelected = cell.theOffer
+        logoSelected = cell.logo
+        imageSelected = cell.image
+        performSegue(withIdentifier: "toRestrunt", sender: indexPath)
     }
     
     

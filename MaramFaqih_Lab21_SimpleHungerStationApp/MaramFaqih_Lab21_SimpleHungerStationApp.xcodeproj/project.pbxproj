@@ -19,6 +19,7 @@
 		EED2400C2742DD49005E4258 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400B2742DD49005E4258 /* Resturant.swift */; };
 		EED2400F2742E9A7005E4258 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400E2742E9A7005E4258 /* Menu.swift */; };
 		EED240112742EED6005E4258 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED240102742EED5005E4258 /* ResturantCell.swift */; };
+		EED2401327438437005E4258 /* ResturantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2401227438436005E4258 /* ResturantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		EED2400B2742DD49005E4258 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		EED2400E2742E9A7005E4258 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EED240102742EED5005E4258 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
+		EED2401227438436005E4258 /* ResturantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		EED2400A2742C056005E4258 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EED2401227438436005E4258 /* ResturantView.swift */,
 				EED23FDD2742C005005E4258 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED23FDE2742C005005E4258 /* ViewController.swift in Sources */,
+				EED2401327438437005E4258 /* ResturantView.swift in Sources */,
 				EED23FDA2742C004005E4258 /* AppDelegate.swift in Sources */,
 				EED2400F2742E9A7005E4258 /* Menu.swift in Sources */,
 				EED2400C2742DD49005E4258 /* Resturant.swift in Sources */,

@@ -15,6 +15,9 @@ class ResturntCell : UITableViewCell{
     @IBOutlet weak var logoCell: UIImageView!
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var offerCell: UILabel!
+    
+ 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
