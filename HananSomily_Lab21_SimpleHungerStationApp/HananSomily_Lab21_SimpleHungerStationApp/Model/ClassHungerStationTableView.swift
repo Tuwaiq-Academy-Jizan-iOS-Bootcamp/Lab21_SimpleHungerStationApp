@@ -17,16 +17,10 @@ struct HungerStationItem {
     var cookingTime : String
     var deleveryTime : String
     var evalution : String
+    var detels : String
 }
 class ClassHungerStationTableView:UITableViewCell {
-
-//    static var food = [
-//        [HungerStationItem(image:UIImage(named: "pizza")!, name: "Pizza", discription: "italic Pizza ", price: "30 SAR", cookingTime: "30 - 40 munites", deleveryTime: "30 munites", evalution: 4.8 ), HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9),HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9)],
-//        [HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9),HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9),HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9)],
-//        [HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9),HungerStationItem(image: UIImage(named: "pizza1")!, name: "Pizza 2", discription: "pizaa .....", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: 3.9)]
-//    ]
-//
-//}
+ 
 //class ClassHungerStationTableView:UITableViewCell {
 //
     //@IBOutlet weak var logoCanteen: UIImageView!
@@ -38,7 +32,9 @@ class ClassHungerStationTableView:UITableViewCell {
     @IBOutlet weak var deliverTimeLabel: UILabel!
     @IBOutlet weak var liveTrackingLabel: UILabel!
     @IBOutlet weak var evaluationLabel: UILabel!
-
+    
+    @IBOutlet weak var displayPannerLabel: UILabel!
+    
 
 var foods:HungerStationItem?
 override func awakeFromNib() {
@@ -51,9 +47,11 @@ override func awakeFromNib() {
     deliverTimeLabel.text = foods?.deleveryTime
    // liveTrackingLabel.text = foods.
     evaluationLabel.text = foods?.evalution
+    displayPannerLabel.text = foods?.detels
 
 }
-    func printElement(logoo:UIImage , imagee:UIImage , name:String , description:String , timeCook :String , timeDelever :String , evaluteStar : String){
+    func printElement(logoo:UIImage , imagee:UIImage , name:String , description:String , timeCook :String , timeDelever :String , evaluteStar : String ,
+        detel : String){
         logoImage.image = logoo
         imageMeal.image = imagee
         nameMealLabel.text = name
@@ -62,6 +60,7 @@ override func awakeFromNib() {
         deliverTimeLabel.text = timeDelever
        // liveTrackingLabel.text = foods.
        evaluationLabel.text = evaluteStar
+        displayPannerLabel.text = detel
 //evalut : String
     }
    

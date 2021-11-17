@@ -14,6 +14,10 @@ struct MenuResturant {
 }
 
 class MenuViewController:UIViewController {
+    
+    @IBAction func ExitBotton(_ sender: UIButton) {
+       // exit(2)
+    }
     @IBOutlet weak var photoResturantImage: UIImageView!
     @IBOutlet weak var logoSellectImage: UIImageView!
     @IBOutlet weak var nameResturantLabel: UILabel!
@@ -22,6 +26,8 @@ class MenuViewController:UIViewController {
     @IBOutlet weak var caloresLabel: UILabel!
     @IBOutlet weak var priceDeleveryLabel: UILabel!
     @IBOutlet weak var deliveryTimeLabel: UILabel!
+    
+    @IBOutlet weak var detelsOffers: UILabel!
     @IBOutlet weak var menuResturantTabelView: UITableView!
     var selected:HungerStationItem?
     var menuSelectHerfy:[MenuResturant] = []
@@ -36,11 +42,14 @@ class MenuViewController:UIViewController {
             nameResturantLabel.text = item.name
             levelResturantLabel.text = item.evalution
             descriptionResturantLabel.text = item.discription
-            deliveryTimeLabel.text = item.deleveryTime }
+            deliveryTimeLabel.text = item.deleveryTime
+            caloresLabel.text = item.price
+            detelsOffers.text = item.detels
+        }
         
-            menuSelectHerfy = [MenuResturant(menuPhoto: UIImage(named: "herfy1")!, menuName: "Tortilla", numePrice: "25 SAR"),MenuResturant(menuPhoto: UIImage(named: "herfy2")!, menuName: "ICE", numePrice: "5 SAR"),MenuResturant(menuPhoto: UIImage(named: "herfy3")!, menuName: "Borger", numePrice: "30 SAR")]
-            menuSelectAselBorger = [MenuResturant(menuPhoto: UIImage(named: "AB1")!, menuName: "borger chiken", numePrice: "20 SAR"),MenuResturant(menuPhoto: UIImage(named: "AB2")!, menuName: "meet borger", numePrice: "30 SAR"),MenuResturant(menuPhoto: UIImage(named: "AB3")!, menuName: "potetoes ", numePrice: "15 SAR")]
-            menuSelectBorgerKing = [MenuResturant(menuPhoto: UIImage(named: "bk1")!, menuName: "chiken borger", numePrice: "23 SAR"),MenuResturant(menuPhoto: UIImage(named: "bk2")!, menuName: "meet ..", numePrice: "18 SAR")]
+            menuSelectHerfy = [MenuResturant(menuPhoto: UIImage(named: "herfy1")!, menuName: "BBQ Chicken Tortilla", numePrice: "25 SAR"),MenuResturant(menuPhoto: UIImage(named: "herfy2")!, menuName: "ICE Cream", numePrice: "5 SAR"),MenuResturant(menuPhoto: UIImage(named: "herfy3")!, menuName: "Super Herfy Combo", numePrice: "30 SAR")]
+            menuSelectAselBorger = [MenuResturant(menuPhoto: UIImage(named: "AB1")!, menuName: "Jucy burger ", numePrice: "20 SAR"),MenuResturant(menuPhoto: UIImage(named: "AB2")!, menuName: "Origin burger meat", numePrice: "30 SAR"),MenuResturant(menuPhoto: UIImage(named: "AB3")!, menuName: "Cheese Potato ", numePrice: "15 SAR")]
+            menuSelectBorgerKing = [MenuResturant(menuPhoto: UIImage(named: "bk1")!, menuName: "X-TRA long chicken", numePrice: "23 SAR"),MenuResturant(menuPhoto: UIImage(named: "bk2")!, menuName: "Humburger", numePrice: "18 SAR")]
             
             menuResturantTabelView.delegate = self
             menuResturantTabelView.dataSource = self
@@ -56,10 +65,10 @@ extension MenuViewController:UITableViewDelegate {
 }
 extension MenuViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if nameResturantLabel.text == "Asel Borger"{
+        if nameResturantLabel.text == "The Burger's Origin "{
             return menuSelectAselBorger.count
         }
-        if nameResturantLabel.text == "Borger King"{
+        if nameResturantLabel.text == "Burger King"{
             return menuSelectBorgerKing.count
         }
 
@@ -78,12 +87,12 @@ extension MenuViewController:UITableViewDataSource {
         var image = menuSelectHerfy[indexPath.row].menuPhoto
             content.image = image }
         //
-        if nameResturantLabel.text == "Asel Borger"{
+        if nameResturantLabel.text == "The Burger's Origin "{
             content.text = menuSelectAselBorger[indexPath.row].menuName
         content.secondaryText = menuSelectAselBorger[indexPath.row].numePrice
         var image = menuSelectAselBorger[indexPath.row].menuPhoto
             content.image = image }
-        if nameResturantLabel.text == "Borger King"{
+        if nameResturantLabel.text == "Burger King"{
             content.text = menuSelectBorgerKing[indexPath.row].menuName
         content.secondaryText = menuSelectBorgerKing[indexPath.row].numePrice
         var image = menuSelectBorgerKing[indexPath.row].menuPhoto

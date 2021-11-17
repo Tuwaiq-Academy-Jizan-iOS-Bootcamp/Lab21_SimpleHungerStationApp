@@ -38,3 +38,19 @@
 //    }
 //}
 
+/////////////////
+/////    @IBAction func swipLeft(_ sender: UISwipeGestureRecognizer) {
+//        if i != 0 {
+//        i -= 1
+//        } else {
+//            i = resturant.count-1 }
+//    View1.image = UIImage(named: resturant[i])
+//        }
+//
+//    @IBAction func swipRight(_ sender: UISwipeGestureRecognizer) {
+//        if i != resturant.count - 1 {
+//            i += 1
+//        } else {
+//            i = 0 }
+//    View1.image = UIImage(named: resturant[i])
+//        }

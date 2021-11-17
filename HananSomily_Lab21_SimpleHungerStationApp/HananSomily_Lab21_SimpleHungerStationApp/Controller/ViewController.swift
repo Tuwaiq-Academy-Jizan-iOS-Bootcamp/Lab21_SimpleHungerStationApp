@@ -15,8 +15,7 @@ class ViewController: UIViewController {
             collectonImageView.dataSource = self
         }
     }
-    
-    @IBOutlet weak var View1: UIImageView!
+    var sectionName = "Hunger Station"
     var i = 0
     var resturant:[UIImage] = []
     //["aselBorger","borgerKing","herfy"]
@@ -31,30 +30,19 @@ class ViewController: UIViewController {
     var foodHungerStation:[HungerStationItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-resturant = [UIImage(named:"aselBorger")!,UIImage(named: "borgerKing")!,UIImage(named: "herfy")!]
+resturant = [UIImage(named:"borgerKing")!,UIImage(named: "aselBorger")!,UIImage(named: "herfy")!]
 
         // Do any additional setup after loading the view.
-        foodHungerStation =  [HungerStationItem(logo:UIImage(named: "logoAseelBorger")!,image:UIImage(named: "aselBorger")!, name: "Asel Borger", discription: ".. Fast food .. ", price: "30 SAR", cookingTime: "30 - 40 munites", deleveryTime: "30 munites", evalution: "4.8" ), HungerStationItem(logo:UIImage(named: "logoburgerking")!,image: UIImage(named: "borgerKing")!, name: "Borger King", discription: " ...Fast food...", price: "45 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: "3.9"),HungerStationItem(logo:UIImage(named: "logoHerfyar")!,image: UIImage(named: "herfy")!, name: "Herfy", discription: " . Fast food . ", price: "35 SAR ", cookingTime: "40 -50 muntes ", deleveryTime: "20 Munites ", evalution: "3.9 ")]
+        foodHungerStation =  [HungerStationItem(logo:UIImage(named: "logoAseelBorger")!,image:UIImage(named: "aselBorger11")!, name: "The Burger's Origin ", discription: ".. Fast food .. ", price: "30 SR", cookingTime: "30 - 40 MIN", deleveryTime: "30 MIN", evalution: "4.8" , detels:"50.0 % off Your Order " ), HungerStationItem(logo:UIImage(named: "logoburgerking")!,image: UIImage(named: "borgerKing")!, name: "Burger King", discription: " ...Fast food...", price: "45 SR ", cookingTime: "40 -50 MIN ", deleveryTime: "20 MIN ", evalution: "3.9" ,detels:"5 SR Delivery"),HungerStationItem(logo:UIImage(named: "logoHerfyar")!,image: UIImage(named: "herfy")!, name: "Herfy", discription: " . Fast food . ", price: "35 SR ", cookingTime: "40 -50 MIN ", deleveryTime: "20 MIN ", evalution: "3.9 ",detels:"5 SR Delivery")]
     }
 
-//    @IBAction func swipLeft(_ sender: UISwipeGestureRecognizer) {
-//        if i != 0 {
-//        i -= 1
-//        } else {
-//            i = resturant.count-1 }
-//    View1.image = UIImage(named: resturant[i])
-//        }
-//
-//    @IBAction func swipRight(_ sender: UISwipeGestureRecognizer) {
-//        if i != resturant.count - 1 {
-//            i += 1
-//        } else {
-//            i = 0 }
-//    View1.image = UIImage(named: resturant[i])
-//        }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let send = segue.destination as! MenuViewController
         send.selected = select
+        
+    }
+    @IBAction func backTo(segue:UIStoryboardSegue){
         
     }
 }
@@ -74,7 +62,7 @@ extension ViewController :UITableViewDelegate , UITableViewDataSource {
         ClassHungerStationTableView
         //StructureHungerStation
         let content = foodHungerStation[indexPath.row]
-        cell.printElement(logoo:content.logo , imagee: content.image , name: content.name , description: content.discription, timeCook: content.cookingTime, timeDelever: content.deleveryTime , evaluteStar: content.evalution)
+        cell.printElement(logoo:content.logo , imagee: content.image , name: content.name , description: content.discription, timeCook: content.cookingTime, timeDelever: content.deleveryTime , evaluteStar: content.evalution , detel: content.detels)
 
         return cell
     }
@@ -89,11 +77,15 @@ extension ViewController :UITableViewDelegate , UITableViewDataSource {
         return 400
         
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+        return "Hunger Station"
+    }
 //    func tableView(_ tableView: UITableView, viewForHeader section: Int) -> UIView? {
 //        let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width , height: 40))
 //        let label = UILabel(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width, height: 40))
 //        view.backgroundColor = .systemYellow
-//        label.text = "Hunger Station"
+//        label.text = sectionName
 //        label.textColor = .white
 //        label.textAlignment = .center
 //        view.addSubview(label)
@@ -102,6 +94,9 @@ extension ViewController :UITableViewDelegate , UITableViewDataSource {
 //    func tableView(_ tableView: UITableView, heightForHeader section: Int) -> CGFloat {
 //        return 70
 //    }
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return " .. End .."
+    }
     
 }
 extension ViewController:UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
