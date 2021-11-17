@@ -17,7 +17,6 @@ class DataTableViewCell: UITableViewCell {
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var typeFoodLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-   
     
     override func awakeFromNib() {
         super.awakeFromNib()
