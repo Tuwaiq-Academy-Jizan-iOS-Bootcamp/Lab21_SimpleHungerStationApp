@@ -10,7 +10,6 @@ import UIKit
  struct Menu{
     var mealName : String
     var mealImage : UIImage
-
     var mealPrice : String
     
 }

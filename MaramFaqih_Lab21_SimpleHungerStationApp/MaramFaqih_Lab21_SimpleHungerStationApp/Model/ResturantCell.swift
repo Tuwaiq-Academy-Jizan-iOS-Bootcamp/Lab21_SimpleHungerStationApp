@@ -17,10 +17,14 @@ class ResturntCell : UITableViewCell{
     @IBOutlet weak var offerCell: UILabel!
     
  
+    @IBOutlet weak var deliveryPriceCell: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        logoCell.layer.cornerRadius = 0.2 *  logoCell.bounds.size.height
+
+        logoCell.layer.masksToBounds = true
     }
     //nameCell.text = resturants[indexPath.row].name
   

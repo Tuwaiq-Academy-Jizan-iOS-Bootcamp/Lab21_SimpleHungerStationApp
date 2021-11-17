@@ -14,14 +14,18 @@ class ResturantView: UIViewController {
     
     @IBOutlet weak var resturantDeliveryTime: UILabel!
     
+    @IBOutlet weak var viewInfoAboutResturant: UIView!
     
     @IBOutlet weak var resturantOffer: UILabel!
     
+    @IBOutlet weak var resturantMinimum: UILabel!
     @IBOutlet weak var resturantCuisine: UILabel!
     @IBOutlet weak var resturantRating: UILabel!
     @IBOutlet weak var resturantImage: UIImageView!
     @IBOutlet weak var resturantLogo: UIImageView!
     @IBOutlet weak var resturantName: UILabel!
+    
+    @IBOutlet weak var resturantDeliveryPrice: UILabel!
     
     var nameSelectedT = ""
     var deliveryTimeSelectedT = ""
@@ -29,12 +33,17 @@ class ResturantView: UIViewController {
    
     var cuisineSelectedT = ""
     var offerSelectedT = ""
+    var DeliveryPriceSelectedT = ""
+    var minimumSelectedT = ""
     var menuSelectedT : [Menu]=[]
    var logoSelectedT = UIImage(named: "herfyLogo")
    var imageSelectedT = UIImage(named: "herfyLogo")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewInfoAboutResturant.layer.cornerRadius = 0.1 *  viewInfoAboutResturant.bounds.size.height
+
+        viewInfoAboutResturant.layer.masksToBounds = true
 
         // Do any additional setup after loading the view.
         
@@ -43,12 +52,15 @@ class ResturantView: UIViewController {
        resturantRating.text =  ratingSelectedT
        resturantCuisine.text =  cuisineSelectedT
        resturantOffer.text =  offerSelectedT
+        resturantDeliveryPrice.text =  DeliveryPriceSelectedT
          resturantLogo.image =  logoSelectedT
         resturantImage.image =  imageSelectedT
-        print(menuSelectedT)
-        menuTibleView.delegate = self
+        resturantMinimum.text = minimumSelectedT
+        //print(menuSelectedT)
+        menuTibleView.delegate =  self
         menuTibleView.dataSource = self
     }
+    
     
 
     /*

@@ -20,23 +20,27 @@ class ViewController: UIViewController {
     
      var cuisineSelected = ""
      var offerSelected = ""
+    var DeliveryPriceSelected = ""
+    var minimumSelected = ""
     var menuSelected : [Menu] = []
     var logoSelected = UIImage(named: "herfyLogo")
     var imageSelected = UIImage(named: "herfyLogo")
-    
+   // resturantsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300))
     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        headers = ["h1","h2","h3","h4"]
+       
+        
         headerImageView.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
         headerImageView.layer.masksToBounds = true
         resturantsTableView.delegate = self
         resturantsTableView.dataSource = self
-        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, menu: [Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "20")]))
-        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, menu: [Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
-        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
-        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
+        headers = ["h1","h2","h3","h4"]
+        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, deliveryPrice: "5", minimum: "35", menu: [Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Musahab Large Size", mealImage:  UIImage(named: "herfyMeal2")!, mealPrice: "20")]))
+        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, deliveryPrice: "7", minimum: "60", menu: [Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
+        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, deliveryPrice: "10", minimum: "99", menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
+        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, deliveryPrice: "3", minimum: "50", menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
       
     }
 
@@ -75,19 +79,28 @@ class ViewController: UIViewController {
             destintionToDetails.logoSelectedT =  logoSelected
             destintionToDetails.imageSelectedT =  imageSelected
             destintionToDetails.menuSelectedT =  menuSelected
+            destintionToDetails.DeliveryPriceSelectedT = DeliveryPriceSelected
+            destintionToDetails.minimumSelectedT = minimumSelected
 
         }
+    @IBAction func backToFrist(segue:UIStoryboardSegue){
+        
+    }
     
 }
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
         return resturants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ResturntCell
+       // cell.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
+
+        //cell.layer.masksToBounds = true
+        tableView.backgroundColor = .systemGray6
       
-  
        cell.nameCell.text = resturants[indexPath.row].name
         cell.deliveryTimeCell.text = resturants[indexPath.row].deliveryTime
         cell.ratingCell.text = resturants[indexPath.row].rating
@@ -96,7 +109,10 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         cell.imageCell.image = resturants[indexPath.row].image
        
         cell.offerCell.text = resturants[indexPath.row].theOffer
+       
         
+        cell.deliveryPriceCell.text = resturants[indexPath.row].deliveryPrice
+       
         return cell
       
     }
@@ -104,16 +120,35 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         return 250
         
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .systemGray6
+        
+        return view
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let verticalPadding: CGFloat = 10
+
+        let maskLayer = CALayer()
+        maskLayer.cornerRadius = 20
+        maskLayer.backgroundColor = UIColor.black.cgColor
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        cell.layer.mask = maskLayer
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = resturants[indexPath.row]
-        nameSelected = cell.name
-        deliveryTimeSelected = cell.deliveryTime
-        ratingSelected = cell.rating
-        cuisineSelected = cell.cuisine
-        offerSelected = cell.theOffer
-        logoSelected = cell.logo
-        imageSelected = cell.image
-        menuSelected = cell.menu
+        let arrPath = resturants[indexPath.row]
+        nameSelected = arrPath.name
+        deliveryTimeSelected = arrPath.deliveryTime
+        ratingSelected = arrPath.rating
+        cuisineSelected = arrPath.cuisine
+        offerSelected = arrPath.theOffer
+        logoSelected = arrPath.logo
+        imageSelected = arrPath.image
+        menuSelected = arrPath.menu
+        DeliveryPriceSelected = arrPath.deliveryPrice
+        minimumSelected = arrPath.minimum
         performSegue(withIdentifier: "toRestrunt", sender: indexPath)
     }
     

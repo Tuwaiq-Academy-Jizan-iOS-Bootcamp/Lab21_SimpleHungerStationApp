@@ -16,6 +16,9 @@ struct Resturant{
     var rating : String
     var theOffer : String
     var trackingStatus : Bool
+    var deliveryPrice : String
+    var minimum : String
+    
     var menu : [Menu]
 }
 
