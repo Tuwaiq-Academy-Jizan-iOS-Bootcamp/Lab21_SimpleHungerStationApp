@@ -16,14 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var headerImage: UIImageView!
     
+//     var for Select from  View1 -> View2
     var selectRestaurant : Restaurant?
-        var restaurants :[Restaurant] = [
-            Restaurant(nameResturant: "Herfy", resturantType: "Fast Food", resturantRating: "3.8", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "1", resturantLogo: "19", resturantOffers: "50.0 % Off Your Order (Spend 35 SAR",deliveryChargeResturant: "",mimimum: "35SR"),
-            //     ..................................
-            Restaurant(nameResturant: "Applebee's", resturantType: "Grills,American", resturantRating: "3.9", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "2", resturantLogo: "31", resturantOffers: "5 SAR Delivery (Spend 35 SAR)",deliveryChargeResturant: "",mimimum:"44SR"),
-            //     ..................................
-            Restaurant(nameResturant: "Ocean Basket", resturantType: "Sea Food", resturantRating: "3.9", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "3", resturantLogo: "30", resturantOffers: "5 SAR Delivery (Spend 35 SAR)",deliveryChargeResturant: "", mimimum: "55SR")]
-    var headerImageArr = ["22","23","24"]
+    
+//    var for swipe
+    var headerImageArr = ["22","1",""]
     var allAmage = 0
     
     override func viewDidLoad() {
@@ -56,6 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             headerImage.image = UIImage (named: headerImageArr[allAmage])
         }
     }
+    // Extension Delegate and Data Source
     
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return restaurants.count
@@ -78,7 +76,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
        
 
 func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          return 250
+          return 300
 }
 
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -92,4 +90,4 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
 
-//allamge.image = UIImage(named: allage[allamge]
+

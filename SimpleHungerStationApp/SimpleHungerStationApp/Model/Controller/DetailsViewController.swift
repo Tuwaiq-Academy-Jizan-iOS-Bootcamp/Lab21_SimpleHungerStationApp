@@ -11,7 +11,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    @IBOutlet weak var muneRatinglabel: UILabel!
+
     @IBOutlet weak var muneLogo: UIImageView!
     @IBOutlet weak var tabelViewDetails: UITableView!
     @IBOutlet weak var nameMuneLabel: UILabel!

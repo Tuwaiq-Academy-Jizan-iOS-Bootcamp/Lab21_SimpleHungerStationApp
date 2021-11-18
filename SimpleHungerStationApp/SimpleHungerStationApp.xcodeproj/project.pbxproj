@@ -148,7 +148,6 @@
 			children = (
 				9A1535762743679D006D4A6E /* DetailsViewController.swift */,
 				9A1813E72742C08E00F9C9A7 /* ViewController.swift */,
-				9A1814152742E04200F9C9A7 /* RestaurantsCell.swift */,
 				9AE409152744575F0056B646 /* View */,
 			);
 			path = Controller;
@@ -158,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9A1813E92742C08E00F9C9A7 /* Main.storyboard */,
+				9A1814152742E04200F9C9A7 /* RestaurantsCell.swift */,
 				9A24F45B2745191E00F9BFB2 /* MuneCell.swift */,
 			);
 			path = View;
