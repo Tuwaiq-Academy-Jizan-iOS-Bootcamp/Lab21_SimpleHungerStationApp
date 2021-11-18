@@ -19,7 +19,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var muneImage: UIImageView!
     @IBOutlet weak var muneTypeLabel: UILabel!
     @IBOutlet weak var muneTimeLabel: UILabel!
-    @IBOutlet weak var deliveryChargeMuneLabel: UILabel!
+    @IBOutlet weak var muneRatingLabel:  UILabel!
+    @IBOutlet weak var minimumLabel: UILabel!
     
     var selectRestaurant : Restaurant?
     var munes : [Meal] = []
@@ -32,12 +33,14 @@ class DetailsViewController: UIViewController {
         
         if let selectRestaurant = selectRestaurant {
             nameMuneLabel.text = selectRestaurant.nameResturant
-            muneRatinglabel.text = selectRestaurant.resturantRating
             muneLogo.image = UIImage(named :selectRestaurant.resturantLogo)
             offersMuneLabel.text = selectRestaurant.resturantOffers
             muneImage.image = UIImage(named: selectRestaurant.imageResturant)
-            muneTypeLabel.text = selectRestaurant.resturantType
             muneTimeLabel.text = selectRestaurant.timeMealPreparation
+            muneTypeLabel.text = selectRestaurant.resturantType
+            minimumLabel.text = selectRestaurant.mimimum
+            muneRatingLabel.text = selectRestaurant.resturantRating
+            
         }
     
         if nameMuneLabel.text ==  "Herfy" {
