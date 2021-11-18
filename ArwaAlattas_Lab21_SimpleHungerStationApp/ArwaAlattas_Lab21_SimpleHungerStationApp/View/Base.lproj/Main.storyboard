@@ -20,39 +20,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="MVS-E6-bdm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale1" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-lN-mfH">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale1" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-lN-mfH">
                                             <rect key="frame" x="8" y="8" width="304" height="76"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="TDD-52-mET" appends="YES" id="hMy-tH-bWn"/>
+                                                <outletCollection property="gestureRecognizers" destination="N44-dn-EgN" appends="YES" id="6DZ-0g-ja4"/>
+                                            </connections>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale11" translatesAutoresizingMaskIntoConstraints="NO" id="go8-rg-dNu">
-                                            <rect key="frame" x="8" y="92" width="46" height="36"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale11" translatesAutoresizingMaskIntoConstraints="NO" id="go8-rg-dNu">
+                                            <rect key="frame" x="0.0" y="94" width="57" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale22" translatesAutoresizingMaskIntoConstraints="NO" id="JA2-uR-xQe">
-                                            <rect key="frame" x="74" y="91" width="46" height="36"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale22" translatesAutoresizingMaskIntoConstraints="NO" id="JA2-uR-xQe">
+                                            <rect key="frame" x="65" y="92" width="47" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale66" translatesAutoresizingMaskIntoConstraints="NO" id="vD4-N4-KLZ">
-                                            <rect key="frame" x="137" y="91" width="46" height="36"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale66" translatesAutoresizingMaskIntoConstraints="NO" id="vD4-N4-KLZ">
+                                            <rect key="frame" x="130" y="92" width="61" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale33" translatesAutoresizingMaskIntoConstraints="NO" id="Jgc-NI-GAm">
-                                            <rect key="frame" x="206" y="91" width="46" height="36"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale55" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-wq-3k2">
+                                            <rect key="frame" x="265" y="91" width="55" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale55" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-wq-3k2">
-                                            <rect key="frame" x="274" y="91" width="46" height="36"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sale33" translatesAutoresizingMaskIntoConstraints="NO" id="Jgc-NI-GAm">
+                                            <rect key="frame" x="197" y="91" width="60" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="340" id="tdo-Wg-tdx" customClass="elementViewCell" customModule="ArwaAlattas_Lab21_SimpleHungerStationApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="172.5" width="320" height="340"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="320" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tdo-Wg-tdx" id="nCi-W6-T7c">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="340"/>
@@ -67,17 +72,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8Yj-op-Oeg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="542.5" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="3384.5" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRs-y6-4Xg">
-                                                            <rect key="frame" x="0.0" y="5" width="457.5" height="50"/>
+                                                            <rect key="frame" x="0.0" y="5" width="3299.5" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="2BE-fM-hTZ"/>
                                                                 <constraint firstAttribute="height" constant="50" id="u9q-p8-fyB"/>
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-EE-LYI">
-                                                            <rect key="frame" x="464.5" y="17" width="78" height="26.5"/>
+                                                            <rect key="frame" x="3306.5" y="17" width="78" height="26.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="26.5" id="NXm-am-hVU"/>
                                                                 <constraint firstAttribute="width" constant="78" id="VWd-b1-KyB"/>
@@ -208,7 +213,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w8X-Gr-TL2" secondAttribute="bottom" id="791-LS-m6N"/>
                             <constraint firstItem="w8X-Gr-TL2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N4r-NI-IR2"/>
@@ -218,11 +223,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Simple Hunger Station App" id="NgW-7U-71U"/>
                     <connections>
+                        <outlet property="imageHeader" destination="WnD-lN-mfH" id="Lsg-01-FZ4"/>
                         <outlet property="resturantTableView" destination="w8X-Gr-TL2" id="MHj-Vr-X8G"/>
                         <segue destination="b31-py-W1p" kind="show" identifier="GoToVC" id="3iC-5k-85T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="TDD-52-mET">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="pds-mq-jkW"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="N44-dn-EgN">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="PJt-9m-JZW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="708.75" y="69.718309859154928"/>
         </scene>
@@ -361,6 +377,20 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aei-xC-JuJ">
+                                <rect key="frame" x="16" y="20" width="36" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fCn-K2-WIk" kind="unwind" unwindAction="unwindToRootViewControllerWithSeque:" id="eNd-I7-eZ6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uFD-0L-7BH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -383,6 +413,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88X-iK-fso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fCn-K2-WIk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1665" y="81.338028169014081"/>
         </scene>
@@ -398,6 +429,7 @@
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="tag.fill" catalog="system" width="128" height="119"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

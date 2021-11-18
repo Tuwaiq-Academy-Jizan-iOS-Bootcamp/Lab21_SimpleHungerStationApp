@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
   
+    @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var resturantTableView: UITableView!{
         didSet{
             resturantTableView.delegate = self
@@ -19,6 +20,28 @@ class ViewController: UIViewController {
         
     }
     var selectResturant: Resturant?
+     // array and variable for image header
+    var  numberOfImages = 0
+    var movingHeader = ["HungerStation1","hugerstation2","hungerstation2","hungerStation3"]
+    @IBAction func swipeRight(_ sender: Any) {
+        numberOfImages += 1
+        if numberOfImages > 3 {
+            numberOfImages = 0
+        }
+        imageHeader.image = UIImage(named: movingHeader[numberOfImages])
+    }
+    
+    @IBAction func swipeLeft(_ sender: Any) {
+        
+        numberOfImages -= 1
+        if numberOfImages < 0 {
+            numberOfImages = 3
+        }
+        imageHeader.image = UIImage(named: movingHeader[numberOfImages])
+    }
+    
+    
+     // object for resturant from Resturant struct
     var applebees = Resturant(name: "Applebee's", typefood: "Grills, American", image: "Applebees" , timeDilevry: "45 - 55 minutes", tracking: "Live Tracking ", star: "3,9",logo: "logoApplebees")
     var herfy = Resturant(name: "Herfy", typefood: "Fast Food", image: "Herfy", timeDilevry: "40 - 50 minutes", tracking: "Live Tracking ", star: "3,8",logo: "herfyLogo")
     var oceanBasket = Resturant(name: "Ocean Basket", typefood: "Sea Food", image: "OseanBasket", timeDilevry: "45 - 55 minutes", tracking: "Live Tracking ", star: "3,8",logo: "oceanbasketlogo")
@@ -36,7 +59,10 @@ class ViewController: UIViewController {
         Goto.selectMenu = selectResturant
         
     }
+    @IBAction func unwindToRootViewController(seque:UIStoryboardSegue){
 
+    }
+    
 }
 extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
