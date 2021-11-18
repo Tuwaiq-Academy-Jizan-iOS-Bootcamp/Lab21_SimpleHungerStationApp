@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363.768115942029" y="-44.196428571428569"/>
+            <point key="canvasLocation" x="2362.3188405797105" y="-44.196428571428569"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="qu2-C0-x7M">
@@ -425,6 +425,19 @@
                                     <constraint firstItem="IfV-qa-fic" firstAttribute="top" secondItem="WbU-zA-7k6" secondAttribute="top" constant="11" id="guJ-yy-Adg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50% Discouunt on all menu up to 30 riyals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W51-Hj-hAk">
+                                <rect key="frame" x="12" y="387" width="393" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6277247802" green="0.79487725379999996" blue="0.88385859219999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.30281675050000001" green="0.58642266350000005" blue="0.66557610899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exclamationmark.octagon.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-qv-oT5">
+                                <rect key="frame" x="20" y="395.5" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ccp-Og-JF0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -527,10 +540,14 @@
         <image name="44" width="225" height="225"/>
         <image name="900" width="168" height="299"/>
         <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.octagon.fill" catalog="system" width="128" height="112"/>
         <image name="hanger1" width="135" height="93.5"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.leadinghalf.filled" catalog="system" width="128" height="116"/>
         <image name="tag" catalog="system" width="128" height="119"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
