@@ -368,10 +368,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="tag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-Eo-Bo4">
-                                <rect key="frame" x="61" y="337" width="23" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lm7-Yw-5zr">
                                 <rect key="frame" x="-3" y="-24" width="414" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -387,15 +383,19 @@
                                     <segue destination="riz-01-0Bd" kind="unwind" unwindAction="unwindToRootviewControllerWithSegue:" id="VSs-QA-d9z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="              50% Discount on all menu up to 30 riyals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJH-lg-3mc">
-                                <rect key="frame" x="42" y="328" width="311" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50.0 % Off Your Order (Spend 35 SAR)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha9-Iu-9RH">
+                                <rect key="frame" x="47" y="338" width="304" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.56253975629806519" green="0.78839248418807983" blue="0.91635292768478394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.018525229766964912" green="0.32560861110687256" blue="0.98397892713546753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="tag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-vu-fH9">
+                                <rect key="frame" x="55" y="342" width="23" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yLN-S3-bbB"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -409,7 +409,7 @@
                         <outlet property="muneTimeLabel" destination="Hud-5y-IXj" id="Tcc-Wb-kPq"/>
                         <outlet property="muneTypeLabel" destination="H0L-mE-eUA" id="lOB-2d-eMZ"/>
                         <outlet property="nameMuneLabel" destination="4O7-LZ-Fr3" id="FQp-C3-xOG"/>
-                        <outlet property="offersMuneLabel" destination="MJH-lg-3mc" id="PyK-QM-yHn"/>
+                        <outlet property="offersMuneLabel" destination="Ha9-Iu-9RH" id="jsd-XT-sxH"/>
                         <outlet property="tabelViewDetails" destination="JO9-81-Kce" id="pgh-7I-Zb0"/>
                     </connections>
                 </viewController>

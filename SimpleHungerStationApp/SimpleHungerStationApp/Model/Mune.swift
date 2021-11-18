@@ -26,7 +26,7 @@ struct Restaurant {
 
 
 var restaurants :[Restaurant] = [
-    Restaurant(nameResturant: "Herfy", resturantType: "Fast Food", resturantRating: "3.8", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "1", resturantLogo: "19", resturantOffers: "50.0 % Off Your Order (Spend 35 SAR",deliveryChargeResturant: "",mimimum: "35SR"),
+    Restaurant(nameResturant: "Herfy", resturantType: "Fast Food", resturantRating: "3.8", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "1", resturantLogo: "19", resturantOffers: "50.0 % Off Your Order (Spend 35 SAR)",deliveryChargeResturant: "",mimimum: "35SR"),
     //     ..................................
     Restaurant(nameResturant: "Applebee's", resturantType: "Grills,American", resturantRating: "3.9", timeMealPreparation: "40-50 minutes", tracking: "Live Tracking", imageResturant: "2", resturantLogo: "20", resturantOffers: "5 SAR Delivery (Spend 35 SAR)",deliveryChargeResturant: "",mimimum:"44SR"),
     //     ..................................
