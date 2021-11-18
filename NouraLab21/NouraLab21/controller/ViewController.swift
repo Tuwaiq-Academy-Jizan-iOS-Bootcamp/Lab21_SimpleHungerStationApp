@@ -18,24 +18,26 @@ class ViewController: UIViewController {
     var resturants:[Hungerstation] = []
     var selectedHungerstation:Hungerstation?
     var selecteMenu:[Menu] = []
-    var imageView = ["view","V1","V2","V3","V5","V6"]
-    var index = 0
+   var imageView = ["view","V1","V2","V3","V5","V6"]
+   var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         resturants.append(resturants1)
         resturants.append(resturants2)
         resturants.append(resturants3)
+        resturants.append(resturants4)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let sendData = segue.destination as! MenuViewController
-    sendData.selectedHungerstation = selectedHungerstation
-}
+        sendData.selectedHungerstation = selectedHungerstation
+    }
     @IBAction func swipeRight(_ sender: Any) {
         if index < imageView.count - 1 {
-                index += 1
-            } else {
-                index = 0
-            }
+            index += 1
+        } else {
+            index = 0
+        }
         headrImage.image = UIImage(named: imageView[index])
     }
     
@@ -67,12 +69,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt
-    indexPath: IndexPath)
+                   indexPath: IndexPath)
     -> CGFloat {
-    return 250
+        return 200
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       selectedHungerstation = resturants[indexPath.row]
+        selectedHungerstation = resturants[indexPath.row]
         performSegue(withIdentifier: "goTo2", sender: self)
     }
 }
