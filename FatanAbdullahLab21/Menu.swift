@@ -10,8 +10,6 @@ var MealImage: String
 }
 
 
-
-
         
     
 

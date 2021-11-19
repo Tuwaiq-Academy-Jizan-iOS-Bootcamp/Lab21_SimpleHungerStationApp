@@ -16,7 +16,11 @@ class DataTVCell: UITableViewCell {
 @IBOutlet weak var Evaluation: UILabel!
 @IBOutlet weak var DeliveryTime: UILabel!
 @IBOutlet weak var DeliveryPrice: UILabel!
-var Data : HungerStation?
+@IBOutlet weak var LogOne: UIImageView!
+    
+    @IBOutlet weak var MealName: UILabel!
+    @IBOutlet weak var PriceMeal: UILabel!
+    @IBOutlet weak var imageMeal: UIImageView!
 override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
