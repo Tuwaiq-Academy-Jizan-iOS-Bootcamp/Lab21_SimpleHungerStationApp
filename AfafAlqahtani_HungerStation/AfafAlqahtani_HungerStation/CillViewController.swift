@@ -25,5 +25,6 @@ class CellViewController: UITableViewCell{
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealName: UILabel!
     @IBOutlet weak var mealPrice: UILabel!
+    
 }
 

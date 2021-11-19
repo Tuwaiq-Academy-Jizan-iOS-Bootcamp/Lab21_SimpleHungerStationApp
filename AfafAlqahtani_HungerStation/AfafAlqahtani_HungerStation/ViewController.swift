@@ -24,7 +24,7 @@ struct HungerStayion{
 class ViewController: UIViewController {
     @IBOutlet weak var resturantTabelView: UITableView!
     
-    var resturants = [HungerStayion(titleName: "Herfi", subTitle: "Fast Food", largeimage: "Herfy", smalimage: "Logohiefi", timer: "45_60",tracking:"Life Trakcing", evaluation: "3.9", offer: "5 SAR Delivery (spend 35 SAR)", delivery: "Delivery 5 SR")
+    var resturants = [HungerStayion(titleName: "Herfi", subTitle: "Fast Food", largeimage: "Herfy", smalimage: "Logohiefi", timer: "45_60",tracking:"Life Trakcing", evaluation: "3.9", offer: "5 SAR Delivery (spend 35 SAR)", delivery: "5SR")
                       
                       , HungerStayion(titleName: "Littlel Ceasar", subTitle: "Pizza", largeimage: "LittlelCeasar", smalimage: "Logolittlecaesars", timer: "40_60", tracking:"Life Trakcing",evaluation: "4.5", offer: "50.0 % off your order (spend 35 SAR)",delivery: "Delivery 10 SR")
                       
@@ -41,12 +41,10 @@ class ViewController: UIViewController {
         resturantTabelView.dataSource = self
         
       //  resturants.append(resturant)
-    
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let sendTo = segue.destination as! ConnectingOfViewController
-        sendTo.selectedIResturant = selectedIResturant
-    }
-   
+}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let send = segue.destination as! ConnectingOfViewController
+    send.selectedIResturant = selectedIResturant
 }
 }
 
@@ -70,7 +68,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 360
+        return 500
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          selectedIResturant = resturants[indexPath.row]
