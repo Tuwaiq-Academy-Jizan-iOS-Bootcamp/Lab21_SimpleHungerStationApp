@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAD6845827463AF300AFF9B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6845727463AF300AFF9B7 /* AppDelegate.swift */; };
+		EAD6845A27463AF300AFF9B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6845927463AF300AFF9B7 /* SceneDelegate.swift */; };
+		EAD6845C27463AF300AFF9B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6845B27463AF300AFF9B7 /* ViewController.swift */; };
+		EAD6845F27463AF300AFF9B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD6845D27463AF300AFF9B7 /* Main.storyboard */; };
+		EAD6846127463AF500AFF9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD6846027463AF500AFF9B7 /* Assets.xcassets */; };
+		EAD6846427463AF500AFF9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD6846227463AF500AFF9B7 /* LaunchScreen.storyboard */; };
+		EAD6846F27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6846E27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.swift */; };
+		EAD6847927463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6847827463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.swift */; };
+		EAD6847B27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6847A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift */; };
+		EAD68488274641C500AFF9B7 /* DetaileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD68487274641C500AFF9B7 /* DetaileViewController.swift */; };
+		EAD6848A2746639A00AFF9B7 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD684892746639A00AFF9B7 /* CellView.swift */; };
+		EAD6848F2746B64900AFF9B7 /* CellMinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6848E2746B64900AFF9B7 /* CellMinue.swift */; };
+		EAD684912746E20C00AFF9B7 /* CellForResturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD684902746E20C00AFF9B7 /* CellForResturant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAD6846B27463AF500AFF9B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAD6844C27463AF300AFF9B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD6845327463AF300AFF9B7;
+			remoteInfo = DahmaJaber_MiniHungerStition;
+		};
+		EAD6847527463AF500AFF9B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAD6844C27463AF300AFF9B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD6845327463AF300AFF9B7;
+			remoteInfo = DahmaJaber_MiniHungerStition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAD6845427463AF300AFF9B7 /* DahmaJaber_MiniHungerStition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahmaJaber_MiniHungerStition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD6845727463AF300AFF9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAD6845927463AF300AFF9B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EAD6845B27463AF300AFF9B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAD6845E27463AF300AFF9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAD6846027463AF500AFF9B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAD6846327463AF500AFF9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAD6846527463AF500AFF9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAD6846A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DahmaJaber_MiniHungerStitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD6846E27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahmaJaber_MiniHungerStitionTests.swift; sourceTree = "<group>"; };
+		EAD6847427463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DahmaJaber_MiniHungerStitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD6847827463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahmaJaber_MiniHungerStitionUITests.swift; sourceTree = "<group>"; };
+		EAD6847A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAD68487274641C500AFF9B7 /* DetaileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaileViewController.swift; sourceTree = "<group>"; };
+		EAD684892746639A00AFF9B7 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		EAD6848E2746B64900AFF9B7 /* CellMinue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMinue.swift; sourceTree = "<group>"; };
+		EAD684902746E20C00AFF9B7 /* CellForResturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForResturant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAD6845127463AF300AFF9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6846727463AF500AFF9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6847127463AF500AFF9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAD6844B27463AF300AFF9B7 = {
+			isa = PBXGroup;
+			children = (
+				EAD6845627463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */,
+				EAD6846D27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests */,
+				EAD6847727463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests */,
+				EAD6845527463AF300AFF9B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAD6845527463AF300AFF9B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6845427463AF300AFF9B7 /* DahmaJaber_MiniHungerStition.app */,
+				EAD6846A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.xctest */,
+				EAD6847427463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAD6845627463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6845727463AF300AFF9B7 /* AppDelegate.swift */,
+				EAD6845927463AF300AFF9B7 /* SceneDelegate.swift */,
+				EAD6848B2746786800AFF9B7 /* Model */,
+				EAD6848D274678B700AFF9B7 /* View */,
+				EAD6848C2746788600AFF9B7 /* Controller */,
+				EAD6846027463AF500AFF9B7 /* Assets.xcassets */,
+				EAD6846227463AF500AFF9B7 /* LaunchScreen.storyboard */,
+				EAD6846527463AF500AFF9B7 /* Info.plist */,
+			);
+			path = DahmaJaber_MiniHungerStition;
+			sourceTree = "<group>";
+		};
+		EAD6846D27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6846E27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.swift */,
+			);
+			path = DahmaJaber_MiniHungerStitionTests;
+			sourceTree = "<group>";
+		};
+		EAD6847727463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6847827463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.swift */,
+				EAD6847A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift */,
+			);
+			path = DahmaJaber_MiniHungerStitionUITests;
+			sourceTree = "<group>";
+		};
+		EAD6848B2746786800AFF9B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EAD684892746639A00AFF9B7 /* CellView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAD6848C2746788600AFF9B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAD68487274641C500AFF9B7 /* DetaileViewController.swift */,
+				EAD684902746E20C00AFF9B7 /* CellForResturant.swift */,
+				EAD6848E2746B64900AFF9B7 /* CellMinue.swift */,
+				EAD6845B27463AF300AFF9B7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EAD6848D274678B700AFF9B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6845D27463AF300AFF9B7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAD6845327463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD6847E27463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStition" */;
+			buildPhases = (
+				EAD6845027463AF300AFF9B7 /* Sources */,
+				EAD6845127463AF300AFF9B7 /* Frameworks */,
+				EAD6845227463AF300AFF9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DahmaJaber_MiniHungerStition;
+			productName = DahmaJaber_MiniHungerStition;
+			productReference = EAD6845427463AF300AFF9B7 /* DahmaJaber_MiniHungerStition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAD6846927463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD6848127463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStitionTests" */;
+			buildPhases = (
+				EAD6846627463AF500AFF9B7 /* Sources */,
+				EAD6846727463AF500AFF9B7 /* Frameworks */,
+				EAD6846827463AF500AFF9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAD6846C27463AF500AFF9B7 /* PBXTargetDependency */,
+			);
+			name = DahmaJaber_MiniHungerStitionTests;
+			productName = DahmaJaber_MiniHungerStitionTests;
+			productReference = EAD6846A27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAD6847327463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD6848427463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStitionUITests" */;
+			buildPhases = (
+				EAD6847027463AF500AFF9B7 /* Sources */,
+				EAD6847127463AF500AFF9B7 /* Frameworks */,
+				EAD6847227463AF500AFF9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAD6847627463AF500AFF9B7 /* PBXTargetDependency */,
+			);
+			name = DahmaJaber_MiniHungerStitionUITests;
+			productName = DahmaJaber_MiniHungerStitionUITests;
+			productReference = EAD6847427463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAD6844C27463AF300AFF9B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					EAD6845327463AF300AFF9B7 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					EAD6846927463AF500AFF9B7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = EAD6845327463AF300AFF9B7;
+					};
+					EAD6847327463AF500AFF9B7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = EAD6845327463AF300AFF9B7;
+					};
+				};
+			};
+			buildConfigurationList = EAD6844F27463AF300AFF9B7 /* Build configuration list for PBXProject "DahmaJaber_MiniHungerStition" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAD6844B27463AF300AFF9B7;
+			productRefGroup = EAD6845527463AF300AFF9B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAD6845327463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */,
+				EAD6846927463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests */,
+				EAD6847327463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAD6845227463AF300AFF9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD6846427463AF500AFF9B7 /* LaunchScreen.storyboard in Resources */,
+				EAD6846127463AF500AFF9B7 /* Assets.xcassets in Resources */,
+				EAD6845F27463AF300AFF9B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6846827463AF500AFF9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6847227463AF500AFF9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAD6845027463AF300AFF9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD6848F2746B64900AFF9B7 /* CellMinue.swift in Sources */,
+				EAD6845C27463AF300AFF9B7 /* ViewController.swift in Sources */,
+				EAD6848A2746639A00AFF9B7 /* CellView.swift in Sources */,
+				EAD684912746E20C00AFF9B7 /* CellForResturant.swift in Sources */,
+				EAD68488274641C500AFF9B7 /* DetaileViewController.swift in Sources */,
+				EAD6845827463AF300AFF9B7 /* AppDelegate.swift in Sources */,
+				EAD6845A27463AF300AFF9B7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6846627463AF500AFF9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD6846F27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD6847027463AF500AFF9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD6847B27463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITestsLaunchTests.swift in Sources */,
+				EAD6847927463AF500AFF9B7 /* DahmaJaber_MiniHungerStitionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAD6846C27463AF500AFF9B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAD6845327463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */;
+			targetProxy = EAD6846B27463AF500AFF9B7 /* PBXContainerItemProxy */;
+		};
+		EAD6847627463AF500AFF9B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAD6845327463AF300AFF9B7 /* DahmaJaber_MiniHungerStition */;
+			targetProxy = EAD6847527463AF500AFF9B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAD6845D27463AF300AFF9B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAD6845E27463AF300AFF9B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAD6846227463AF500AFF9B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAD6846327463AF500AFF9B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAD6847C27463AF500AFF9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAD6847D27463AF500AFF9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAD6847F27463AF500AFF9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DahmaJaber_MiniHungerStition/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAD6848027463AF500AFF9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DahmaJaber_MiniHungerStition/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAD6848227463AF500AFF9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DahmaJaber_MiniHungerStition.app/DahmaJaber_MiniHungerStition";
+			};
+			name = Debug;
+		};
+		EAD6848327463AF500AFF9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStitionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DahmaJaber_MiniHungerStition.app/DahmaJaber_MiniHungerStition";
+			};
+			name = Release;
+		};
+		EAD6848527463AF500AFF9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStitionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DahmaJaber_MiniHungerStition;
+			};
+			name = Debug;
+		};
+		EAD6848627463AF500AFF9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tuwaiqAcademy.DahmaJaber-MiniHungerStitionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DahmaJaber_MiniHungerStition;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAD6844F27463AF300AFF9B7 /* Build configuration list for PBXProject "DahmaJaber_MiniHungerStition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD6847C27463AF500AFF9B7 /* Debug */,
+				EAD6847D27463AF500AFF9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD6847E27463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD6847F27463AF500AFF9B7 /* Debug */,
+				EAD6848027463AF500AFF9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD6848127463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD6848227463AF500AFF9B7 /* Debug */,
+				EAD6848327463AF500AFF9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD6848427463AF500AFF9B7 /* Build configuration list for PBXNativeTarget "DahmaJaber_MiniHungerStitionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD6848527463AF500AFF9B7 /* Debug */,
+				EAD6848627463AF500AFF9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAD6844C27463AF300AFF9B7 /* Project object */;
+}
