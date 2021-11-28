@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA42BF942746673B00D22EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA42BF932746673B00D22EA8 /* Assets.xcassets */; };
+		BA677F6D2743CA0E00BAE01F /* TheRestruantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */; };
+		BA7057122744EA7E00F2360F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */; };
+		BA7057142744F57500F2360F /* MenuRestruantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7057132744F57500F2360F /* MenuRestruantData.swift */; };
+		BA8CC4562742C242003CDD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4552742C242003CDD0C /* AppDelegate.swift */; };
+		BA8CC4582742C242003CDD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4572742C242003CDD0C /* SceneDelegate.swift */; };
+		BA8CC45A2742C242003CDD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4592742C242003CDD0C /* ViewController.swift */; };
+		BA8CC45D2742C242003CDD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8CC45B2742C242003CDD0C /* Main.storyboard */; };
+		BA8CC4622742C243003CDD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8CC4602742C243003CDD0C /* LaunchScreen.storyboard */; };
+		BA8CC46D2742C243003CDD0C /* HungerStationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC46C2742C243003CDD0C /* HungerStationAppTests.swift */; };
+		BA8CC4772742C243003CDD0C /* HungerStationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4762742C243003CDD0C /* HungerStationAppUITests.swift */; };
+		BA8CC4792742C243003CDD0C /* HungerStationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4782742C243003CDD0C /* HungerStationAppUITestsLaunchTests.swift */; };
+		BA8CC4862742CBB8003CDD0C /* RestrantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CC4852742CBB8003CDD0C /* RestrantData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA8CC4692742C243003CDD0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA8CC44A2742C242003CDD0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA8CC4512742C242003CDD0C;
+			remoteInfo = HungerStationApp;
+		};
+		BA8CC4732742C243003CDD0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA8CC44A2742C242003CDD0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA8CC4512742C242003CDD0C;
+			remoteInfo = HungerStationApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA42BF932746673B00D22EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../TuwaiqAcademy/AbdulrhmanCC/AbdulrhmanCC/Assets.xcassets; sourceTree = "<group>"; };
+		BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRestruantCell.swift; sourceTree = "<group>"; };
+		BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		BA7057132744F57500F2360F /* MenuRestruantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRestruantData.swift; sourceTree = "<group>"; };
+		BA8CC4522742C242003CDD0C /* HungerStationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HungerStationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8CC4552742C242003CDD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA8CC4572742C242003CDD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA8CC4592742C242003CDD0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA8CC45C2742C242003CDD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA8CC4612742C243003CDD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA8CC4632742C243003CDD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA8CC4682742C243003CDD0C /* HungerStationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungerStationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8CC46C2742C243003CDD0C /* HungerStationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungerStationAppTests.swift; sourceTree = "<group>"; };
+		BA8CC4722742C243003CDD0C /* HungerStationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungerStationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8CC4762742C243003CDD0C /* HungerStationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungerStationAppUITests.swift; sourceTree = "<group>"; };
+		BA8CC4782742C243003CDD0C /* HungerStationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungerStationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BA8CC4852742CBB8003CDD0C /* RestrantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrantData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA8CC44F2742C242003CDD0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC4652742C243003CDD0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC46F2742C243003CDD0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA8CC4492742C242003CDD0C = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4542742C242003CDD0C /* HungerStationApp */,
+				BA8CC46B2742C243003CDD0C /* HungerStationAppTests */,
+				BA8CC4752742C243003CDD0C /* HungerStationAppUITests */,
+				BA8CC4532742C242003CDD0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA8CC4532742C242003CDD0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4522742C242003CDD0C /* HungerStationApp.app */,
+				BA8CC4682742C243003CDD0C /* HungerStationAppTests.xctest */,
+				BA8CC4722742C243003CDD0C /* HungerStationAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA8CC4542742C242003CDD0C /* HungerStationApp */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4552742C242003CDD0C /* AppDelegate.swift */,
+				BA8CC4572742C242003CDD0C /* SceneDelegate.swift */,
+				BA42BF932746673B00D22EA8 /* Assets.xcassets */,
+				BA8CC4872742CF0B003CDD0C /* Model */,
+				BA8CC4882742CF26003CDD0C /* View */,
+				BA8CC4602742C243003CDD0C /* LaunchScreen.storyboard */,
+				BA8CC4632742C243003CDD0C /* Info.plist */,
+			);
+			path = HungerStationApp;
+			sourceTree = "<group>";
+		};
+		BA8CC46B2742C243003CDD0C /* HungerStationAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC46C2742C243003CDD0C /* HungerStationAppTests.swift */,
+			);
+			path = HungerStationAppTests;
+			sourceTree = "<group>";
+		};
+		BA8CC4752742C243003CDD0C /* HungerStationAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4762742C243003CDD0C /* HungerStationAppUITests.swift */,
+				BA8CC4782742C243003CDD0C /* HungerStationAppUITestsLaunchTests.swift */,
+			);
+			path = HungerStationAppUITests;
+			sourceTree = "<group>";
+		};
+		BA8CC4872742CF0B003CDD0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4852742CBB8003CDD0C /* RestrantData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA8CC4882742CF26003CDD0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC45B2742C242003CDD0C /* Main.storyboard */,
+				BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */,
+				BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */,
+				BA8CC4892742CF31003CDD0C /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA8CC4892742CF31003CDD0C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CC4592742C242003CDD0C /* ViewController.swift */,
+				BA7057132744F57500F2360F /* MenuRestruantData.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA8CC4512742C242003CDD0C /* HungerStationApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8CC47C2742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationApp" */;
+			buildPhases = (
+				BA8CC44E2742C242003CDD0C /* Sources */,
+				BA8CC44F2742C242003CDD0C /* Frameworks */,
+				BA8CC4502742C242003CDD0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HungerStationApp;
+			productName = HungerStationApp;
+			productReference = BA8CC4522742C242003CDD0C /* HungerStationApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA8CC4672742C243003CDD0C /* HungerStationAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8CC47F2742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationAppTests" */;
+			buildPhases = (
+				BA8CC4642742C243003CDD0C /* Sources */,
+				BA8CC4652742C243003CDD0C /* Frameworks */,
+				BA8CC4662742C243003CDD0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA8CC46A2742C243003CDD0C /* PBXTargetDependency */,
+			);
+			name = HungerStationAppTests;
+			productName = HungerStationAppTests;
+			productReference = BA8CC4682742C243003CDD0C /* HungerStationAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA8CC4712742C243003CDD0C /* HungerStationAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8CC4822742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationAppUITests" */;
+			buildPhases = (
+				BA8CC46E2742C243003CDD0C /* Sources */,
+				BA8CC46F2742C243003CDD0C /* Frameworks */,
+				BA8CC4702742C243003CDD0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA8CC4742742C243003CDD0C /* PBXTargetDependency */,
+			);
+			name = HungerStationAppUITests;
+			productName = HungerStationAppUITests;
+			productReference = BA8CC4722742C243003CDD0C /* HungerStationAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA8CC44A2742C242003CDD0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					BA8CC4512742C242003CDD0C = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					BA8CC4672742C243003CDD0C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BA8CC4512742C242003CDD0C;
+					};
+					BA8CC4712742C243003CDD0C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BA8CC4512742C242003CDD0C;
+					};
+				};
+			};
+			buildConfigurationList = BA8CC44D2742C242003CDD0C /* Build configuration list for PBXProject "HungerStationApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA8CC4492742C242003CDD0C;
+			productRefGroup = BA8CC4532742C242003CDD0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA8CC4512742C242003CDD0C /* HungerStationApp */,
+				BA8CC4672742C243003CDD0C /* HungerStationAppTests */,
+				BA8CC4712742C243003CDD0C /* HungerStationAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA8CC4502742C242003CDD0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8CC4622742C243003CDD0C /* LaunchScreen.storyboard in Resources */,
+				BA42BF942746673B00D22EA8 /* Assets.xcassets in Resources */,
+				BA8CC45D2742C242003CDD0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC4662742C243003CDD0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC4702742C243003CDD0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA8CC44E2742C242003CDD0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8CC45A2742C242003CDD0C /* ViewController.swift in Sources */,
+				BA8CC4562742C242003CDD0C /* AppDelegate.swift in Sources */,
+				BA7057122744EA7E00F2360F /* MenuTableViewCell.swift in Sources */,
+				BA677F6D2743CA0E00BAE01F /* TheRestruantCell.swift in Sources */,
+				BA8CC4862742CBB8003CDD0C /* RestrantData.swift in Sources */,
+				BA8CC4582742C242003CDD0C /* SceneDelegate.swift in Sources */,
+				BA7057142744F57500F2360F /* MenuRestruantData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC4642742C243003CDD0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8CC46D2742C243003CDD0C /* HungerStationAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8CC46E2742C243003CDD0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8CC4792742C243003CDD0C /* HungerStationAppUITestsLaunchTests.swift in Sources */,
+				BA8CC4772742C243003CDD0C /* HungerStationAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA8CC46A2742C243003CDD0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA8CC4512742C242003CDD0C /* HungerStationApp */;
+			targetProxy = BA8CC4692742C243003CDD0C /* PBXContainerItemProxy */;
+		};
+		BA8CC4742742C243003CDD0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA8CC4512742C242003CDD0C /* HungerStationApp */;
+			targetProxy = BA8CC4732742C243003CDD0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA8CC45B2742C242003CDD0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8CC45C2742C242003CDD0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA8CC4602742C243003CDD0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8CC4612742C243003CDD0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA8CC47A2742C243003CDD0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA8CC47B2742C243003CDD0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA8CC47D2742C243003CDD0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HungerStationApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA8CC47E2742C243003CDD0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HungerStationApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA8CC4802742C243003CDD0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungerStationApp.app/HungerStationApp";
+			};
+			name = Debug;
+		};
+		BA8CC4812742C243003CDD0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungerStationApp.app/HungerStationApp";
+			};
+			name = Release;
+		};
+		BA8CC4832742C243003CDD0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HungerStationApp;
+			};
+			name = Debug;
+		};
+		BA8CC4842742C243003CDD0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AbdulrhmanAbuhyyh.HungerStationAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HungerStationApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA8CC44D2742C242003CDD0C /* Build configuration list for PBXProject "HungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8CC47A2742C243003CDD0C /* Debug */,
+				BA8CC47B2742C243003CDD0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA8CC47C2742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8CC47D2742C243003CDD0C /* Debug */,
+				BA8CC47E2742C243003CDD0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA8CC47F2742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8CC4802742C243003CDD0C /* Debug */,
+				BA8CC4812742C243003CDD0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA8CC4822742C243003CDD0C /* Build configuration list for PBXNativeTarget "HungerStationAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA8CC4832742C243003CDD0C /* Debug */,
+				BA8CC4842742C243003CDD0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA8CC44A2742C242003CDD0C /* Project object */;
+}
