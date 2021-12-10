@@ -35,10 +35,10 @@ class ResturantView: UIViewController {
     var offerSelectedT = ""
     var DeliveryPriceSelectedT = ""
     var minimumSelectedT = ""
-    var menuSelectedT : [Menu]=[]
-   var logoSelectedT = UIImage(named: "herfyLogo")
-   var imageSelectedT = UIImage(named: "herfyLogo")
-    
+    var menuSelectedT :Int = Int()
+    var logoSelectedT:UIImage = UIImage()
+    var imageSelectedT:UIImage = UIImage()
+    var menuResturant : [Menu] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         viewInfoAboutResturant.layer.cornerRadius = 0.1 *  viewInfoAboutResturant.bounds.size.height
@@ -59,9 +59,48 @@ class ResturantView: UIViewController {
         //print(menuSelectedT)
         menuTibleView.delegate =  self
         menuTibleView.dataSource = self
+        getaData(with: String(menuSelectedT))
       
     }
+    func getaData(with endPoint:String){
+        
+        let baseURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants/\(endPoint)"
+       if let url = URL(string: baseURL) {
+        let session = URLSession(configuration: .default)
+       
+        let task = session.dataTask(with: url){ data, respons, error in
+            if let error = error {
+                print("error",error.localizedDescription)
+            }else{
+                if let safeData = data {
+                    do{
+                           let decoder = JSONDecoder()
+                          
+                           let decoderData = try decoder.decode(MenuResturant.self, from: safeData)
+                        self.menuResturant  = decoderData.menu
+                        DispatchQueue.main.async {
+                      
+                      //  self.resturantNameStruct  = decoderData
+                       print("decoderData:",decoderData)
+                        
+//                               DispatchQueue.main.async {
+//                                   self.users = decoderData
+                                   self.menuTibleView.reloadData()
 
+//
+   }
+
+
+} catch{
+    print("error f",error.localizedDescription)
+
+               }
+           }
+       }
+    }
+           task.resume()
+       }
+}
     
 
     /*
@@ -77,14 +116,28 @@ class ResturantView: UIViewController {
 }
 extension ResturantView: UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuSelectedT.count
+        return menuResturant.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "toCellMenu", for: indexPath ) as! MenuCell
-        cell.mealNameCell.text = menuSelectedT[indexPath.row].mealName
-        cell.priceMealCell.text = menuSelectedT[indexPath.row].mealPrice
-        cell.imageMenuCell.image = menuSelectedT[indexPath.row].mealImage
+        cell.mealNameCell.text = menuResturant[indexPath.row].title
+        cell.priceMealCell.text = String( menuResturant[indexPath.row].price.value)+" "+menuResturant[indexPath.row].price.currency
+        let urlImage = URL(string:menuResturant[indexPath.row].image)
+        if let urlImage = urlImage {
+          DispatchQueue.global().async {
+             
+              if let data = try? Data(contentsOf: urlImage){
+              DispatchQueue.main.async {
+
+                if tableView.cellForRow(at: indexPath) != nil {
+                    cell.imageMenuCell.image = UIImage(data: data)!
+               }
+              }
+            }
+          }
+        }
+        //cell.imageMenuCell.image = menuResturant[indexPath.row].mealImage
        return cell
         
     }

@@ -10,10 +10,10 @@ class ResturntCell : UITableViewCell{
     
     @IBOutlet weak var viewOffer: UIView!
     @IBOutlet weak var nameCell: UILabel!
-    @IBOutlet weak var maxDeliveryTimeCell: UILabel!
+   // @IBOutlet weak var maxDeliveryTimeCell: UILabel!
     
     @IBOutlet weak var currencyCell: UILabel!
-    @IBOutlet weak var minDeliveryTimeCell: UILabel!
+    @IBOutlet weak var deliveryTimeCell: UILabel!
   //  @IBOutlet weak var offerSpendCell: UILabel!
     @IBOutlet weak var ratingCell: UILabel!
     @IBOutlet weak var cuisineCell: UILabel!

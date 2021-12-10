@@ -25,9 +25,10 @@ class ViewController: UIViewController {
      var offerSelected = ""
     var DeliveryPriceSelected = ""
     var minimumSelected = ""
-    var menuSelected : [Menu] = []
-    var logoSelected = UIImage(named: "herfyLogo")
-    var imageSelected = UIImage(named: "herfyLogo")
+    //var menuSelected : [Menu] = []
+    var menuSelected : Int = Int()
+    var logoSelected : UIImage = UIImage()
+    var imageSelected : UIImage = UIImage()
    // resturantsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300))
     var index = 0
     override func viewDidLoad() {
@@ -144,8 +145,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         tableView.backgroundColor = .systemGray6
 
         cell.nameCell.text = resturantNameStruct[indexPath.row].name
-        cell.minDeliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)
-        cell.maxDeliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.max)
+        cell.deliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)+" - "+String(resturantNameStruct[indexPath.row].delivery.time.max)
         cell.ratingCell.text = String(resturantNameStruct[indexPath.row].rating)
         cell.cuisineCell.text = resturantNameStruct[indexPath.row].category
 //        is_promoted.
@@ -228,18 +228,48 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         cell.layer.mask = maskLayer
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let arrPath = resturants[indexPath.row]
-//        nameSelected = arrPath.name
-//        deliveryTimeSelected = arrPath.deliveryTime
-//        ratingSelected = arrPath.rating
-//        cuisineSelected = arrPath.cuisine
-//        offerSelected = arrPath.theOffer
-//        logoSelected = arrPath.logo
-//        imageSelected = arrPath.image
-//        menuSelected = arrPath.menu
-//        DeliveryPriceSelected = arrPath.deliveryPrice
-//        minimumSelected = arrPath.minimum
-//        performSegue(withIdentifier: "toRestrunt", sender: indexPath)
+        let arrPath = resturantNameStruct[indexPath.row]
+        nameSelected = arrPath.name
+        deliveryTimeSelected = String(arrPath.delivery.time.min)+" - "+String(arrPath.delivery.time.max)
+
+        ratingSelected = String(arrPath.rating)
+        cuisineSelected = arrPath.category
+        if let offer = resturantNameStruct[indexPath.row].offer{
+            offerSelected = "\(offer.value) (Spend \(offer.spend))"
+            
+        }
+        let urlImageLogo = URL(string:resturantNameStruct[indexPath.row].resturant_image)
+        if let urlImage = urlImageLogo {
+          DispatchQueue.global().async {
+             
+              if let data = try? Data(contentsOf: urlImage){
+              DispatchQueue.main.async {
+
+                if tableView.cellForRow(at: indexPath) != nil {
+                    self.logoSelected = UIImage(data: data)!
+               }
+              }
+            }
+          }
+        }
+        let urlImage = URL(string:resturantNameStruct[indexPath.row].image)
+        if let urlImage = urlImage {
+          DispatchQueue.global().async {
+             
+              if let data = try? Data(contentsOf: urlImage){
+              DispatchQueue.main.async {
+
+                if tableView.cellForRow(at: indexPath) != nil {
+                    self.imageSelected = UIImage(data: data)!
+               }
+              }
+            }
+          }
+        }
+       menuSelected = arrPath.id
+        DeliveryPriceSelected = String(arrPath.delivery.cost.value)+" "+arrPath.delivery.cost.currency
+        minimumSelected = String(arrPath.delivery.cost.value)+" "+arrPath.delivery.cost.currency
+        performSegue(withIdentifier: "toRestrunt", sender: indexPath)
     }
     
     

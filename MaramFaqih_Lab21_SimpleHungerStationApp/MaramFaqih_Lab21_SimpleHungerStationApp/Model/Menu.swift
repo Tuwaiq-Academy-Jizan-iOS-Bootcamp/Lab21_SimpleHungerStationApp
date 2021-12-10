@@ -7,9 +7,26 @@
 
 import Foundation
 import UIKit
- struct Menu{
-    var mealName : String
-    var mealImage : UIImage
-    var mealPrice : String
-    
+// struct Menu{
+//    var mealName : String
+//    var mealImage : UIImage
+//    var mealPrice : String
+//
+//}
+struct MenuResturant:Codable{
+     var menu : [Menu]
+ 
+}
+struct Menu:Codable{
+    var id : Int
+    var title : String
+    var subtitle : String?
+    var calories : Int?
+    var price : Price
+    var image : String
+   
+}
+struct Price:Codable{
+    var value : Int
+    var currency : String
 }
