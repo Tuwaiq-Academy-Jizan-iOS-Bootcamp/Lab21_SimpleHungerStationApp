@@ -7,15 +7,20 @@
 
 import UIKit
 class ResturntCell : UITableViewCell{
-    @IBOutlet weak var nameCell: UILabel!
-    @IBOutlet weak var deliveryTimeCell: UILabel!
     
+    @IBOutlet weak var viewOffer: UIView!
+    @IBOutlet weak var nameCell: UILabel!
+    @IBOutlet weak var maxDeliveryTimeCell: UILabel!
+    
+    @IBOutlet weak var currencyCell: UILabel!
+    @IBOutlet weak var minDeliveryTimeCell: UILabel!
+  //  @IBOutlet weak var offerSpendCell: UILabel!
     @IBOutlet weak var ratingCell: UILabel!
     @IBOutlet weak var cuisineCell: UILabel!
     @IBOutlet weak var logoCell: UIImageView!
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var offerCell: UILabel!
-    
+    @IBOutlet weak var isPromotedCell : UILabel!
  
     @IBOutlet weak var deliveryPriceCell: UILabel!
     

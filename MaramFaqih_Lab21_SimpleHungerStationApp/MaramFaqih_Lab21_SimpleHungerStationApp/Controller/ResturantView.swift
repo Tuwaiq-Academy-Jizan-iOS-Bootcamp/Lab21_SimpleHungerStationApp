@@ -59,8 +59,9 @@ class ResturantView: UIViewController {
         //print(menuSelectedT)
         menuTibleView.delegate =  self
         menuTibleView.dataSource = self
+      
     }
-    
+
     
 
     /*
