@@ -54,17 +54,22 @@
 //            i = 0 }
 //    View1.image = UIImage(named: resturant[i])
 //        }
+
+
+
+//hunger api
+
 struct HungerStationAPI:Codable{
-    var data:[Data]
+    var data:[DataAPI]
 }
-struct Data:Codable{
+struct DataAPI:Codable{
     var id:Int
     var name:String
     var category:String
     var delivery:Delivery
     var rating:Float
     var is_promoted:Bool
-    var offer:Offer
+    var offer:Offer?
     var image:String
     var resturant_image:String
 }
@@ -77,10 +82,31 @@ struct Time:Codable{
     var max:Int
 }
 struct Cost:Codable{
-    var value:Int
+    var value:Double
     var currency:String
 }
 struct Offer:Codable{
     var value:String
     var spend:Int
+}
+
+
+
+
+
+//menu api
+struct MenuData:Codable{
+    var menu:[Menu]
+}
+struct Menu:Codable{
+    var id:Int
+    var title:String
+    var subtitle:String?
+  //  var calories:String?
+    var price:Price
+    var image:String
+}
+struct Price:Codable{
+    var value:Int
+    var currency:String
 }
