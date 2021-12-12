@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var resturantsTableView: UITableView!
     @IBOutlet weak var headerImageView: UIImageView!
     var headers : [String] = []
-    var resturantNameStruct : [Dataa] = []
+    var resturantNameStruct : [DataSet] = []
+    var resturantNameSelected : [DataSet] = []
+
     //var resturantNameStruct : Restaurant = [Any]
 
      var nameSelected = ""
@@ -27,8 +29,13 @@ class ViewController: UIViewController {
     var minimumSelected = ""
     //var menuSelected : [Menu] = []
     var menuSelected : Int = Int()
-    var logoSelected : UIImage = UIImage()
-    var imageSelected : UIImage = UIImage()
+    
+//    var logoSelected : UIImage = UIImage()
+//    var imageSelected : UIImage = UIImage()
+//
+    
+    var logoSelected = ""
+    var imageSelected = ""
    // resturantsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300))
     var index = 0
     override func viewDidLoad() {
@@ -41,10 +48,7 @@ class ViewController: UIViewController {
         resturantsTableView.delegate = self
         resturantsTableView.dataSource = self
         headers = ["h1","h2","h3","h4"]
-//        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, deliveryPrice: "5", minimum: "35", menu: [Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Combo Regular Musahab Large Size", mealImage:  UIImage(named: "herfyMeal1")!, mealPrice: "23"),Menu(mealName: "Musahab Large Size", mealImage:  UIImage(named: "herfyMeal2")!, mealPrice: "20")]))
-//        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, deliveryPrice: "7", minimum: "60", menu: [Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
-//        resturants.append(Resturant(name: "Herfy", logo: UIImage(named: "herfyLogo")!, image:UIImage(named: "herfyImage")!, cuisine: "Fast Food", deliveryTime: "40-50", rating: "3.8", theOffer: "50.0% Off Your Order (Spend 35 SAR)", trackingStatus: true, deliveryPrice: "10", minimum: "99", menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
-//        resturants.append(Resturant(name: "applebee's", logo: UIImage(named: "applebee'sLogo")!, image:UIImage(named: "applebee'sImage")!, cuisine: "American Food", deliveryTime: "45-55", rating: "3.9", theOffer: "5 SAR Delivery(Spend 35 SAR)", trackingStatus: true, deliveryPrice: "3", minimum: "50", menu:[ Menu(mealName: "M", mealImage:  UIImage(named: "herfyImage")!, mealPrice: "23")]))
+
         getaData(with:"restaurants")
     }
     func getaData(with endPoint:String){
@@ -62,9 +66,9 @@ class ViewController: UIViewController {
                            let decoder = JSONDecoder()
                           
                            let decoderData = try decoder.decode(Restaurant.self, from: safeData)
-                        self.resturantNameStruct  = decoderData.data
                         DispatchQueue.main.async {
-                      
+                            self.resturantNameStruct  = decoderData.data
+
                       //  self.resturantNameStruct  = decoderData
                        print("decoderData:",decoderData)
                         
@@ -124,6 +128,7 @@ class ViewController: UIViewController {
             destintionToDetails.menuSelectedT =  menuSelected
             destintionToDetails.DeliveryPriceSelectedT = DeliveryPriceSelected
             destintionToDetails.minimumSelectedT = minimumSelected
+            destintionToDetails.resturantNameSelectedT = resturantNameSelected
 
         }
     @IBAction func backToFrist(segue:UIStoryboardSegue){
@@ -145,7 +150,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         tableView.backgroundColor = .systemGray6
 
         cell.nameCell.text = resturantNameStruct[indexPath.row].name
-        cell.deliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)+" - "+String(resturantNameStruct[indexPath.row].delivery.time.max)
+        cell.deliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)+" - "+String(resturantNameStruct[indexPath.row].delivery.time.max)+" minutes"
         cell.ratingCell.text = String(resturantNameStruct[indexPath.row].rating)
         cell.cuisineCell.text = resturantNameStruct[indexPath.row].category
 //        is_promoted.
@@ -167,6 +172,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
             cell.viewOffer.isHidden = true
 
         }
+  
             let urlImage = URL(string:resturantNameStruct[indexPath.row].image)
             if let urlImage = urlImage {
               DispatchQueue.global().async {
@@ -184,7 +190,6 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         let urlImageLogo = URL(string:resturantNameStruct[indexPath.row].resturant_image)
         if let urlImage = urlImageLogo {
           DispatchQueue.global().async {
-              //[weak self] in as! Decoderfrom
               if let data = try? Data(contentsOf: urlImage){
               DispatchQueue.main.async {
 
@@ -202,7 +207,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //
         cell.deliveryPriceCell.text = String(resturantNameStruct[indexPath.row].delivery.cost.value)
         cell.currencyCell.text = resturantNameStruct[indexPath.row].delivery.cost.currency
-       
+//
         return cell
       
     }
@@ -210,7 +215,9 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         return 250
         
     }
-    
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 100.0
+//    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = .systemGray6
@@ -224,13 +231,13 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         let maskLayer = CALayer()
         maskLayer.cornerRadius = 20
         maskLayer.backgroundColor = UIColor.black.cgColor
-        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 10 , dy: verticalPadding/2)
         cell.layer.mask = maskLayer
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let arrPath = resturantNameStruct[indexPath.row]
         nameSelected = arrPath.name
-        deliveryTimeSelected = String(arrPath.delivery.time.min)+" - "+String(arrPath.delivery.time.max)
+        deliveryTimeSelected = String(arrPath.delivery.time.min)+" - "+String(arrPath.delivery.time.max)+" minutes"
 
         ratingSelected = String(arrPath.rating)
         cuisineSelected = arrPath.category
@@ -238,39 +245,43 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
             offerSelected = "\(offer.value) (Spend \(offer.spend))"
             
         }
-        let urlImageLogo = URL(string:resturantNameStruct[indexPath.row].resturant_image)
-        if let urlImage = urlImageLogo {
-          DispatchQueue.global().async {
-             
-              if let data = try? Data(contentsOf: urlImage){
-              DispatchQueue.main.async {
-
-                if tableView.cellForRow(at: indexPath) != nil {
-                    self.logoSelected = UIImage(data: data)!
-               }
-              }
-            }
-          }
-        }
-        let urlImage = URL(string:resturantNameStruct[indexPath.row].image)
-        if let urlImage = urlImage {
-          DispatchQueue.global().async {
-             
-              if let data = try? Data(contentsOf: urlImage){
-              DispatchQueue.main.async {
-
-                if tableView.cellForRow(at: indexPath) != nil {
-                    self.imageSelected = UIImage(data: data)!
-               }
-              }
-            }
-          }
-        }
+        imageSelected = arrPath.image
+        logoSelected = arrPath.resturant_image
+//        let urlImageLogo = URL(string:resturantNameStruct[indexPath.row].resturant_image)
+//        if let urlImage = urlImageLogo {
+//          DispatchQueue.global().async {
+//
+//              if let data = try? Data(contentsOf: urlImage){
+//              DispatchQueue.main.async {
+//
+//                if tableView.cellForRow(at: indexPath) != nil {
+//                    self.logoSelected = UIImage(data: data)!
+//               }
+//              }
+//            }
+//          }
+//        }
+//        let urlImage = URL(string:resturantNameStruct[indexPath.row].image)
+//        if let urlImage = urlImage {
+//          DispatchQueue.global().async {
+//
+//              if let data = try? Data(contentsOf: urlImage){
+//              DispatchQueue.main.async {
+//
+//                if tableView.cellForRow(at: indexPath) != nil {
+//                    self.imageSelected = UIImage(data: data)!
+//               }
+//              }
+//            }
+//          }
+//        }
+        //resturantNameSelected = [resturantNameStruct[indexPath.row]]
        menuSelected = arrPath.id
         DeliveryPriceSelected = String(arrPath.delivery.cost.value)+" "+arrPath.delivery.cost.currency
         minimumSelected = String(arrPath.delivery.cost.value)+" "+arrPath.delivery.cost.currency
         performSegue(withIdentifier: "toRestrunt", sender: indexPath)
     }
-    
-    
+
 }
+    
+

@@ -26,7 +26,7 @@ class ResturantView: UIViewController {
     @IBOutlet weak var resturantName: UILabel!
     
     @IBOutlet weak var resturantDeliveryPrice: UILabel!
-    
+    var resturantNameSelectedT : [DataSet] = []
     var nameSelectedT = ""
     var deliveryTimeSelectedT = ""
     var ratingSelectedT = ""
@@ -36,8 +36,8 @@ class ResturantView: UIViewController {
     var DeliveryPriceSelectedT = ""
     var minimumSelectedT = ""
     var menuSelectedT :Int = Int()
-    var logoSelectedT:UIImage = UIImage()
-    var imageSelectedT:UIImage = UIImage()
+    var logoSelectedT = ""
+    var imageSelectedT = ""
     var menuResturant : [Menu] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,15 +53,63 @@ class ResturantView: UIViewController {
        resturantCuisine.text =  cuisineSelectedT
        resturantOffer.text =  offerSelectedT
         resturantDeliveryPrice.text =  DeliveryPriceSelectedT
-         resturantLogo.image =  logoSelectedT
-        resturantImage.image =  imageSelectedT
+        resturantLogo.image = nil
+//           resturantLogo.image =  logoSelectedT
+        resturantImage.image = nil
+        
+//           resturantImage.image =  imageSelectedT
+        let urlImageLogo = URL(string:logoSelectedT)
+               if let urlImage = urlImageLogo {
+                 DispatchQueue.global().async {
+       
+                     if let data = try? Data(contentsOf: urlImage){
+                     DispatchQueue.main.async {
+       
+                         self.resturantLogo.image = UIImage(data: data)!
+                      }
+                     }
+                   }
+                 }
+               
+               let urlImage = URL(string: imageSelectedT)
+               if let urlImage = urlImage {
+                 DispatchQueue.global().async {
+       
+                     if let data = try? Data(contentsOf: urlImage){
+                     DispatchQueue.main.async {
+                         self.resturantImage.image = UIImage(data: data)!
+                      }
+                     }
+                   }
+                 }
+               
+        
         resturantMinimum.text = minimumSelectedT
         //print(menuSelectedT)
         menuTibleView.delegate =  self
         menuTibleView.dataSource = self
         getaData(with: String(menuSelectedT))
+//        let urlImage = URL(string:resturantNameSelected.image)
+//        if let urlImage = urlImage {
+//          DispatchQueue.global().async {
+//
+//              if let data = try? Data(contentsOf: urlImage){
+//              DispatchQueue.main.async {
+//
+//
+//                    self.resturantImage = UIImage(data: data)!
+//
+//              }
+//            }
+//          }
+//        }
       
     }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        resturantImage.image =  imageSelectedT
+//
+//    }
     func getaData(with endPoint:String){
         
         let baseURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants/\(endPoint)"

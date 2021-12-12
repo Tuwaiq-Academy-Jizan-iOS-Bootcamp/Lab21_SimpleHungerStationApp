@@ -24,10 +24,10 @@
 
 import Foundation
 struct Restaurant : Codable{
-   var data :[Dataa]
+   var data :[DataSet]
 }
 
-struct Dataa : Codable {
+struct DataSet : Codable {
     var id : Int
     var name : String
     var category : String

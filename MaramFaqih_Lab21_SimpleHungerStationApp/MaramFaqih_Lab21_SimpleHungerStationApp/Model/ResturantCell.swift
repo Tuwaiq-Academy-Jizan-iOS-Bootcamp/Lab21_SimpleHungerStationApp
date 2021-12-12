@@ -30,6 +30,8 @@ class ResturntCell : UITableViewCell{
         logoCell.layer.cornerRadius = 0.2 *  logoCell.bounds.size.height
 
         logoCell.layer.masksToBounds = true
+        logoCell.image = nil
+        imageCell.image = nil
     }
     //nameCell.text = resturants[indexPath.row].name
   
