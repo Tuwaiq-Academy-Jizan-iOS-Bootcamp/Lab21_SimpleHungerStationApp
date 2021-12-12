@@ -28,7 +28,8 @@ class ViewController: UIViewController {
         sendMune.menu = menuSander
         sendMune.imageOfresturant = imageOfmeal
     }
-    
+    @IBAction func unwind(segue:UIStoryboardSegue) {
+    }
 
 }
 
@@ -66,5 +67,5 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         imageOfmeal = restaurants[indexPath.row].mealImage
         performSegue(withIdentifier: "toMenu", sender: self)
     }
-    
+  
 }

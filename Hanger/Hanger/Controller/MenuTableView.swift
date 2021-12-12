@@ -24,6 +24,8 @@ class MenuTableView: UIViewController {
         generalImage.image = imageOfresturant
     }
     
+    
+    
 }
 extension MenuTableView : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +40,7 @@ extension MenuTableView : UITableViewDelegate, UITableViewDataSource {
         let imageSize = CGSize(width: 90, height: 90)
         content.image = menu[indexPath.row].mealImages
         content.imageProperties.maximumSize = imageSize
-        content.imageProperties.cornerRadius = .infinity
+        content.imageProperties.cornerRadius = .nan
         content.secondaryText = "\(menu[indexPath.row].PriceOfMeal) SRA "
         
         
