@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     //var menuSelected : [Menu] = []
     var menuSelected : Int = Int()
     
+    
+    
 //    var logoSelected : UIImage = UIImage()
 //    var imageSelected : UIImage = UIImage()
 //
@@ -207,7 +209,22 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //
         cell.deliveryPriceCell.text = String(resturantNameStruct[indexPath.row].delivery.cost.value)
         cell.currencyCell.text = resturantNameStruct[indexPath.row].delivery.cost.currency
-//
+        
+        //let widthLabel = cell.offerCell.sizeToFit()
+        cell.cuisineCell.sizeToFit()
+        cell.offerCell.sizeToFit()
+        //Path part
+        let path = UIBezierPath()
+        path.move(to: .zero) //StartPoint frame.size
+        path.addLine(to: CGPoint(x: cell.offerCell.bounds.size.width+25, y: 0))
+        path.addLine(to: CGPoint(x: cell.offerCell.bounds.size.width+15, y: 27))
+        path.addLine(to: CGPoint(x: 0, y: 27))
+       
+        let shape = CAShapeLayer()
+        shape.path = path.cgPath
+        //cell.offerCell.sizeToFit()
+        cell.viewOffer.layer.mask=shape
+        //cell.viewOffer.sizeToFit()
         return cell
       
     }
@@ -233,6 +250,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 10 , dy: verticalPadding/2)
         cell.layer.mask = maskLayer
+      //  cell.UITableView.dropShadow()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let arrPath = resturantNameStruct[indexPath.row]
@@ -284,4 +302,33 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 
 }
     
+
+//extension UIView {
+//    func dropShadow(scale: Bool = true) {
+//        layer.masksToBounds = false
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOpacity = 0.2
+//        layer.shadowOffset = .zero
+//        layer.shadowRadius = 1
+//        layer.shouldRasterize = true
+//        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+//    }
+//}
+//class ShadowView: UIView {
+//    override var bounds: CGRect {
+//        didSet {
+//            setupShadow()
+//        }
+//    }
+//
+//    private func setupShadow() {
+//        self.layer.cornerRadius = 8
+//        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        self.layer.shadowRadius = 3
+//        self.layer.shadowOpacity = 0.3
+//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+//        self.layer.shouldRasterize = true
+//        self.layer.rasterizationScale = UIScreen.main.scale
+//    }
+//}
 

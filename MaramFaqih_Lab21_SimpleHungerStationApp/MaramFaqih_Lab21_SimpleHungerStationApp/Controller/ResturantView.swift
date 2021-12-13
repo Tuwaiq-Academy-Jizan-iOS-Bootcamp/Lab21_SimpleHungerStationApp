@@ -14,6 +14,7 @@ class ResturantView: UIViewController {
     
     @IBOutlet weak var resturantDeliveryTime: UILabel!
     
+    @IBOutlet weak var viewInfoAboutResturantTwo: UIView!
     @IBOutlet weak var viewInfoAboutResturant: UIView!
     
     @IBOutlet weak var resturantOffer: UILabel!
@@ -30,7 +31,9 @@ class ResturantView: UIViewController {
     var nameSelectedT = ""
     var deliveryTimeSelectedT = ""
     var ratingSelectedT = ""
-   
+    var preSetOfState : CGFloat = 0
+    var preSetOfStateImage : CGFloat = 0
+    @IBOutlet weak var viewForOffer: UIView!
     var cuisineSelectedT = ""
     var offerSelectedT = ""
     var DeliveryPriceSelectedT = ""
@@ -39,12 +42,29 @@ class ResturantView: UIViewController {
     var logoSelectedT = ""
     var imageSelectedT = ""
     var menuResturant : [Menu] = []
+    @IBOutlet weak var hidViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var setViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hidImageConstraint: NSLayoutConstraint!
+    var  preHeightView : CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewInfoAboutResturant.layer.cornerRadius = 0.1 *  viewInfoAboutResturant.bounds.size.height
-
+        preHeightView = viewInfoAboutResturantTwo.bounds.size.height
+//        viewInfoAboutResturant.layer.shadowColor = UIColor.black.cgColor
+//        viewInfoAboutResturant.layer.shadowOffset = CGSize(width: 3, height: 3)
+//        viewInfoAboutResturant.layer.shadowOpacity = 0.7
+//        viewInfoAboutResturant.layer.shadowRadius = 4.0
+//
+//
+        viewForOffer.layer.cornerRadius = 5
+        viewInfoAboutResturantTwo.layer.cornerRadius = 8
+        viewInfoAboutResturant.layer.cornerRadius = 8
+        
+ //       viewInfoAboutResturant.dropShadow()
+//        viewInfoAboutResturant.addShadow(offset: CGSize.init(width: 10, height: 10), color: UIColor.black, radius: 5, opacity: 0.7)
+        viewInfoAboutResturantTwo.layer.masksToBounds = true
         viewInfoAboutResturant.layer.masksToBounds = true
-
+        viewForOffer.layer.masksToBounds = true
         // Do any additional setup after loading the view.
         
         resturantName.text =  nameSelectedT
@@ -193,7 +213,119 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
         return 100
         
     }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView.contentOffset.y > (20){
+//            hidViewConstraint.constant = 0
+//
+//        }
+//print("scs: \(scrollView.contentOffset.y)" )
+        //viewInfoAboutResturant.bounds.height
+        //if scrollView.contentOffset.y < viewInfoAboutResturant.bounds.size.height + 20 {
+       // let point = subview1.convert(subview2.frame.origin, to: viewControll.view)
+       // let point = ResturantView.convert(viewInfoAboutResturant.frame.origin, to: ResturantView.view)
+        
+//        var ofStet = preSetOfState - scrollView.contentOffset.y
+//        var constHeight = hidViewConstraint.constant + ofStet
+//        hidViewConstraint.constant = constHeight
+        
+        if   scrollView.contentOffset.y>0 {
+            if viewInfoAboutResturantTwo.bounds.size.height > viewInfoAboutResturant.bounds.size.height * 1.1{
+               let ofStet = preSetOfState - scrollView.contentOffset.y
+                   let  constHeight = hidViewConstraint.constant + ofStet
+                    hidViewConstraint.constant = constHeight
+            
+           print("ssss:\(scrollView.contentOffset.y)")
+        let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
+       // preSetOfStateImage = scrollView.contentOffset.y
+        let constHeightImage = hidImageConstraint.constant + ofStetImage
+        hidImageConstraint.constant = constHeightImage
+            }
+        }
+        else {
+            if viewInfoAboutResturantTwo.bounds.size.height <= preHeightView {
+            let ofStet = preSetOfState - scrollView.contentOffset.y
+                let  constHeight = hidViewConstraint.constant + ofStet
+                 hidViewConstraint.constant = constHeight
+
+        print("ssss:\(scrollView.contentOffset.y)")
+     let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
+     let constHeightImage = hidImageConstraint.constant + ofStetImage
+            hidImageConstraint.constant = constHeightImage
+            }
+        }
+        //preSetOfState = scrollView.contentOffset.y
+        
+       // let newConstant = hidViewConstraint.constant
+//        else {
+//            let ofStet = preSetOfState + scrollView.contentOffset.y
+//                let  constHeight = hidViewConstraint.constant - ofStet
+//                 hidViewConstraint.constant = constHeight
+//
+//        print("ssss:\(scrollView.contentOffset.y)")
+//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
+//    // preSetOfStateImage = scrollView.contentOffset.y
+//     let constHeightImage = hidImageConstraint.constant - ofStetImage
+//     hidImageConstraint.constant = constHeightImage
+//
+//
+//        }
+//        if hidViewConstraint.constant > setViewConstraint.constant {
+//
+//            let ofStet = preSetOfState + scrollView.contentOffset.y
+//                // preSetOfState = scrollView.contentOffset.y
+//                 let constHeight = hidViewConstraint.constant - ofStet
+//                 hidViewConstraint.constant = constHeight
+//print("ssss:\(scrollView.contentOffset.y)")
+//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
+//    // preSetOfStateImage = scrollView.contentOffset.y
+//     let constHeightImage = hidImageConstraint.constant - ofStetImage
+//     hidImageConstraint.constant = constHeightImage
+//        }
+//        }else if scrollView.contentOffset.y < ( 0.33333333333333337){
+//            let ofStet = preSetOfState + scrollView.contentOffset.y
+//                // preSetOfState = scrollView.contentOffset.y
+//                 let constHeight = hidViewConstraint.constant - ofStet
+//                 hidViewConstraint.constant = constHeight
+//print("ssss:\(scrollView.contentOffset.y)")
+//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
+//    // preSetOfStateImage = scrollView.contentOffset.y
+//     let constHeightImage = hidImageConstraint.constant - ofStetImage
+//     hidImageConstraint.constant = constHeightImage
+//        }
+//        else{
+//
+//
+//        }
+    }
+    //hidImageConstraint
     
      
     
 }
+//extension UIView {
+//
+//    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
+//        layer.masksToBounds = false
+//        layer.shadowOffset = offset
+//        layer.shadowColor = color.cgColor
+//        layer.shadowRadius = radius
+//        layer.shadowOpacity = opacity
+//
+//        let backgroundCGColor = backgroundColor?.cgColor
+//        backgroundColor = nil
+//        layer.backgroundColor =  backgroundCGColor
+//    }
+//}
+//extension UIView {
+//    func dropShadow(scale: Bool = true) {
+//        layer.masksToBounds = false
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOpacity = 0.2
+//        layer.shadowOffset = .zero
+//        layer.shadowRadius = 1
+//        layer.shouldRasterize = true
+//        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+//    }
+//}
+
+
