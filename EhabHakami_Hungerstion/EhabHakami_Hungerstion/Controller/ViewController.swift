@@ -18,20 +18,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
-//    var apple = DeliveryFood(nameRestaurant: "apple bees", typeOfFood: "Grills,American", photoFoods: UIImage(named: "chiesceac")!, restaurantBrandImage: UIImage(named: "applebees")!, estimatedTimeOfArrival: "45 - 55 minutes", rateTheFood: 3.5, deliveryOffers: "10real delivery Offers")
-//
-//    var appleBees2 = DeliveryFood(nameRestaurant: "apple bees", typeOfFood: "Grills,American", photoFoods: UIImage(named: "appleBees2")!, restaurantBrandImage: UIImage(named: "applebees")!, estimatedTimeOfArrival: "45 - 55 minutes", rateTheFood: 4.5, deliveryOffers: "5real delivery Offers")
-//
-//
-//    var herfeBurger1 = DeliveryFood(nameRestaurant: "Herfe", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "bifwithChies")!, restaurantBrandImage: UIImage(named: "herfeEmplem")!, estimatedTimeOfArrival: "30 - 40 minutes", rateTheFood: 4.4, deliveryOffers: "10real delivery Offers")
-//
-//    var herfeBurger2 = DeliveryFood(nameRestaurant: "Herfe", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "superHerve")!, restaurantBrandImage: UIImage(named: "herfeEmplem")!, estimatedTimeOfArrival: "30 - 40 minutes", rateTheFood: 3.4, deliveryOffers: "10real delivery Offers")
-//
-//    var macdonlds1 = DeliveryFood(nameRestaurant: "macdonlds", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "grandchaken")!, restaurantBrandImage: UIImage(named: "emplemmack")!, estimatedTimeOfArrival: "20 - 30 minutes", rateTheFood: 3.8, deliveryOffers: "Free delivery Offers")
-//
-//    var macdonlds2 = DeliveryFood(nameRestaurant: "macdonlds", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "macChiken2")!, restaurantBrandImage: UIImage(named: "emplemmack")!, estimatedTimeOfArrival: "20 - 30 minutes", rateTheFood: 3.8, deliveryOffers: "Free delivery Offers")
-    
-    //var myarray = [DeliveryFood]()
     var apples = [DeliveryFood]()
     
     var appleBeesChies = [DeliveryFood]()
@@ -82,13 +68,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // add cell
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomViewCell
         
         cell.photoFoodsImageView.image = newArray[indexPath.row].photoFoods
-        //cell.detilesRestaurantBrand = newArray[indexPath.row].restaurantBrandImage
+        
         cell.nameRestaurantLabel.text = newArray[indexPath.row].nameRestaurant
-       // cell.detilesNameRestaurantLabel.text = myarrays[indexPath.row].nameRestaurant
+       
         cell.restaurantBrandImageView.image = newArray[indexPath.row].restaurantBrandImage
         
         cell.typeOfFoodLabel.text = newArray[indexPath.row].typeOfFood
@@ -122,15 +108,37 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
            return 233
     }
     
-    
-   
-    
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 3
-//    }
 }
         
+
+
+
+
+
+
+
+
+
+//    var apple = DeliveryFood(nameRestaurant: "apple bees", typeOfFood: "Grills,American", photoFoods: UIImage(named: "chiesceac")!, restaurantBrandImage: UIImage(named: "applebees")!, estimatedTimeOfArrival: "45 - 55 minutes", rateTheFood: 3.5, deliveryOffers: "10real delivery Offers")
+//
+//    var appleBees2 = DeliveryFood(nameRestaurant: "apple bees", typeOfFood: "Grills,American", photoFoods: UIImage(named: "appleBees2")!, restaurantBrandImage: UIImage(named: "applebees")!, estimatedTimeOfArrival: "45 - 55 minutes", rateTheFood: 4.5, deliveryOffers: "5real delivery Offers")
+//
+//
+//    var herfeBurger1 = DeliveryFood(nameRestaurant: "Herfe", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "bifwithChies")!, restaurantBrandImage: UIImage(named: "herfeEmplem")!, estimatedTimeOfArrival: "30 - 40 minutes", rateTheFood: 4.4, deliveryOffers: "10real delivery Offers")
+//
+//    var herfeBurger2 = DeliveryFood(nameRestaurant: "Herfe", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "superHerve")!, restaurantBrandImage: UIImage(named: "herfeEmplem")!, estimatedTimeOfArrival: "30 - 40 minutes", rateTheFood: 3.4, deliveryOffers: "10real delivery Offers")
+//
+//    var macdonlds1 = DeliveryFood(nameRestaurant: "macdonlds", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "grandchaken")!, restaurantBrandImage: UIImage(named: "emplemmack")!, estimatedTimeOfArrival: "20 - 30 minutes", rateTheFood: 3.8, deliveryOffers: "Free delivery Offers")
+//
+//    var macdonlds2 = DeliveryFood(nameRestaurant: "macdonlds", typeOfFood: "Fast,Food", photoFoods: UIImage(named: "macChiken2")!, restaurantBrandImage: UIImage(named: "emplemmack")!, estimatedTimeOfArrival: "20 - 30 minutes", rateTheFood: 3.8, deliveryOffers: "Free delivery Offers")
+    
+    //var myarray = [DeliveryFood]()
+
+
+
+
+
+
 //        var content = cell.defaultContentConfiguration()
 //
 //        cell.accessoryType = .disclosureIndicator // button
@@ -224,17 +232,17 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 //
 //
 //
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-           let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        view.backgroundColor =  UIColor(red: 1, green: 1, blue: 0,alpha: 1)
-
-           let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 30))
-
-           lbl.font = UIFont.systemFont(ofSize: 20)
-        lbl.text = "heloo"
-           view.addSubview(lbl)
-           return view
-         }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//           let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+//        view.backgroundColor =  UIColor(red: 1, green: 1, blue: 0,alpha: 1)
+//
+//           let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 30))
+//
+//           lbl.font = UIFont.systemFont(ofSize: 20)
+//        lbl.text = "heloo"
+//           view.addSubview(lbl)
+//           return view
+//         }
 //
 //
 //    // print power then last Sections
@@ -251,13 +259,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 ////           return 65
 ////    }
 ////
-   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          return 65
-   }
+
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 3
+//    }
+
+
+//func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//          return 65
+//   }
 //
 //
-//    // add 3 Sections
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
-    }
-//}
+////    // add 3 Sections
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 3
+//    }

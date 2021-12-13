@@ -11,12 +11,19 @@ class DetilesViewController: UIViewController {
     var detilesArray = DeliveryFood.restaurant[0].menuRestaurant
     
     
+    @IBOutlet weak var restrantImageInView: UIImageView!
+    
+    
+    
+    
     
     @IBOutlet weak var detilesMyTableView: UITableView!
     var tableViewDitels = UITableView()
     
     @IBOutlet weak var detilesFoodImageView: UIImageView!
     var imageOfView = UIImage(named: "")
+    
+    
     
     
     override func viewDidLoad() {
@@ -64,22 +71,9 @@ extension DetilesViewController:UITableViewDelegate,UITableViewDataSource{
         
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
-        view.backgroundColor = .systemPink
-        let label = UILabel(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width, height: 40))
-//        let image = UIImage(
-//        label.image = detilesArray[section.raw].photoFood
-        
-        
-        label.textColor = .white
-//        label.textAlignment = .center
-        view.addSubview(label)
-        return view
-    }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 40
+//    }
     
 }
