@@ -30,6 +30,8 @@ class ViewControllerFormanue:UIViewController {
     var deviver = ""
     @IBOutlet weak var offer: UILabel!
     var offerData = ""
+    @IBOutlet weak var promtedForOfferLabel: UIImageView!
+    @IBOutlet weak var holderView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOFMune.delegate = self
@@ -45,7 +47,14 @@ class ViewControllerFormanue:UIViewController {
         offer.text = offerData
         if offerData == "no offer" {
             offer.removeFromSuperview()
+            promtedForOfferLabel.removeFromSuperview()
         }
+        // shadow for view
+        holderView.layer.shadowColor = UIColor.black.cgColor
+        holderView.layer.shadowOpacity = 1
+        holderView.layer.shadowOffset = .zero
+        holderView.layer.shadowRadius = 30
+        
         // label edges
         offer.layer.masksToBounds = true
         offer.layer.cornerRadius = 7
@@ -92,7 +101,6 @@ class ViewControllerFormanue:UIViewController {
                             
                             DispatchQueue.main.sync {
                                 self.tableViewOFMune.reloadData()
-                                
                             }
                         }catch {
                             print("Somthing Wrongs In the JSON Struct", error.localizedDescription)
@@ -136,11 +144,11 @@ extension ViewControllerFormanue:UITableViewDataSource, UITableViewDelegate {
                         
                         
                         
+                        }
                     }
                 }
+                
             }
-            
-        }
         
         
         return cell

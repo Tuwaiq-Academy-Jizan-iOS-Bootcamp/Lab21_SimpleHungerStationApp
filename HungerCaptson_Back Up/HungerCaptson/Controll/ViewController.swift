@@ -95,15 +95,16 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell.eveloutionStar.text = "\(hungerstaionArray[indexPath.row].rating)"
         cell.delviryTime.text = "\(hungerstaionArray[indexPath.row].delivery.time.min) " + "- \(hungerstaionArray[indexPath.row].delivery.time.max) minutes"
         cell.delviryCost.text = "Delivery: \(hungerstaionArray[indexPath.row].delivery.cost.value)" + "\(hungerstaionArray[indexPath.row].delivery.cost.currency)"
-        
+        if hungerstaionArray[indexPath.row].is_promoted == false{
+            cell.promtoed?.removeFromSuperview()
+        }
         
         if hungerstaionArray[indexPath.row].offer != nil {
             let value = hungerstaionArray[indexPath.row].offer?.value
             let spend = hungerstaionArray[indexPath.row].offer?.spend
             
-            cell.offer.text = value! + " (spend \(spend!) SAR)"
+            cell.offer.text = "   " + value! + " (spend \(spend!) SAR)"
         } else {
-            cell.promtoed?.removeFromSuperview()
             cell.offer?.removeFromSuperview()
         }
         
@@ -153,7 +154,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
                     let value = hungerstaionArray[indexPath.row].offer?.value
                     let spend = hungerstaionArray[indexPath.row].offer?.spend
                     
-                    offerOfresturant = value! + " (spend \(spend!) SAR)"
+                    offerOfresturant = "        " + value! + " (spend \(spend!) SAR)"
                 }else {
                     offerOfresturant = "no offer"
                 }
