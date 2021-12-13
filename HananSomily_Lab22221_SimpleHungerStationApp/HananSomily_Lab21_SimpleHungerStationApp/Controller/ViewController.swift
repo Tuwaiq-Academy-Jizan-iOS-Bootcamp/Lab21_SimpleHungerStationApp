@@ -7,7 +7,27 @@
 
 import UIKit
 import Foundation
+//class PlaceholderCell: UITableViewCell {
+//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//        backgroundColor = .white
+//        selectionStyle = .none
+//
+//        layer.shadowColor = UIColor.black.cgColor
+//        layer.shadowOffset = CGSize(width: 0, height: 10)
+//        layer.shadowRadius = 10.0
+//        layer.shadowOpacity = 0.5
+//        layer.masksToBounds = false
+//        clipsToBounds = false
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//    }
+//}
+
 class ViewController: UIViewController {
+   
  
     @IBOutlet weak var collectonImageView: UICollectionView! {
         didSet{
@@ -24,6 +44,9 @@ class ViewController: UIViewController {
         didSet {
             hungerStationTableView.delegate = self
             hungerStationTableView.dataSource = self
+//            hungerStationTableView.layer.shouldRasterize = true
+//            hungerStationTableView.layer.shadowColor = .init(gray: 54, alpha: 32)
+        
         }
     }
     
@@ -31,6 +54,8 @@ class ViewController: UIViewController {
    // var resturent:HungerStationAPI
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         getDtaaAPI(with: "/restaurants")
 //resturant = [UIImage(named:"borgerKing")!,UIImage(named: "aselBorger")!,UIImage(named: "herfy")!]
 
@@ -88,8 +113,24 @@ extension ViewController :UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
  let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! ClassHungerStationTableView
         //StructureHungerStation
-        let content = foodHungerStation[indexPath.row]
+//        cell.layer.masksToBounds = true
+//        cell.layer.mask
+
+let content = foodHungerStation[indexPath.row]
         //print()
+//        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = 20
+        cell.viewDetelCell.layer.masksToBounds = true
+        cell.viewDetelCell.layer.cornerRadius = 12
+
+        cell.backgroundView?.layer.cornerRadius = 5
+        cell.backgroundView?.clipsToBounds = true
+       
+        
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = UIScreen.main.scale
+
 cell.nameMealLabel.text = content.name
 cell.descriptionMealLabel.text = content.category
  cell.deliverCostLabel.text = "\(content.delivery.cost.value)\(content.delivery.cost.currency)"
@@ -97,11 +138,26 @@ cell.descriptionMealLabel.text = content.category
         cell.evaluationLabel.text = "\(content.rating)"
 if let value = content.offer  {
     cell.offerLabel.text = "\(value.value)(Spend \(value.spend) SAR)"
+    cell.offerLabel.sizeToFit()
+    print(cell.offerLabel.bounds.width)
+    let path = UIBezierPath()
+    path.move(to: .zero)
+    path.addLine(to: CGPoint(x: cell.offerLabel.bounds.width+50 , y: 0))
+    path.addLine(to: CGPoint(x: cell.offerLabel.bounds.width, y: 30))
+    path.addLine(to: CGPoint(x: 0, y: 30))
+
+    let shape = CAShapeLayer()
+    shape.path = path.cgPath
+
+    cell.offerViewShape.layer.mask = shape
     
+   // cell.offerViewShape.sizeToFit()
+
 } else {
     cell.offerLabel.isHidden = true
+    cell.offerViewShape.isHidden = true
 }
-
+        
 let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
      // print(resturantImage)
     if let resturantImage = resturantImage {
@@ -115,6 +171,7 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
        }
      }
    }
+//        content.imageProperties.maximumSize = CGSize(width: 50, height: 50)
         if let resturantLogoImage = URL(string:foodHungerStation[indexPath.row].resturant_image){
             print(resturantLogoImage)
                 DispatchQueue.global().async {
@@ -130,7 +187,7 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
          }
         if content.is_promoted == true {
             cell.promotedLable.text = "Promoted"
-//\(content.is_promoted)
+
         } else {
             cell.promotedLable.isHidden = true
         }
@@ -167,6 +224,16 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return " .. End .."
     }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+        {
+            let verticalPadding: CGFloat = 10
+
+            let maskLayer = CALayer()
+            maskLayer.cornerRadius = 20
+            maskLayer.backgroundColor = UIColor.black.cgColor
+            maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 5 , dy: verticalPadding/2)
+            cell.layer.mask = maskLayer
+        }
     
 }
 extension ViewController:UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{

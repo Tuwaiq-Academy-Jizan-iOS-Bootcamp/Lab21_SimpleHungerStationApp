@@ -102,7 +102,7 @@ struct Menu:Codable{
     var id:Int
     var title:String
     var subtitle:String?
-  //  var calories:String?
+    var calories:Int?
     var price:Price
     var image:String
 }

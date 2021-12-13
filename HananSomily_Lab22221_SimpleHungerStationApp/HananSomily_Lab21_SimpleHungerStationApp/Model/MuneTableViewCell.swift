@@ -8,9 +8,16 @@
 import Foundation
 import UIKit
 class MuneTableViewCell:UITableViewCell {
+    
+    
     @IBOutlet weak var m: UILabel!
     @IBOutlet weak var menuNameLabel: UILabel!
     @IBOutlet weak var menuDiscriptionLabel: UILabel!
     @IBOutlet weak var menuPriceLabel: UILabel!
     @IBOutlet weak var menuImage: UIImageView!
+    @IBOutlet weak var caloresLabel: UILabel!
+    @IBOutlet weak var cloresImage: UIImageView!
+    
+    
+    
 }
