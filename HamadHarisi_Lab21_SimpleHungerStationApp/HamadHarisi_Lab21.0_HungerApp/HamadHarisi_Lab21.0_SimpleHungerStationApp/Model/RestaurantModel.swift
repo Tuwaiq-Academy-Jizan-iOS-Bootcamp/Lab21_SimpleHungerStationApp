@@ -1,0 +1,80 @@
+//
+//  RestaurantModel.swift
+//  HamadHarisi_Lab21.0_SimpleHungerStationApp
+//
+//  Created by حمد الحريصي on 17/11/2021.
+//
+import Foundation
+import UIKit
+
+struct Restorants:Codable
+{
+var data:[RestorantsData]
+}
+struct RestorantsData:Codable
+{
+var id: Int
+var name: String
+var category: String
+var delivery: Delivery
+var rating: Double
+var is_promoted: Bool
+var offer: Offer?
+var image: String
+var resturant_image:String
+}
+struct Delivery:Codable
+{
+var time:Time
+var cost:Cost
+}
+struct Time:Codable
+{
+var min:Int
+var max:Int
+}
+struct Cost:Codable
+{
+var value:Double
+var currency:String
+}
+struct Offer:Codable
+{
+var value:String
+var spend:Int
+}
+
+struct Menus:Codable
+{
+var menu:[MenusData]
+}
+struct MenusData:Codable
+{
+var id:Int
+var title:String
+var subtitle:String?
+var calories:Int?
+var price:Price
+var image:String
+}
+struct Price:Codable
+{
+var value:Int
+var currency:String
+}
+//struct Restaurants
+//{
+//var restaurantName: String
+//var restaurantImage: UIImage
+//var deliveryTime:String
+//var ratingStars:String
+//var foodName:String
+//var foodImage:UIImage
+//}
+//
+//struct Menu
+//{
+//var price:String
+//var name:String
+//var mealImage:UIImage
+//}
