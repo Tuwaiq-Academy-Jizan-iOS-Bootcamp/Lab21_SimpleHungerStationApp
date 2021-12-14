@@ -35,7 +35,7 @@ class ResturantView: UIViewController {
     var preSetOfStateImage : CGFloat = 0
     @IBOutlet weak var viewForOffer: UIView!
     var cuisineSelectedT = ""
-    var offerSelectedT = ""
+    var offerSelectedT : String? = nil
     var DeliveryPriceSelectedT = ""
     var minimumSelectedT = ""
     var menuSelectedT :Int = Int()
@@ -56,13 +56,22 @@ class ResturantView: UIViewController {
 //        viewInfoAboutResturant.layer.shadowRadius = 4.0
 //
 //
-        viewForOffer.layer.cornerRadius = 5
         viewInfoAboutResturantTwo.layer.cornerRadius = 8
+        viewInfoAboutResturantTwo.layer.shadowOffset = CGSize(width: 0, height: 3)
+        viewInfoAboutResturantTwo.layer.shadowRadius = 3
+        viewInfoAboutResturantTwo.layer.shadowOpacity = 0.1
+        viewInfoAboutResturantTwo.layer.masksToBounds = false
+        //viewInfoAboutResturantTwo.layer.shadowPath = UIBezierPath(roundedRect: viewInfoAboutResturantTwo.bounds , byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+       // viewInfoAboutResturantTwo.layer.shouldRasterize = true
+        //viewInfoAboutResturantTwo.layer.rasterizationScale = UIScreen.main.scale
+        
+        viewForOffer.layer.cornerRadius = 5
+//        viewInfoAboutResturantTwo.layer.cornerRadius = 8
         viewInfoAboutResturant.layer.cornerRadius = 8
         
  //       viewInfoAboutResturant.dropShadow()
 //        viewInfoAboutResturant.addShadow(offset: CGSize.init(width: 10, height: 10), color: UIColor.black, radius: 5, opacity: 0.7)
-        viewInfoAboutResturantTwo.layer.masksToBounds = true
+        //viewInfoAboutResturantTwo.layer.masksToBounds = true
         viewInfoAboutResturant.layer.masksToBounds = true
         viewForOffer.layer.masksToBounds = true
         // Do any additional setup after loading the view.
@@ -71,7 +80,15 @@ class ResturantView: UIViewController {
         resturantDeliveryTime.text =  deliveryTimeSelectedT
        resturantRating.text =  ratingSelectedT
        resturantCuisine.text =  cuisineSelectedT
-       resturantOffer.text =  offerSelectedT
+       //resturantOffer.text =  offerSelectedT
+        if let offer = offerSelectedT {
+            resturantOffer.text = offer
+            
+        }
+        else{
+            resturantOffer.isHidden = true
+            viewForOffer.isHidden = true
+        }
         resturantDeliveryPrice.text =  DeliveryPriceSelectedT
         resturantLogo.image = nil
 //           resturantLogo.image =  logoSelectedT
@@ -118,7 +135,8 @@ class ResturantView: UIViewController {
 //
 //
 //                    self.resturantImage = UIImage(data: data)!
-//
+resturantDeliveryTime.sizeToFit()
+
 //              }
 //            }
 //          }
@@ -191,6 +209,23 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "toCellMenu", for: indexPath ) as! MenuCell
         cell.mealNameCell.text = menuResturant[indexPath.row].title
         cell.priceMealCell.text = String( menuResturant[indexPath.row].price.value)+" "+menuResturant[indexPath.row].price.currency
+        if let calories = menuResturant[indexPath.row].calories {
+        cell.calories.text = String(calories)
+        }else{
+            cell.calories.isHidden = true
+            cell.caloriesImage.isHidden = true
+        }
+       
+//        cell.calories.isHidden =          true
+//        cell.caloriesImage.isHidden = true
+        if let subTitle = menuResturant[indexPath.row].subtitle {
+            cell.subTitle.text = subTitle
+            
+        }
+        else{
+            cell.subTitle.isHidden = true
+        }
+        
         let urlImage = URL(string:menuResturant[indexPath.row].image)
         if let urlImage = urlImage {
           DispatchQueue.global().async {
@@ -247,7 +282,7 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
                 let  constHeight = hidViewConstraint.constant + ofStet
                  hidViewConstraint.constant = constHeight
 
-        print("ssss:\(scrollView.contentOffset.y)")
+       // print("ssss:\(scrollView.contentOffset.y)")
      let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
      let constHeightImage = hidImageConstraint.constant + ofStetImage
             hidImageConstraint.constant = constHeightImage

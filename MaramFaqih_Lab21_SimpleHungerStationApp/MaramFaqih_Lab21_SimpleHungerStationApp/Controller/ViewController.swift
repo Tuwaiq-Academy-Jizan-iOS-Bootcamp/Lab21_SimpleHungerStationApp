@@ -24,7 +24,7 @@ class ViewController: UIViewController {
      var ratingSelected = ""
     
      var cuisineSelected = ""
-     var offerSelected = ""
+    var offerSelected : String? = nil
     var DeliveryPriceSelected = ""
     var minimumSelected = ""
     //var menuSelected : [Menu] = []
@@ -146,11 +146,23 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ResturntCell
-        cell.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
-
-        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
+//
+//        cell.layer.masksToBounds = true
         tableView.backgroundColor = .systemGray6
-
+//            //viewForCell
+//        cell.viewForCell.layer.cornerRadius = 8
+//        cell.viewForCell.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        cell.viewForCell.layer.shadowRadius = 3
+//        cell.viewForCell.layer.shadowOpacity = 0.3
+//        cell.viewForCell.layer.shadowPath = UIBezierPath(roundedRect:   cell.viewForCell.bounds , byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+//        cell.viewForCell.layer.shouldRasterize = true
+//        cell.viewForCell.layer.rasterizationScale = UIScreen.main.scale
+//        cell.viewForCell.layer.cornerRadius = 8
+//        cell.viewForCell.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        cell.viewForCell.layer.shadowRadius = 3
+//        cell.viewForCell.layer.shadowOpacity = 0.1
+//        cell.viewForCell.layer.masksToBounds = false
         cell.nameCell.text = resturantNameStruct[indexPath.row].name
         cell.deliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)+" - "+String(resturantNameStruct[indexPath.row].delivery.time.max)+" minutes"
         cell.ratingCell.text = String(resturantNameStruct[indexPath.row].rating)
@@ -207,8 +219,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //        cell.offerCell.text = resturantNameStruct[indexPath.row].offer
 //
 //
-        cell.deliveryPriceCell.text = String(resturantNameStruct[indexPath.row].delivery.cost.value)
-        cell.currencyCell.text = resturantNameStruct[indexPath.row].delivery.cost.currency
+        cell.deliveryPriceCell.text = String(resturantNameStruct[indexPath.row].delivery.cost.value) + resturantNameStruct[indexPath.row].delivery.cost.currency
+        //cell.currencyCell.text =
         
         //let widthLabel = cell.offerCell.sizeToFit()
         cell.cuisineCell.sizeToFit()
@@ -225,6 +237,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         //cell.offerCell.sizeToFit()
         cell.viewOffer.layer.mask=shape
         //cell.viewOffer.sizeToFit()
+        
         return cell
       
     }
@@ -249,6 +262,12 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         maskLayer.cornerRadius = 20
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 10 , dy: verticalPadding/2)
+   
+//        maskLayer.cornerRadius = 8
+//        maskLayer.shadowOffset = CGSize(width: 0, height: 3)
+//        maskLayer.shadowRadius = 3
+//        maskLayer.shadowOpacity = 0.1
+//        maskLayer.masksToBounds = false
         cell.layer.mask = maskLayer
       //  cell.UITableView.dropShadow()
     }
@@ -262,6 +281,10 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         if let offer = resturantNameStruct[indexPath.row].offer{
             offerSelected = "\(offer.value) (Spend \(offer.spend))"
             
+        }
+        else
+        {
+            offerSelected = nil
         }
         imageSelected = arrPath.image
         logoSelected = arrPath.resturant_image
@@ -332,3 +355,20 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //    }
 //}
 
+//class ShadowView: UIView {
+//    override var bounds: CGRect {
+//        didSet {
+//            setupShadow()
+//        }
+//    }
+//
+//    private func setupShadow() {
+//        self.layer.cornerRadius = 8
+//        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        self.layer.shadowRadius = 3
+//        self.layer.shadowOpacity = 0.3
+//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+//        self.layer.shouldRasterize = true
+//        self.layer.rasterizationScale = UIScreen.main.scale
+//    }
+//}

@@ -9,9 +9,12 @@ import UIKit
 
 class MenuCell: UITableViewCell {
 
+    @IBOutlet weak var calories: UILabel!
+    @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var mealNameCell: UILabel!
     @IBOutlet weak var priceMealCell: UILabel!
     @IBOutlet weak var imageMenuCell: UIImageView!
+    @IBOutlet weak var caloriesImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
