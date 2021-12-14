@@ -17,9 +17,13 @@ class CellViewController:UITableViewCell {
     @IBOutlet weak var resturantTypeLabel: UILabel!
     @IBOutlet weak var resturantDeliveryTimeLabel: UILabel!
     @IBOutlet weak var resturantDeliveryPriceLabel: UILabel!
+    @IBOutlet weak var resturantPromoted: UILabel!
     
-//Menu
+    //Menu
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealPriceLabel: UILabel!
     @IBOutlet weak var mealImageView: UIImageView!
+    @IBOutlet weak var mealDescrptionLabel: UILabel!
+    @IBOutlet weak var mealCalorisLabel: UILabel!
+    @IBOutlet weak var framLabel: UIImageView!
 }

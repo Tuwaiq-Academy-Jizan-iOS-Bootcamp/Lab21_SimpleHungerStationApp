@@ -6,21 +6,44 @@
 //
 
 import Foundation
-// 
-struct Resturant {
-    var resturantImage: String
-    var resturantLogo: String
-    var resturantDiscount : String
-    var resturantName: String
-    var resturantType: String
-    var resturantDeliveryTime: String
-    var resturantDeliveryPrice: String
-    var resturantRating: String
+struct Resturant: Codable{
+    var data: [ResturantData]
 }
-//
-struct Menu {
-    var mealImage: String
-    var mealName: String
-    var mealPrice: String
+
+
+struct ResturantData: Codable {
+    let id: Int
+    let name: String
+    let category: String
+    let delivery: Delivery
+    let rating: Double
+    let is_promoted: Bool
+    let offer: Offer?
+    let image: String
+    let resturant_image: String
+
+}
+
+
+struct Delivery: Codable {
+    let time: Time
+    let cost: Cost
+}
+
+
+struct Cost: Codable {
+    let value: Double
+    let currency: String
+}
+
+
+struct Time: Codable {
+    let min, max: Int
+}
+
+
+struct Offer: Codable {
+    let value: String
+    let spend: Int
 }
 

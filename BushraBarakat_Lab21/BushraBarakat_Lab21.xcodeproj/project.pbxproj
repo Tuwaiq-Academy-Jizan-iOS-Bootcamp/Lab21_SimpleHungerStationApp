@@ -19,6 +19,8 @@
 		116F26CF274787F300AF13D3 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F26CE274787F300AF13D3 /* CellViewController.swift */; };
 		116F26D427478C7F00AF13D3 /* ResturantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F26D327478C7F00AF13D3 /* ResturantModel.swift */; };
 		116F26D627478CC900AF13D3 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F26D527478CC900AF13D3 /* ViewControllerTwo.swift */; };
+		11B88D3427660D5D00F10F3F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B88D3327660D5D00F10F3F /* MenuModel.swift */; };
+		11B88D362767FD1500F10F3F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B88D352767FD1500F10F3F /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		116F26CE274787F300AF13D3 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		116F26D327478C7F00AF13D3 /* ResturantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantModel.swift; sourceTree = "<group>"; };
 		116F26D527478CC900AF13D3 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
+		11B88D3327660D5D00F10F3F /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		11B88D352767FD1500F10F3F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				116F269E274784E100AF13D3 /* AppDelegate.swift */,
 				116F26A0274784E100AF13D3 /* SceneDelegate.swift */,
+				11B88D352767FD1500F10F3F /* ImageView.swift */,
 				116F26D027478BF000AF13D3 /* Model */,
 				116F26D127478C0A00AF13D3 /* View */,
 				116F26D227478C1400AF13D3 /* Controller */,
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				116F26D327478C7F00AF13D3 /* ResturantModel.swift */,
+				11B88D3327660D5D00F10F3F /* MenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B88D362767FD1500F10F3F /* ImageView.swift in Sources */,
 				116F26A3274784E100AF13D3 /* ViewController.swift in Sources */,
 				116F269F274784E100AF13D3 /* AppDelegate.swift in Sources */,
 				116F26D427478C7F00AF13D3 /* ResturantModel.swift in Sources */,
+				11B88D3427660D5D00F10F3F /* MenuModel.swift in Sources */,
 				116F26CF274787F300AF13D3 /* CellViewController.swift in Sources */,
 				116F26A1274784E100AF13D3 /* SceneDelegate.swift in Sources */,
 				116F26D627478CC900AF13D3 /* ViewControllerTwo.swift in Sources */,
