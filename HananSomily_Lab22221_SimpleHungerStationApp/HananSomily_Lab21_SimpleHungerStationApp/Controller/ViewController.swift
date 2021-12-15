@@ -27,6 +27,11 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
         didSet {
             hungerStationTableView.delegate = self
             hungerStationTableView.dataSource = self
+//            hungerStationTableView.layer.masksToBounds = false
+//            hungerStationTableView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//            hungerStationTableView.layer.shadowColor = UIColor.black.cgColor
+//            hungerStationTableView.layer.shadowOpacity = 0.5
+//            hungerStationTableView.layer.shadowRadius = 5
 //            hungerStationTableView.layer.shouldRasterize = true
 //            hungerStationTableView.layer.shadowColor = .init(gray: 54, alpha: 32)
         
@@ -142,9 +147,9 @@ let content = foodHungerStation[indexPath.row]
 //        cell.viewDetelCell.layer.cornerRadius = 12
 
        // cell.layer.cornerRadius = 8
-        cell.viewDetelCell.layer.shadowOffset = CGSize(width: 0, height: 3)
-        cell.viewDetelCell.layer.shadowRadius = 3
-        cell.viewDetelCell.layer.shadowOpacity = 0.1
+    cell.viewDetelCell.layer.shadowOffset = CGSize(width: 0, height: 4)
+        cell.viewDetelCell.layer.shadowRadius = 7
+        cell.viewDetelCell.layer.shadowOpacity = 0.2
         cell.viewDetelCell.layer.shadowColor = UIColor.black.cgColor
         cell.viewDetelCell.layer.masksToBounds = false
 
@@ -230,7 +235,7 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
         
     }
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//    
+//
 //        return "Hunger Station"
 //    }
 //
