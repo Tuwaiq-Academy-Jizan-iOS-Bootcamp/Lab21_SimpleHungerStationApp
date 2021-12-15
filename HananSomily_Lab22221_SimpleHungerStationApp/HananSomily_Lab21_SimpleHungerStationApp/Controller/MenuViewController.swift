@@ -157,7 +157,7 @@ extension MenuViewController:UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         if scrollView.contentOffset.y > 0{
-            if attributeView.bounds.size.height > 107{
+            if attributeView.bounds.size.height > 105{
 
         let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
         let hightView = scroolView1.constant + offSetDifrent
@@ -165,7 +165,7 @@ extension MenuViewController:UITableViewDelegate {
           print("scroll view = \(scrollView.contentOffset.y)")
             }
         }else {
-            if attributeView.bounds.size.height <= 219{
+            if attributeView.bounds.size.height <= 209{
                 let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
             let hightView = scroolView1.constant + offSetDifrent
             scroolView1.constant = hightView
