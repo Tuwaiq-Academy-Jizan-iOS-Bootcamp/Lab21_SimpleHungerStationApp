@@ -31,7 +31,7 @@ override func viewDidLoad() {
     TableViewTwo.delegate = self
     TableViewTwo.dataSource = self
 if let selectR  = selectR {
-    RestaurantNameVT.text = selectR.name
+RestaurantNameVT.text = selectR.name
 DeliveryTimeVT.text = "\(selectR.delivery.time.min) : \(selectR.delivery.time.max)"
 DeliveryPriceVT.text = "\(selectR.delivery.cost.value)\(selectR.delivery.cost.currency)"
 EvaluationVT.text = "\(selectR.rating)"
@@ -112,45 +112,54 @@ MealTypeVT.text = selectR.category
             }
     }
 }
+
 extension ViewControllerTwo:UITableViewDelegate, UITableViewDataSource {
-func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
         return arrayHS.count
-}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
-
-let cell = tableView.dequeueReusableCell(withIdentifier:"cellTwo", for: indexPath) as!
-    DataTVCellTwo
-    return cell
-
-    cell.MealName.text = arrayHS[indexPath.row].title
-//    cell.MealDescription.text = arrayHS[indexPath.row].subtitle
-    cell.MealPrice.text = "\(arrayHS[indexPath.row].price)"
+    }
     
-    if let subb = arrayHS[indexPath.row].subtitle {
-    cell.MealDescription.text = "\(subb)"
-    }else{ cell.MealDescription.isHidden = true
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell {
         
-    }
-    if let calor = arrayHS[indexPath.row].calories {
-        cell.Calories.text = "\(calor)"
-    }
-  //  cell.Calories.text = arrayHS[indexPath.row].
-    cell.ImageMeal.image = nil
-    if let image = URL(string: arrayHS[indexPath.row].image){
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: image)
-            if let data = data {
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    if tableView.cellForRow(at: indexPath) != nil{
-                    cell.ImageMeal.image = image
-                }
-            }
+    let cell = tableView.dequeueReusableCell(withIdentifier:"cellTwo", for: indexPath) as! DataTVCellTwo
+        
+        
+        
+        cell.MealName.text = arrayHS[indexPath.row].title
+        cell.MealPrice.text = "\(arrayHS[indexPath.row].price)"
+//        Subtitle
+        if let subb = arrayHS[indexPath.row].subtitle {
+            cell.MealDescription.text = "\(subb)"
+        }else{
+            cell.MealDescription.isHidden = true
+            
         }
-     }
-    
-                
+//      Calories
+        if let calories0 = arrayHS[indexPath.row].calories {
+            cell.Calories.text = "\(calories0)"
+        }else {
+            cell.Calories.isHidden = true
+           
+        }
+        
+//image
+        if let image = URL(string: arrayHS[indexPath.row].image){
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: image)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+
+                            cell.ImageMeal.image = image
+
+                    }
                 }
             }
+            
+            
+        }
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath:IndexPath)->CGFloat {
+        return 250
+    }
 }
