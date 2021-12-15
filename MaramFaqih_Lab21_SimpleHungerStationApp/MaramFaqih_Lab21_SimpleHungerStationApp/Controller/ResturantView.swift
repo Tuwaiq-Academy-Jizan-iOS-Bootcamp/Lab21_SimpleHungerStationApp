@@ -50,31 +50,18 @@ class ResturantView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         preHeightView = viewInfoAboutResturantTwo.bounds.size.height
-//        viewInfoAboutResturant.layer.shadowColor = UIColor.black.cgColor
-//        viewInfoAboutResturant.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        viewInfoAboutResturant.layer.shadowOpacity = 0.7
-//        viewInfoAboutResturant.layer.shadowRadius = 4.0
-//
-//
+
         viewInfoAboutResturantTwo.layer.cornerRadius = 8
         viewInfoAboutResturantTwo.layer.shadowOffset = CGSize(width: 0, height: 3)
         viewInfoAboutResturantTwo.layer.shadowRadius = 3
         viewInfoAboutResturantTwo.layer.shadowOpacity = 0.1
         viewInfoAboutResturantTwo.layer.masksToBounds = false
-        //viewInfoAboutResturantTwo.layer.shadowPath = UIBezierPath(roundedRect: viewInfoAboutResturantTwo.bounds , byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
-       // viewInfoAboutResturantTwo.layer.shouldRasterize = true
-        //viewInfoAboutResturantTwo.layer.rasterizationScale = UIScreen.main.scale
-        
+     
         viewForOffer.layer.cornerRadius = 5
-//        viewInfoAboutResturantTwo.layer.cornerRadius = 8
         viewInfoAboutResturant.layer.cornerRadius = 8
         
- //       viewInfoAboutResturant.dropShadow()
-//        viewInfoAboutResturant.addShadow(offset: CGSize.init(width: 10, height: 10), color: UIColor.black, radius: 5, opacity: 0.7)
-        //viewInfoAboutResturantTwo.layer.masksToBounds = true
         viewInfoAboutResturant.layer.masksToBounds = true
         viewForOffer.layer.masksToBounds = true
-        // Do any additional setup after loading the view.
         
         resturantName.text =  nameSelectedT
         resturantDeliveryTime.text =  deliveryTimeSelectedT
@@ -90,11 +77,10 @@ class ResturantView: UIViewController {
             viewForOffer.isHidden = true
         }
         resturantDeliveryPrice.text =  DeliveryPriceSelectedT
-        resturantLogo.image = nil
-//           resturantLogo.image =  logoSelectedT
-        resturantImage.image = nil
         
-//           resturantImage.image =  imageSelectedT
+        resturantLogo.image = nil
+        resturantImage.image = nil
+
         let urlImageLogo = URL(string:logoSelectedT)
                if let urlImage = urlImageLogo {
                  DispatchQueue.global().async {
@@ -122,32 +108,14 @@ class ResturantView: UIViewController {
                
         
         resturantMinimum.text = minimumSelectedT
-        //print(menuSelectedT)
         menuTibleView.delegate =  self
         menuTibleView.dataSource = self
         getaData(with: String(menuSelectedT))
-//        let urlImage = URL(string:resturantNameSelected.image)
-//        if let urlImage = urlImage {
-//          DispatchQueue.global().async {
-//
-//              if let data = try? Data(contentsOf: urlImage){
-//              DispatchQueue.main.async {
-//
-//
-//                    self.resturantImage = UIImage(data: data)!
-resturantDeliveryTime.sizeToFit()
 
-//              }
-//            }
-//          }
-//        }
+resturantDeliveryTime.sizeToFit()
       
     }
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        resturantImage.image =  imageSelectedT
-//
-//    }
+
     func getaData(with endPoint:String){
         
         let baseURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants/\(endPoint)"
@@ -166,14 +134,12 @@ resturantDeliveryTime.sizeToFit()
                         self.menuResturant  = decoderData.menu
                         DispatchQueue.main.async {
                       
-                      //  self.resturantNameStruct  = decoderData
                        print("decoderData:",decoderData)
                         
-//                               DispatchQueue.main.async {
-//                                   self.users = decoderData
+
                                    self.menuTibleView.reloadData()
 
-//
+
    }
 
 
@@ -215,9 +181,7 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
             cell.calories.isHidden = true
             cell.caloriesImage.isHidden = true
         }
-       
-//        cell.calories.isHidden =          true
-//        cell.caloriesImage.isHidden = true
+
         if let subTitle = menuResturant[indexPath.row].subtitle {
             cell.subTitle.text = subTitle
             
@@ -240,7 +204,6 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
             }
           }
         }
-        //cell.imageMenuCell.image = menuResturant[indexPath.row].mealImage
        return cell
         
     }
@@ -250,29 +213,14 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView.contentOffset.y > (20){
-//            hidViewConstraint.constant = 0
-//
-//        }
-//print("scs: \(scrollView.contentOffset.y)" )
-        //viewInfoAboutResturant.bounds.height
-        //if scrollView.contentOffset.y < viewInfoAboutResturant.bounds.size.height + 20 {
-       // let point = subview1.convert(subview2.frame.origin, to: viewControll.view)
-       // let point = ResturantView.convert(viewInfoAboutResturant.frame.origin, to: ResturantView.view)
-        
-//        var ofStet = preSetOfState - scrollView.contentOffset.y
-//        var constHeight = hidViewConstraint.constant + ofStet
-//        hidViewConstraint.constant = constHeight
-        
+      
         if   scrollView.contentOffset.y>0 {
             if viewInfoAboutResturantTwo.bounds.size.height > viewInfoAboutResturant.bounds.size.height * 1.1{
                let ofStet = preSetOfState - scrollView.contentOffset.y
                    let  constHeight = hidViewConstraint.constant + ofStet
                     hidViewConstraint.constant = constHeight
             
-           print("ssss:\(scrollView.contentOffset.y)")
         let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
-       // preSetOfStateImage = scrollView.contentOffset.y
         let constHeightImage = hidImageConstraint.constant + ofStetImage
         hidImageConstraint.constant = constHeightImage
             }
@@ -283,85 +231,14 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
                 let  constHeight = hidViewConstraint.constant + ofStet
                  hidViewConstraint.constant = constHeight
 
-       // print("ssss:\(scrollView.contentOffset.y)")
-     let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
-     let constHeightImage = hidImageConstraint.constant + ofStetImage
+            let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
+            let constHeightImage = hidImageConstraint.constant + ofStetImage
             hidImageConstraint.constant = constHeightImage
             }
         }
-        //preSetOfState = scrollView.contentOffset.y
-        
-       // let newConstant = hidViewConstraint.constant
-//        else {
-//            let ofStet = preSetOfState + scrollView.contentOffset.y
-//                let  constHeight = hidViewConstraint.constant - ofStet
-//                 hidViewConstraint.constant = constHeight
-//
-//        print("ssss:\(scrollView.contentOffset.y)")
-//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
-//    // preSetOfStateImage = scrollView.contentOffset.y
-//     let constHeightImage = hidImageConstraint.constant - ofStetImage
-//     hidImageConstraint.constant = constHeightImage
-//
-//
-//        }
-//        if hidViewConstraint.constant > setViewConstraint.constant {
-//
-//            let ofStet = preSetOfState + scrollView.contentOffset.y
-//                // preSetOfState = scrollView.contentOffset.y
-//                 let constHeight = hidViewConstraint.constant - ofStet
-//                 hidViewConstraint.constant = constHeight
-//print("ssss:\(scrollView.contentOffset.y)")
-//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
-//    // preSetOfStateImage = scrollView.contentOffset.y
-//     let constHeightImage = hidImageConstraint.constant - ofStetImage
-//     hidImageConstraint.constant = constHeightImage
-//        }
-//        }else if scrollView.contentOffset.y < ( 0.33333333333333337){
-//            let ofStet = preSetOfState + scrollView.contentOffset.y
-//                // preSetOfState = scrollView.contentOffset.y
-//                 let constHeight = hidViewConstraint.constant - ofStet
-//                 hidViewConstraint.constant = constHeight
-//print("ssss:\(scrollView.contentOffset.y)")
-//     let ofStetImage = preSetOfStateImage + scrollView.contentOffset.y
-//    // preSetOfStateImage = scrollView.contentOffset.y
-//     let constHeightImage = hidImageConstraint.constant - ofStetImage
-//     hidImageConstraint.constant = constHeightImage
-//        }
-//        else{
-//
-//
-//        }
+       }
     }
-    //hidImageConstraint
     
      
-    
-}
-//extension UIView {
-//
-//    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
-//        layer.masksToBounds = false
-//        layer.shadowOffset = offset
-//        layer.shadowColor = color.cgColor
-//        layer.shadowRadius = radius
-//        layer.shadowOpacity = opacity
-//
-//        let backgroundCGColor = backgroundColor?.cgColor
-//        backgroundColor = nil
-//        layer.backgroundColor =  backgroundCGColor
-//    }
-//}
-//extension UIView {
-//    func dropShadow(scale: Bool = true) {
-//        layer.masksToBounds = false
-//        layer.shadowColor = UIColor.black.cgColor
-//        layer.shadowOpacity = 0.2
-//        layer.shadowOffset = .zero
-//        layer.shadowRadius = 1
-//        layer.shouldRasterize = true
-//        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-//    }
-//}
 
 
