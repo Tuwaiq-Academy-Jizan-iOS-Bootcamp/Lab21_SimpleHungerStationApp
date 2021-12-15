@@ -6,10 +6,13 @@
 //
 import Foundation
 import UIKit
+import CoreLocation
+import MapKit
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController , CLLocationManagerDelegate{
    // @IBOutlet weak var viewOffer: UIView!
+    var locationManager1  = CLLocationManager()
+  
     
     @IBOutlet weak var resturantsTableView: UITableView!
     @IBOutlet weak var headerImageView: UIImageView!
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
     //var menuSelected : [Menu] = []
     var menuSelected : Int = Int()
     
+    @IBOutlet weak var countryLocation: UILabel!
     
     
 //    var logoSelected : UIImage = UIImage()
@@ -43,8 +47,167 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+     //----------------location------------------//
+//        //locationManager = CLLocationManager()
+//
+//        //locationManager1.allowsBackgroundLocationUpdates = true
+//        locationManager1.delegate = self
+//        //locationManager1  = CLLocationManager()
+//        locationManager1.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager1.distanceFilter = kCLLocationAccuracyHundredMeters
+//
+//        locationManager1.stopUpdatingLocation()
+//        locationManager1.requestAlwaysAuthorization()
+//       // locationManager1.requestLocation()
+//
+//        // check if location enabled
+//        if CLLocationManager.locationServicesEnabled() {
+//            print("Yes")
+//            locationManager1.startUpdatingLocation()
+//            print("Yes")
+//        }else{
+//            print("No")
+//        }
+//
+////        func locationManager(_ manager: CLLocationManager, didUpdateLocations: [CLLocation]){
+////
+////        }
+////        func locationManager(CLLocationManager, didUpdateLocations.location: [CLLocation]){
+////
+////        }
+//
+//         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+//             print("userLocation'''''''''''''''''''''''''''''''''''")
+//
+//             let userLocation = locations[0] as CLLocation
+////             var latitude = userLocation.coordinate.latitude
+////             var longitude = userLocation.coordinate.longitude
+//             print("userLocation''''''''''''''''''''''''''''''''''': \(userLocation)")
+//
+//             let geoCoder = CLGeocoder()
+//            // let location = CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+//                // geoCoder.reverseGeocodeLocation(location)
+//
+//             geoCoder.reverseGeocodeLocation(userLocation){ (placeMarks, error) in
+//                 if error != nil {
+//                     print("error-------------------------------")
+//                 }
+//
+//                 let placeMark = placeMarks! as [CLPlacemark]
+//                 if placeMark.count>0 {
+//                     let placeMark = placeMarks![0]
+//                     self.locationManager1.stopUpdatingLocation()
+//
+//                     let country = placeMark.country
+//                    // print(country)
+//                     self.countryLocation.text = country ?? ""
+//                     print(country ?? "")
+//
+//                 }
+//
+//             }
+//            // geoCoder
+//
+//        }
+//
+//        let geoCoder = CLGeocoder()
+//
+//        geoCoder.
         
+//        locationManager.requestAlwaysAuthorization()
+//        locationManager.delegate = self
+//                locationManager.startUpdatingLocation()
+//                if CLLocationManager.locationServicesEnabled() {
+//                    locationManager.delegate = self
+//                    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//                    locationManager.startUpdatingLocation()
+//                }
+//        @IBAction func getLocation() {
+//          locationManager.delegate = self
+//          locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//          locationManager.startUpdatingLocation()
+//        }
+//        func locationManager(
+//          _ manager: CLLocationManager,
+//          didFailWithError error: Error
+//        ) {
+//          print("didFailWithError \(error.localizedDescription)")
+//        }
+//
+//        func locationManager(
+//          _ manager: CLLocationManager,
+//          didUpdateLocations locations: [CLLocation]
+//        ) {
+//          let newLocation = locations.last!
+//          print("didUpdateLocations \(newLocation)")
+//        }
+//
+//        let authStatus = locationManager.authorizationStatus
+//        if authStatus == .notDetermined {
+//          locationManager.requestWhenInUseAuthorization()
+//          return
+//        }
+//        didFailWithError The operation couldn’t be completed. (kCLErrorDomain error 1.)
+//        func showLocationServicesDeniedAlert() {
+//          let alert = UIAlertController(
+//            title: "Location Services Disabled",
+//            message: "Please enable location services for this app in Settings.",
+//            preferredStyle: .alert)
+//
+//          let okAction = UIAlertAction(
+//            title: "OK",
+//            style: .default,
+//            handler: nil)
+//          alert.addAction(okAction)
+//
+//          present(alert, animated: true, completion: nil)
+//        }
+//        if authStatus == .denied || authStatus == .restricted {
+//          showLocationServicesDeniedAlert()
+//          return
+//        }
+//
+        locationManager1.delegate = self
+                locationManager1.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager1.distanceFilter = kCLLocationAccuracyHundredMeters
+                locationManager1.requestWhenInUseAuthorization()
+                //locationManager1.stopUpdatingLocation()     // request will restart it
+
+                locationManager1.requestLocation()
+        //  locationManager1.startUpdatingLocation()
+            }
+           
+            func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {     // Needed for request
+                print("Some error")
+            }
+           
+            func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+               
+                let newLocation = locations[locations.count - 1]
+                        print(locations.count)
+                getPlacemarkFromLocation(newLocation)
+
+            }
+
+
+             // I've isolated the func, but not really needed
+            func getPlacemarkFromLocation(_ location: CLLocation) {
+               
+                CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error)-> Void in
+                    if error != nil {
+                        //AlertView to show the ERROR message
+                    }
+                    if placemarks!.count > 0 {
+                        let placemark = placemarks![0]
+                        self.locationManager1.stopUpdatingLocation()
+                        
+                        self.countryLocation.text = placemark.locality ?? ""
+
+                    }else{
+                        print("No placemarks found.")
+                    }
+                })
+ 
         headerImageView.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
         headerImageView.layer.masksToBounds = true
         resturantsTableView.delegate = self
@@ -72,7 +235,7 @@ class ViewController: UIViewController {
                             self.resturantNameStruct  = decoderData.data
 
                       //  self.resturantNameStruct  = decoderData
-                       print("decoderData:",decoderData)
+                      // print("decoderData:",decoderData)
                         
 //                               DispatchQueue.main.async {
 //                                   self.users = decoderData
@@ -372,3 +535,14 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //        self.layer.rasterizationScale = UIScreen.main.scale
 //    }
 //}
+
+extension CLLocation {
+    func fetchCityAndCountry(completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first?.locality, $0?.first?.country, $1) }
+    }
+//    let location = CLLocation(latitude, longitude)
+//    location.fetchCityAndCountry { city, country, error in
+//        guard let city = city, let country = country, error == nil else { return }
+//        print(city + ", " + country)  // Rio de Janeiro, Brazil
+//    }
+}
