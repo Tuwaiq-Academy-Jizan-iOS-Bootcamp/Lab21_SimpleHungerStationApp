@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>“NSLocationAlwaysAndWhenInUseUsageDescription”</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow location updates while in background and usin user?</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow location updates while in background and usin app?</string>
 </dict>
 </plist>

@@ -14,13 +14,15 @@ class MenuViewController:UIViewController {
     {
         didSet{
             attributeView.layer.masksToBounds = true
-            attributeView.layer.cornerRadius = 5
-//            let path = UIBezierPath()
-//            path.move(to: CGPoint(x: 200, y: 200)) //StartPoint
-//            path.addLine(to: CGPoint(x: 380, y: 380)) //EndPoint of First Line and StartPoint for Second Line
-//            path.addLine(to: CGPoint(x: 20, y: 380)) //EndPoint of Second Line
-//   attributeView.layer.masksToBounds = true
-//   attributeView.layer.cornerRadius = 60
+            attributeView.layer.cornerRadius = 15
+          
+        
+   attributeView.layer.masksToBounds = false
+   attributeView.layer.shadowOffset = CGSize(width: 0, height: 0)
+   attributeView.layer.shadowColor = UIColor.black.cgColor
+   attributeView.layer.shadowOpacity = 0.5
+   attributeView.layer.shadowRadius = 5
+
         }
     }
     @IBOutlet weak var scroolView1: NSLayoutConstraint!
@@ -28,9 +30,10 @@ class MenuViewController:UIViewController {
     @IBOutlet weak var scroolImage: NSLayoutConstraint!
 
 //    // var coverHeightConstraint.constant = 0
-    var largeNavigateBarHeight:CGFloat = 0
+    //var largeNavigateBarHeight:CGFloat = 0
     var previousOFFsetState:CGFloat = 0
-    var hightView :CGFloat = 0
+    var maxhightView :CGFloat = 50
+    var minhightView:CGFloat = 80
     @IBOutlet weak var viewDetels: UIView! {
         didSet{
             viewDetels.layer.masksToBounds = true
@@ -151,8 +154,25 @@ let decodedData = try decoder.decode(MenuData.self, from: safeData)
 }
 
 extension MenuViewController:UITableViewDelegate {
-    
-}
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        if scrollView.contentOffset.y > 0{
+            if attributeView.bounds.size.height > 107{
+
+        let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
+        let hightView = scroolView1.constant + offSetDifrent
+        scroolView1.constant = hightView
+          print("scroll view = \(scrollView.contentOffset.y)")
+            }
+        }else {
+            if attributeView.bounds.size.height <= 219{
+                let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
+            let hightView = scroolView1.constant + offSetDifrent
+            scroolView1.constant = hightView
+            }}
+
+        }
+    }
 extension MenuViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -198,57 +218,8 @@ extension MenuViewController:UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 100
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-        {
-            let verticalPadding: CGFloat = 10
+    
 
-            let maskLayer = CALayer()
-            maskLayer.cornerRadius = 20
-            maskLayer.backgroundColor = UIColor.black.cgColor
-            maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 5 , dy: verticalPadding/2)
-            cell.layer.mask = maskLayer
-        }
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//
-//        if   scrollView.contentOffset.y>0 {
-//            if attributeView.bounds.size.height > viewDetels.bounds.size.height * 1.1{
-//               let ofStet = largeNavigateBarHeight - scrollView.contentOffset.y
-//                   let  constHeight = scroolView1.constant + ofStet
-//                    scroolView1.constant = constHeight
-//
-//           print("ssss:\(scrollView.contentOffset.y)")
-//        let ofStetImage = previousOFFsetState - scrollView.contentOffset.y
-//       // preSetOfStateImage = scrollView.contentOffset.y
-//        let constHeightImage = scroolImage.constant + ofStetImage
-//        scroolImage.constant = constHeightImage
-//            }
-//        }
-//        else {
-//            if attributeView.bounds.size.height <= hightView {
-//            let ofStet = largeNavigateBarHeight - scrollView.contentOffset.y
-//                let  constHeight = scroolView1.constant + ofStet
-//                 scroolView1.constant = constHeight
-//
-//        print("ssss:\(scrollView.contentOffset.y)")
-//     let ofStetImage = previousOFFsetState - scrollView.contentOffset.y
-//     let constHeightImage = scroolImage.constant + ofStetImage
-//            scroolImage.constant = constHeightImage
-//            }
-//
-////        if scrollView.contentOffset.y > (200 + largeNavigateBarHeight){
-////            scroolView.constant = 0
-////        }
-////        let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
-////
-////        print("scroll view = \(scrollView.contentOffset.y)")
-////        print("previous \(previousOFFsetState)")
-////        print("difference \(offSetDifrent)")
-////        previousOFFsetState = scrollView.contentOffset.y
-////        let newHight = scroolView.constant + offSetDifrent
-////        scroolView.constant = newHight
-////    }
-//}
-//    }
 }

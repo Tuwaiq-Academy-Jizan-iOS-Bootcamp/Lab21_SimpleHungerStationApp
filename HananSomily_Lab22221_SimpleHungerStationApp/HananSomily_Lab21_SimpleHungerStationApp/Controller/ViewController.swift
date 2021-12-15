@@ -7,28 +7,11 @@
 
 import UIKit
 import Foundation
-//class PlaceholderCell: UITableViewCell {
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        backgroundColor = .white
-//        selectionStyle = .none
-//
-//        layer.shadowColor = UIColor.black.cgColor
-//        layer.shadowOffset = CGSize(width: 0, height: 10)
-//        layer.shadowRadius = 10.0
-//        layer.shadowOpacity = 0.5
-//        layer.masksToBounds = false
-//        clipsToBounds = false
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//    }
-//}
-
-class ViewController: UIViewController {
+import CoreLocation
+class ViewController: UIViewController , CLLocationManagerDelegate {
    
- 
+    @IBOutlet weak var nameOfCity: UILabel!
+    var locationCity:CLLocationManager!
     @IBOutlet weak var collectonImageView: UICollectionView! {
         didSet{
             collectonImageView.delegate = self
@@ -38,7 +21,7 @@ class ViewController: UIViewController {
     var sectionName = "Hunger Station"
     var i = 0
     var resturant:[DataAPI] = []
-    //["aselBorger","borgerKing","herfy"]
+    var resturant2 = ["ads2","ads1","ads3","ads4"]
     var select :DataAPI?
     @IBOutlet weak var hungerStationTableView: UITableView! {
         didSet {
@@ -55,11 +38,45 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        locationCity = CLLocationManager()
+        locationCity.delegate = self
         getDtaaAPI(with: "/restaurants")
 //resturant = [UIImage(named:"borgerKing")!,UIImage(named: "aselBorger")!,UIImage(named: "herfy")!]
 
+  
+        locationCity.desiredAccuracy = kCLLocationAccuracyBest
+        locationCity.requestAlwaysAuthorization()
+    if CLLocationManager.locationServicesEnabled() {
+        print("location enp")
+        locationCity.startUpdatingLocation()
     }
+    else {
+        print("not found")
+        
+    }
+    }
+   // }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let cerentLocation = locations[0] as CLLocation
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(cerentLocation) { placemarks, error in
+            if (error != nil){
+                print("error")
+            }
+            let placemark = placemarks! as [CLPlacemark]
+            if (placemark.count>0){
+                let place = placemarks![0]
+                let locality = place.locality ?? ""
+                let area = place.administrativeArea ?? ""
+                let country = place.country ?? ""
+                print("locality **** \(locations)")
+                print("area \(area)")
+                print("country\(country)")
+                self.nameOfCity.text = "\(country),\(area),\(locality)"
+            }
+        }
+    }
+   // }
     func getDtaaAPI(with endpoint:String){
     let link = "https://hungerstation-api.herokuapp.com/api/v1"
         print(link)
@@ -98,6 +115,9 @@ let decodedData = try decoder.decode(HungerStationAPI.self, from: safeData)
     @IBAction func backTo(segue:UIStoryboardSegue){
         
     }
+     
+    
+
 }
 
 extension ViewController :UITableViewDelegate , UITableViewDataSource {
@@ -112,16 +132,21 @@ extension ViewController :UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
  let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! ClassHungerStationTableView
-        //StructureHungerStation
-//        cell.layer.masksToBounds = true
-//        cell.layer.mask
+
 
 let content = foodHungerStation[indexPath.row]
         //print()
 //        cell.layer.masksToBounds = true
 //        cell.layer.cornerRadius = 20
-        cell.viewDetelCell.layer.masksToBounds = true
-        cell.viewDetelCell.layer.cornerRadius = 12
+//        cell.viewDetelCell.layer.masksToBounds = true
+//        cell.viewDetelCell.layer.cornerRadius = 12
+
+       // cell.layer.cornerRadius = 8
+        cell.viewDetelCell.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cell.viewDetelCell.layer.shadowRadius = 3
+        cell.viewDetelCell.layer.shadowOpacity = 0.1
+        cell.viewDetelCell.layer.shadowColor = UIColor.black.cgColor
+        cell.viewDetelCell.layer.masksToBounds = false
 
         cell.backgroundView?.layer.cornerRadius = 5
         cell.backgroundView?.clipsToBounds = true
@@ -133,7 +158,7 @@ let content = foodHungerStation[indexPath.row]
 
 cell.nameMealLabel.text = content.name
 cell.descriptionMealLabel.text = content.category
- cell.deliverCostLabel.text = "\(content.delivery.cost.value)\(content.delivery.cost.currency)"
+ cell.deliverCostLabel.text = "Delivery: \(content.delivery.cost.value)\(content.delivery.cost.currency)"
  cell.deliveryTimeLabel.text = "\(content.delivery.time.max) - \(content.delivery.time.min) Minutes"
         cell.evaluationLabel.text = "\(content.rating)"
 if let value = content.offer  {
@@ -201,29 +226,17 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return 350
         
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    
-        return "Hunger Station"
-    }
-//    func tableView(_ tableView: UITableView, viewForHeader section: Int) -> UIView? {
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width , height: 40))
-//        let label = UILabel(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width, height: 40))
-//        view.backgroundColor = .systemYellow
-//        label.text = sectionName
-//        label.textColor = .white
-//        label.textAlignment = .center
-//        view.addSubview(label)
-//        return view
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    
+//        return "Hunger Station"
 //    }
-//    func tableView(_ tableView: UITableView, heightForHeader section: Int) -> CGFloat {
-//        return 70
+//
+//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        return " .. End .."
 //    }
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return " .. End .."
-    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
         {
             let verticalPadding: CGFloat = 10
@@ -236,11 +249,18 @@ let resturantImage = URL(string:foodHungerStation[indexPath.row].image)
         }
     
 }
+
 extension ViewController:UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return resturant.count
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
-    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //if section == 1 {
+            return resturant.count
+       // }
+      //  return resturant2.count
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imgeView", for: indexPath) as! ImageViewCell
         if let resturantLogoImage = URL(string:foodHungerStation[indexPath.row].image){

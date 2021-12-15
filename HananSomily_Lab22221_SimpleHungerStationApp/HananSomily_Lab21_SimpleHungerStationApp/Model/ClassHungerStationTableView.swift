@@ -14,7 +14,16 @@ class ClassHungerStationTableView:UITableViewCell {
     @IBOutlet weak var viewDetelCell: UIView!
     {
       didSet{
-//          viewDetelCell.layer.masksToBounds = true
+          
+          viewDetelCell.layer.shadowColor = UIColor(red: 5, green: 324, blue: 543, alpha: 1).cgColor
+          viewDetelCell.layer.shadowOffset = CGSize(width: 6, height: 3)
+          viewDetelCell.layer.shadowRadius = 3
+          viewDetelCell.layer.shadowOpacity = 0.3
+          //viewDetelCell.layer.shadowPath = UIBezierPath(roundedRect: viewDetelCell.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+        //  viewDetelCell.layer.shouldRasterize = true
+         // viewDetelCell.layer.rasterizationScale = UIScreen.main.scale
+          
+          //          viewDetelCell.layer.masksToBounds = true
 //          viewDetelCell.layer.repeatCount = 50
         }
     }
@@ -38,6 +47,26 @@ class ClassHungerStationTableView:UITableViewCell {
         didSet{
         cellView.layer.masksToBounds = true
             cellView.layer.repeatCount = 5
+            
+//            cellView.layer.shadowOffset = CGSize(width: 6, height: 3)
+//            cellView.layer.shadowRadius = 3
+//            cellView.layer.shadowOpacity = 0.3
+//            cellView.layer.shadowPath = UIBezierPath(roundedRect: cellView.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+//            cellView.layer.shouldRasterize = true
+//            cellView.layer.rasterizationScale = UIScreen.main.scale
+
+        }
+    }
+    
+    @IBOutlet weak var shadowView: UIView!
+    {
+        didSet{
+//            shadowView.layer.shadowOffset = CGSize(width: 6, height: 3)
+//            shadowView.layer.shadowRadius = 3
+//            shadowView.layer.shadowOpacity = 0.3
+//            shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 8, height: 8)).cgPath
+//            shadowView.layer.shouldRasterize = true
+//            shadowView.layer.rasterizationScale = UIScreen.main.scale
         }
     }
     @IBOutlet weak var logoImage: UIImageView!
@@ -81,5 +110,19 @@ override func awakeFromNib() {
     promotedLable.text = "\(foods?.is_promoted)"
 
 }
-   
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.masksToBounds = true
+        layer.cornerRadius = 7
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.9
+        layer.shadowRadius = 10
+        layer.shadowPath = CGPath(rect: .init(x: 0,
+                                          y: 10,
+                                          width: contentView.bounds.width,
+                                          height: contentView.bounds.height - 20),
+                              transform: nil)    }
 }
+
