@@ -15,23 +15,51 @@ class ViewController: UIViewController {
             hungerstationTableView.dataSource = self
         }
     }
-    var resturants:[Hungerstation] = []
-    var selectedHungerstation:Hungerstation?
-    var selecteMenu:[Menu] = []
+    var selectedHungerstation:RestorantsData?
    var imageView = ["view","V1","V2","V3","V5","V6"]
    var index = 0
+    var dataRestorants1 = [RestorantsData]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        resturants.append(resturants1)
-        resturants.append(resturants2)
-        resturants.append(resturants3)
-        resturants.append(resturants4)
-        
+        downloadRestorantData()
+        // navigation bar
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                navigationItem.backBarButtonItem = backBarButtonItem
+        navigationController!.navigationBar.titleTextAttributes = [
+                   .foregroundColor: UIColor.white,
+                   ]
+    }
+    // Steps url
+    func downloadRestorantData() {
+        if let UrlRestorantData = URL(string: "https://hungerstation-api.herokuapp.com/api/v1/restaurants") {
+            let urlSession = URLSession(configuration: .default)
+            let task = urlSession.dataTask(with: UrlRestorantData) { data, response, error in
+                if let error = error {
+                    print("The URL Is Not Working", error.localizedDescription)
+                }else {
+                    if let restorantData = data {
+                        do {
+                            let decorder = JSONDecoder()
+                            let restorantsInfo = try decorder.decode(Restorants.self, from: restorantData)
+                            print(restorantsInfo.data)
+                            self.dataRestorants1 = restorantsInfo.data
+                            DispatchQueue.main.async {
+                                self.hungerstationTableView.reloadData()
+                            }
+                        }catch {
+                            print("Somthing Wrongs In the JSON Struct", error.localizedDescription)
+                        }
+                    }
+                }
+            }
+            task.resume()
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let sendData = segue.destination as! MenuViewController
         sendData.selectedHungerstation = selectedHungerstation
     }
+    // code hedar "Swip"
     @IBAction func swipeRight(_ sender: Any) {
         if index < imageView.count - 1 {
             index += 1
@@ -40,7 +68,6 @@ class ViewController: UIViewController {
         }
         headrImage.image = UIImage(named: imageView[index])
     }
-    
     @IBAction func swipeLeft(_ sender: Any) {
         if index > 0 {
             index -= 1
@@ -49,33 +76,90 @@ class ViewController: UIViewController {
         }
         headrImage.image = UIImage(named: imageView[index] )
     }
-    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue){      print("Unwind to Root View Controller")
+    // action the button
+    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue){
+        print("Unwind to Root View Controller")
     }
 }
+// extension
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resturants.count
+        return dataRestorants1.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! DataTableViewCell
-        cell.restaurantNameLabel.text = resturants[indexPath.row].resturantName
-        cell.typeFoodLabel.text = resturants[indexPath.row].typeFood
-        cell.deliveryChargeLabel.text = resturants[indexPath.row].deliveryChrge
-        cell.timeLabel.text = resturants[indexPath.row].time
-        cell.restaurantRatingLable.text = resturants[indexPath.row].starResturant
-        cell.deliveryChargeLabel.text = resturants[indexPath.row].deliveryChrge
-        cell.foodImage.image = UIImage(named: resturants[indexPath.row].resturantImage)
-        cell.logoImage.image = UIImage(named: resturants[indexPath.row].logoImage)
+        cell.restaurantNameLabel.text = dataRestorants1[indexPath.row].name
+        cell.typeFoodLabel.text = dataRestorants1[indexPath.row].category
+        cell.timeLabel.text = "\(dataRestorants1[indexPath.row].delivery.time.max) - \(dataRestorants1[indexPath.row].delivery.time.min) Minutes"
+        cell.costLabel.text =
+        "\(dataRestorants1[indexPath.row].delivery.cost.currency) \(dataRestorants1[indexPath.row].delivery.cost.value)"
+        cell.restaurantRatingLable.text = "\(dataRestorants1[indexPath.row].rating)"
+        // offer
+        if  dataRestorants1[indexPath.row].offer != nil {
+            let value = dataRestorants1[indexPath.row].offer?.value
+            let spend = dataRestorants1[indexPath.row].offer?.spend
+            cell.deliveryChargeLabel.text = "\(value!) "+"(Spend \(spend!) SR)"
+        }else {
+            cell.deliveryChargeLabel?.removeFromSuperview()
+        }
+        //promoted
+        if dataRestorants1[indexPath.row].is_promoted == false {
+            cell.promoted?.removeFromSuperview()
+        }
+        // code size view
+        if dataRestorants1[indexPath.row].offer != nil {
+            let bezierPath = UIBezierPath()
+        bezierPath.move(to: .zero)
+            bezierPath.addLine(to: CGPoint(x: cell.deliveryChargeLabel.bounds.width + 50, y: 0))
+        bezierPath.addLine(to: CGPoint(x: cell.deliveryChargeLabel.bounds.width + 35, y: 25))
+        bezierPath.addLine(to: CGPoint(x: 0, y: 25))
+        let shape = CAShapeLayer()
+            shape.path = bezierPath.cgPath
+            shape.fillColor = UIColor.systemBlue.cgColor
+        cell.deliveryView.layer.addSublayer(shape)
+            cell.deliveryView.sizeToFit()
+        }else{
+            cell.deliveryView.isHidden = true
+        }
+        //code image
+        cell.foodImage.image = nil
+        if let imageF = URL(string: dataRestorants1 [indexPath.row].image){
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageF)
+                if let data = data {
+                    let imge0 = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        if tableView.cellForRow(at: indexPath) != nil{
+                        cell.foodImage.image = imge0
+                }
+            }
+        }
+            }
+        }
+        cell.logoImage.image = nil
+        if let imageL = URL(string: dataRestorants1 [indexPath.row].resturant_image){
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageL)
+                if let data = data {
+                    let imge1 = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        if tableView.cellForRow(at: indexPath) != nil{
+                        cell.logoImage.image = imge1
+                }
+            }
+        }
+            }
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt
                    indexPath: IndexPath)
     -> CGFloat {
-        return 200
+        return 250
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedHungerstation = resturants[indexPath.row]
-        performSegue(withIdentifier: "goTo2", sender: self)
+        selectedHungerstation = dataRestorants1[indexPath.row]
+        performSegue(withIdentifier: "goTo2", sender: self)        
     }
 }
 
