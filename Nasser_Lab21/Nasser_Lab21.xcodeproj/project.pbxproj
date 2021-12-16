@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A4346E42769BDDC00EA5B18 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4346E32769BDDC00EA5B18 /* MenuController.swift */; };
+		7A4346E42769BDDC00EA5B18 /* ControllerMEN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4346E32769BDDC00EA5B18 /* ControllerMEN.swift */; };
 		7A4346E62769BDF500EA5B18 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4346E52769BDF500EA5B18 /* MenuDataSource.swift */; };
 		7A4346E82769BE0800EA5B18 /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4346E72769BE0800EA5B18 /* MenuDelegate.swift */; };
 		7AA68942276893BA0080E834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68941276893BA0080E834 /* AppDelegate.swift */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A4346E32769BDDC00EA5B18 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		7A4346E32769BDDC00EA5B18 /* ControllerMEN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerMEN.swift; sourceTree = "<group>"; };
 		7A4346E52769BDF500EA5B18 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
 		7A4346E72769BE0800EA5B18 /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
 		7AA6893E276893BA0080E834 /* Nasser_Lab21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasser_Lab21.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA68945276893BA0080E834 /* ViewController.swift */,
-				7A4346E32769BDDC00EA5B18 /* MenuController.swift */,
+				7A4346E32769BDDC00EA5B18 /* ControllerMEN.swift */,
 				7A4346E52769BDF500EA5B18 /* MenuDataSource.swift */,
 			);
 			name = Controller;
@@ -305,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A4346E42769BDDC00EA5B18 /* MenuController.swift in Sources */,
+				7A4346E42769BDDC00EA5B18 /* ControllerMEN.swift in Sources */,
 				7AA68976276894F10080E834 /* FoodsCell.swift in Sources */,
 				7AA68946276893BA0080E834 /* ViewController.swift in Sources */,
 				7A4346E62769BDF500EA5B18 /* MenuDataSource.swift in Sources */,

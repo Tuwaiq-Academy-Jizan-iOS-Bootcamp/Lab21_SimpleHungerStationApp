@@ -9,7 +9,7 @@
 
 import UIKit
 import Foundation
-extension MenuController:UITableViewDataSource {
+extension ControllerMEN:UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menu") as! MenuCell
             cell.mainText.text = restorantMenu.menu[indexPath.row].title

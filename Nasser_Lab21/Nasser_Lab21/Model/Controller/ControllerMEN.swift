@@ -7,7 +7,7 @@
 
 
 import UIKit
-class MenuController: UIViewController {
+class ControllerMEN: UIViewController {
     @IBOutlet weak var menuTabelView: UITableView! {
         didSet {
             menuTabelView.delegate = self
@@ -166,7 +166,7 @@ class MenuController: UIViewController {
 }
 
 
-extension MenuController:UITableViewDelegate {
+extension ControllerMEN:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restorantMenu.menu.count

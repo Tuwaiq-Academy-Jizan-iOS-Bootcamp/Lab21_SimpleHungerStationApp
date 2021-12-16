@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var restorantsTabelView: UITableView!
+    @IBOutlet weak var tabelViewrestorants: UITableView!
     var restorants: Restorants = Restorants(data: [])
     var idSender = 0   // @IBOutlet weak var restorantName: UILabel!
     var restorantBackImageSender = ""
@@ -26,25 +26,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadRestorantData(restorantsURL)
-        restorantsTabelView.delegate = self
-        restorantsTabelView.dataSource = self
+        tabelViewrestorants.delegate = self
+        tabelViewrestorants.dataSource = self
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let toMenu = segue.destination as? MenuController
+        let todoME = segue.destination as? ControllerMEN
         
-        toMenu?.idResiver = idSender
-        toMenu?.backImageResiver = restorantBackImageSender
-        toMenu?.logoResiver = logoSener
-        toMenu?.nameResiver = nameSender
-        toMenu?.raitingResiver = raitingSender
-        toMenu?.minimumCostResiver = minimumCostSender
-        toMenu?.deliveryCostResiver = deliveryCostSender
-        toMenu?.deliveryMinTimeResiver = deliveryMinTimeSender
-        toMenu?.deliveryMaxTimeResiver = deliveryMaxTimeSender
-        toMenu?.promotedLabelResiver = promotedLabelSender
-        toMenu?.contantResiver = contantSender
+        todoME?.idResiver = idSender
+        todoME?.backImageResiver = restorantBackImageSender
+        todoME?.logoResiver = logoSener
+        todoME?.nameResiver = nameSender
+        todoME?.raitingResiver = raitingSender
+        todoME?.minimumCostResiver = minimumCostSender
+        todoME?.deliveryCostResiver = deliveryCostSender
+        todoME?.deliveryMinTimeResiver = deliveryMinTimeSender
+        todoME?.deliveryMaxTimeResiver = deliveryMaxTimeSender
+        todoME?.promotedLabelResiver = promotedLabelSender
+        todoME?.contantResiver = contantSender
     }
-    // @IBAction func getBack(segue:UIStoryboardSegue) {}
     func downloadRestorantData(_ FromURL: String) {
         if let urlData = URL(string: FromURL) {
             let urlSession = URLSession(configuration: .default)
@@ -57,7 +56,7 @@ class ViewController: UIViewController {
                             let decorder = JSONDecoder()
                             self.restorants = try decorder.decode(Restorants.self, from: restorantData)
                             DispatchQueue.main.async {
-                                self.restorantsTabelView.reloadData()
+                                self.tabelViewrestorants.reloadData()
                             }
                         }catch {
                             print("Somthing Wrongs In the JSON Struct", error.localizedDescription)
@@ -77,7 +76,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 300
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = restorantsTabelView.dequeueReusableCell(withIdentifier: "cell") as! FoodsCell
+        let cell = tabelViewrestorants.dequeueReusableCell(withIdentifier: "cell") as! FoodsCell
         cell.restorantName.text = restorants.data[indexPath.row].name
         if restorants.data[indexPath.row].offer != nil {
             if let offer = restorants.data[indexPath.row].offer {
