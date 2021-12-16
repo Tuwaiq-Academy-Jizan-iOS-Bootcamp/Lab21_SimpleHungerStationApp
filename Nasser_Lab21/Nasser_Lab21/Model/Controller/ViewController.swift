@@ -1,17 +1,27 @@
 //
-//  ViewController.swift
+//  SceneDelegate.swift
 //  Nasser_Lab21
 //
 //  Created by Nasser Aseeri on 10/05/1443 AH.
 //
+
 
 import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var restorantsTabelView: UITableView!
     var restorants: Restorants = Restorants(data: [])
-    var idSender = 0
+    var idSender = 0   // @IBOutlet weak var restorantName: UILabel!
     var restorantBackImageSender = ""
+    var logoSener = ""
+    var nameSender = ""
+    var raitingSender:Float = 0
+    var contantSender = ""
+    var minimumCostSender:Double = 0
+    var deliveryCostSender:Double = 0
+    var deliveryMinTimeSender = 0
+    var deliveryMaxTimeSender = 0
+    var promotedLabelSender = ""
     let restorantsURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +30,21 @@ class ViewController: UIViewController {
         restorantsTabelView.dataSource = self
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let toMenu = segue.destination as? FoodMenu
-        toMenu?.restorantsId = idSender
-        toMenu?.restorantBackImage = restorantBackImageSender
+        let toMenu = segue.destination as? MenuController
+        
+        toMenu?.idResiver = idSender
+        toMenu?.backImageResiver = restorantBackImageSender
+        toMenu?.logoResiver = logoSener
+        toMenu?.nameResiver = nameSender
+        toMenu?.raitingResiver = raitingSender
+        toMenu?.minimumCostResiver = minimumCostSender
+        toMenu?.deliveryCostResiver = deliveryCostSender
+        toMenu?.deliveryMinTimeResiver = deliveryMinTimeSender
+        toMenu?.deliveryMaxTimeResiver = deliveryMaxTimeSender
+        toMenu?.promotedLabelResiver = promotedLabelSender
+        toMenu?.contantResiver = contantSender
     }
+    // @IBAction func getBack(segue:UIStoryboardSegue) {}
     func downloadRestorantData(_ FromURL: String) {
         if let urlData = URL(string: FromURL) {
             let urlSession = URLSession(configuration: .default)
@@ -65,6 +86,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 }else {
                     cell.priceCondition.text = "  \(offer.value) (spend \(offer.spend) SAR)     "
                 }
+                // the tringle thing...
             }
         }else{
             cell.priceCondition.isHidden = true
@@ -103,8 +125,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.promoted.layer.cornerRadius = 6
         return cell
     }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         idSender = restorants.data[indexPath.row].id
+        restorantBackImageSender = restorants.data[indexPath.row].image
+        logoSener = restorants.data[indexPath.row].resturant_image
+        nameSender = restorants.data[indexPath.row].name
+        raitingSender = restorants.data[indexPath.row].rating
+        contantSender = restorants.data[indexPath.row].category
+        minimumCostSender = restorants.data[indexPath.row].delivery.cost.value
+        deliveryCostSender = restorants.data[indexPath.row].delivery.cost.value
+        deliveryMinTimeSender = restorants.data[indexPath.row].delivery.time.min
+        deliveryMaxTimeSender = restorants.data[indexPath.row].delivery.time.max
+        if restorants.data[indexPath.row].offer != nil {
+            if let offer = restorants.data[indexPath.row].offer {
+                if offer.value.contains("%") {
+                    promotedLabelSender = " \(offer.value) Your Order (spend \(offer.spend) SAR) "
+                }else {
+                    promotedLabelSender = " \(offer.value) (spend \(offer.spend) SAR) "
+                }
+            }
+        }else {
+            promotedLabelSender = ""
+        }
         performSegue(withIdentifier: "toMenu", sender: self)
     }
 }

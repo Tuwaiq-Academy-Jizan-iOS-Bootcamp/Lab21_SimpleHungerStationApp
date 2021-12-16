@@ -1,12 +1,10 @@
 //
-//  Items.swift
+//  SceneDelegate.swift
 //  Nasser_Lab21
 //
 //  Created by Nasser Aseeri on 10/05/1443 AH.
 //
-
-import Foundation
-
+import UIKit
 
 struct Restorants:Codable {
     var data:[RestorantsData]
@@ -16,7 +14,7 @@ struct RestorantsData:Codable {
     var name: String
     var category: String
     var delivery: Delivery
-    var rating: Double
+    var rating: Float
     var is_promoted: Bool
     var offer: Offer?
     var image: String

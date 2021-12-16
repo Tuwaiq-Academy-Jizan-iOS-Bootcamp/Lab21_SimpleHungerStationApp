@@ -4,9 +4,6 @@
 //
 //  Created by Nasser Aseeri on 10/05/1443 AH.
 //
-
-
-
 import UIKit
 class MenuCell: UITableViewCell {
     @IBOutlet weak var foodImage: UIImageView!

@@ -5,8 +5,10 @@
 //  Created by Nasser Aseeri on 10/05/1443 AH.
 //
 
-import UIKit
 
+
+
+import UIKit
 class FoodsCell: UITableViewCell {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var restorandFoodImage: UIImageView!
@@ -17,4 +19,3 @@ class FoodsCell: UITableViewCell {
     @IBOutlet weak var priceCondition: UILabel!
     @IBOutlet weak var promoted: UILabel!
 }
-
