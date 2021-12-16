@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "cm1-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "cm1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },

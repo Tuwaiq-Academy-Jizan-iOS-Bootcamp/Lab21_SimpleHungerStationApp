@@ -17,9 +17,16 @@ class CellElements:UITableViewCell{
     @IBOutlet weak var deliveryTimeLabel: UILabel!
     @IBOutlet weak var deliveryPriceLabel: UILabel!
     @IBOutlet weak var restaurantRatingLabel: UILabel!
+    @IBOutlet weak var promotedLabel: UILabel!
+    
+   @IBOutlet weak var offersView: UIView!
+
+    
 //this is from the menu for restaurant
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealPriceLabel: UILabel!
     @IBOutlet weak var mealImageLabel: UIImageView!
-    
+    @IBOutlet weak var caloriesImage: UIImageView!
+    @IBOutlet weak var caloriesLabel: UILabel!
+    @IBOutlet weak var subtitleMeal: UILabel!
 }

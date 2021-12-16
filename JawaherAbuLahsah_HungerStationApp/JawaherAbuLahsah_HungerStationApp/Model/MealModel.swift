@@ -6,8 +6,21 @@
 //
 
 import Foundation
-struct Meal{
-    var mealName:String
-    var mealPrice:Double
-    var mealImage:String
+
+struct Meal:Codable{
+    var menu:[Menu]
 }
+
+struct Menu: Codable {
+    var id: Int
+    var title: String
+    var subtitle: String?
+    var calories: Int?
+    var price: Cost
+    var image: String
+}
+
+//struct Price: Codable {
+//    let value: Int
+//    let currency: String
+//}

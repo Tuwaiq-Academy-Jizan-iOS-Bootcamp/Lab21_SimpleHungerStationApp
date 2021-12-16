@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "hm1-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hm1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
