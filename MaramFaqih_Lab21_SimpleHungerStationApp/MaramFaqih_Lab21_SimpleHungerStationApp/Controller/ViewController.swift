@@ -13,6 +13,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     var locationManager  = CLLocationManager()
  
+    @IBOutlet weak var viewForHeadr: UIView!
     @IBOutlet weak var resturantsTableView: UITableView!
     @IBOutlet weak var headerImageView: UIImageView!
     
@@ -92,10 +93,14 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
              }
              
        
-        headerImageView.layer.cornerRadius = 0.1 *  headerImageView.bounds.size.height
-        headerImageView.layer.masksToBounds = true
-        resturantsTableView.delegate = self
-        resturantsTableView.dataSource = self
+             
+             headerImageView.layer.masksToBounds = true
+             headerImageView.layer.cornerRadius = 15
+
+            
+             resturantsTableView.delegate = self
+             resturantsTableView.dataSource = self
+             
         headers = ["h1","h2","h3","h4"]
 
         getaData(with:"restaurants")
@@ -147,6 +152,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
                 index = headers.count-1
             }
         headerImageView.image=UIImage(named: headers[index])
+        
     }
     
     @IBAction func headerSwipeGesturLeft(_ sender: UISwipeGestureRecognizer) {
@@ -198,6 +204,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         cell.isPromotedCell.layer.masksToBounds = true
         cell.isPromotedCell.layer.cornerRadius = 5
         
+      
+        
         if resturantNameStruct[indexPath.row].is_promoted {
             cell.isPromotedCell.text = " Promoted "
             
@@ -244,6 +252,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
        
         cell.cuisineCell.sizeToFit()
         cell.offerCell.sizeToFit()
+        
         //Path part
         let path = UIBezierPath()
         path.move(to: .zero) //StartPoint frame.size
@@ -253,9 +262,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
        
         let shape = CAShapeLayer()
         shape.path = path.cgPath
-        //cell.offerCell.sizeToFit()
         cell.viewOffer.layer.mask=shape
-        //cell.viewOffer.sizeToFit()
         
         return cell
       
@@ -278,10 +285,21 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         let maskLayer = CALayer()
         maskLayer.cornerRadius = 20
         maskLayer.backgroundColor = UIColor.black.cgColor
+        
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 10 , dy: verticalPadding/2)
-        cell.layer.mask = maskLayer
+        maskLayer.masksToBounds = false
+        maskLayer.shadowOffset = CGSize(width: 0, height: 0)
+        maskLayer.shadowOpacity = 0.5
+        maskLayer.shadowRadius = 4
+       cell.layer.mask = maskLayer
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ResturntCell
+//        let sizeHeightView =  cell.viewForCell.bounds.size.height - 2
+//        let sizeWidthtView =  cell.viewForCell.bounds.size.width - 2
+//        cell.viewForCell.bounds.size.height = sizeHeightView
+//        cell.viewForCell.bounds.size.width = sizeWidthtView
         let arrPath = resturantNameStruct[indexPath.row]
         nameSelected = arrPath.name
         deliveryTimeSelected = String(arrPath.delivery.time.min)+" - "+String(arrPath.delivery.time.max)+" minutes"

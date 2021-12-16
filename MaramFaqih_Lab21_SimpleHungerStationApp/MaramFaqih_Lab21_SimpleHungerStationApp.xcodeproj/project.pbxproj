@@ -57,7 +57,7 @@
 		EED2400B2742DD49005E4258 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		EED2400E2742E9A7005E4258 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EED2401227438436005E4258 /* ResturantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantView.swift; sourceTree = "<group>"; };
-		EED240182743CA01005E4258 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuCell.swift; path = ../Controller/MenuCell.swift; sourceTree = "<group>"; };
+		EED240182743CA01005E4258 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		EED2401A2743CB14005E4258 /* ResturantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,8 +112,8 @@
 				EED23FD92742C004005E4258 /* AppDelegate.swift */,
 				EED23FDB2742C004005E4258 /* SceneDelegate.swift */,
 				EED2400D2742DD4F005E4258 /* Model */,
-				EED2400A2742C056005E4258 /* Controller */,
 				EED240092742C03E005E4258 /* View */,
+				EED2400A2742C056005E4258 /* Controller */,
 				EED23FE22742C008005E4258 /* Assets.xcassets */,
 				EED23FE42742C008005E4258 /* LaunchScreen.storyboard */,
 				EED23FE72742C008005E4258 /* Info.plist */,
@@ -142,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				EED23FDF2742C005005E4258 /* Main.storyboard */,
+				EED2401A2743CB14005E4258 /* ResturantCell.swift */,
+				EED240182743CA01005E4258 /* MenuCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,8 +162,6 @@
 			children = (
 				EED2400E2742E9A7005E4258 /* Menu.swift */,
 				EED2400B2742DD49005E4258 /* Resturant.swift */,
-				EED2401A2743CB14005E4258 /* ResturantCell.swift */,
-				EED240182743CA01005E4258 /* MenuCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72X8293LK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaramFaqih_Lab21_SimpleHungerStationApp/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and using app?";
@@ -513,6 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72X8293LK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MaramFaqih_Lab21_SimpleHungerStationApp/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and using app?";

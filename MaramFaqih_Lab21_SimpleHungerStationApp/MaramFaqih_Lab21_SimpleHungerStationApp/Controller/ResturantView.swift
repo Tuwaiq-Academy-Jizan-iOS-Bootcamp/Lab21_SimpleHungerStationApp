@@ -49,6 +49,7 @@ class ResturantView: UIViewController {
     var  preHeightView : CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         preHeightView = viewInfoAboutResturantTwo.bounds.size.height
 
         viewInfoAboutResturantTwo.layer.cornerRadius = 8
@@ -67,7 +68,6 @@ class ResturantView: UIViewController {
         resturantDeliveryTime.text =  deliveryTimeSelectedT
        resturantRating.text =  ratingSelectedT
        resturantCuisine.text =  cuisineSelectedT
-       //resturantOffer.text =  offerSelectedT
         if let offer = offerSelectedT {
             resturantOffer.text = offer
             
@@ -213,24 +213,31 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-      
+      //up
         if   scrollView.contentOffset.y>0 {
-            if viewInfoAboutResturantTwo.bounds.size.height > viewInfoAboutResturant.bounds.size.height * 1.1{
-               let ofStet = preSetOfState - scrollView.contentOffset.y
-                   let  constHeight = hidViewConstraint.constant + ofStet
-                    hidViewConstraint.constant = constHeight
             
-        let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
-        let constHeightImage = hidImageConstraint.constant + ofStetImage
-        hidImageConstraint.constant = constHeightImage
+            if viewInfoAboutResturantTwo.bounds.size.height > viewInfoAboutResturant.bounds.size.height * 1.1{
+                //view
+               let ofStet = preSetOfState - scrollView.contentOffset.y
+               let  constHeight = hidViewConstraint.constant + ofStet
+               hidViewConstraint.constant = constHeight
+               //image
+               let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
+               let constHeightImage = hidImageConstraint.constant + ofStetImage
+               hidImageConstraint.constant = constHeightImage
+                
             }
         }
+        
+    //down
         else {
+            //view
             if viewInfoAboutResturantTwo.bounds.size.height <= preHeightView {
+                
             let ofStet = preSetOfState - scrollView.contentOffset.y
-                let  constHeight = hidViewConstraint.constant + ofStet
-                 hidViewConstraint.constant = constHeight
-
+            let  constHeight = hidViewConstraint.constant + ofStet
+            hidViewConstraint.constant = constHeight
+            //image
             let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
             let constHeightImage = hidImageConstraint.constant + ofStetImage
             hidImageConstraint.constant = constHeightImage
