@@ -95,6 +95,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell.eveloutionStar.text = "\(hungerstaionArray[indexPath.row].rating)"
         cell.delviryTime.text = "\(hungerstaionArray[indexPath.row].delivery.time.min) " + "- \(hungerstaionArray[indexPath.row].delivery.time.max) minutes  |"
         cell.delviryCost.text = "Delivery: \(hungerstaionArray[indexPath.row].delivery.cost.value)" + "\(hungerstaionArray[indexPath.row].delivery.cost.currency)"
+        
         if hungerstaionArray[indexPath.row].is_promoted {
             cell.promtoed.isHidden = false
         } else {
@@ -105,7 +106,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
             let value = hungerstaionArray[indexPath.row].offer?.value
             let spend = hungerstaionArray[indexPath.row].offer?.spend
             
-            cell.offer?.text = "   " + value! + " (spend \(spend!) SAR)"
+            cell.offer?.text = "   " + value! + " (spend \(spend!) SAR)           "
         } else {
             cell.offer?.removeFromSuperview()
         }
