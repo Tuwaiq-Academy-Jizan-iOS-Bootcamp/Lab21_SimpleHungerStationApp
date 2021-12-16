@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainCollectionViewCell" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="Doaa_hugerStationApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylp-Qa-PwY">
+                        <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell1" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-IQ-eMe">
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Q6-IQ-eMe" firstAttribute="top" secondItem="ylp-Qa-PwY" secondAttribute="top" id="JbR-nn-iye"/>
+                            <constraint firstItem="5Q6-IQ-eMe" firstAttribute="leading" secondItem="ylp-Qa-PwY" secondAttribute="leading" id="g0x-DS-BYS"/>
+                            <constraint firstAttribute="trailing" secondItem="5Q6-IQ-eMe" secondAttribute="trailing" id="jVQ-iA-dq2"/>
+                            <constraint firstAttribute="bottom" secondItem="5Q6-IQ-eMe" secondAttribute="bottom" id="obL-y0-mtq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ylp-Qa-PwY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IaG-hX-Qz7"/>
+                <constraint firstItem="ylp-Qa-PwY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L5h-dW-nEs"/>
+                <constraint firstAttribute="trailing" secondItem="ylp-Qa-PwY" secondAttribute="trailing" id="X4O-Ha-yXr"/>
+                <constraint firstAttribute="bottom" secondItem="ylp-Qa-PwY" secondAttribute="bottom" id="xMa-zZ-QEj"/>
+            </constraints>
+            <size key="customSize" width="112" height="137"/>
+            <connections>
+                <outlet property="img" destination="5Q6-IQ-eMe" id="BMV-p1-hhV"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="165.73660714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cell1" width="86" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
