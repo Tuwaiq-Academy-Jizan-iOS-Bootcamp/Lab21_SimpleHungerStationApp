@@ -11,7 +11,8 @@ class ViewController: UIViewController {
         
     var restorants: Restorants = Restorants(data: [])
     var idSender = 0
-    var restorantBackImageSender = ""
+    
+    var restorantBackImageSender : UIImage?
     
    
     var logoSener = ""
@@ -34,24 +35,26 @@ class ViewController: UIViewController {
             restaurantTableView.delegate = self
             restaurantTableView.dataSource = self
         }
+    
+    
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let toMenu = segue.destination as? RestaurantMenu
-            toMenu?.restorantsId = idSender
-            toMenu?.restorantBackImage = restorantBackImageSender
-        
-            toMenu?.logoResiver = logoSener
-            toMenu?.nameResiver = nameSender
-            toMenu?.raitingResiver = raitingSender
-            toMenu?.minimumCostResiver = minimumCostSender
-            toMenu?.deliveryCostResiver = deliveryCostSender
-            toMenu?.deliveryMinTimeResiver = deliveryMinTimeSender
-            toMenu?.deliveryMaxTimeResiver = deliveryMaxTimeSender
-            toMenu?.promotedLabelResiver = promotedLabelSender
+            let toRestaurantMenu = segue.destination as? RestaurantMenu
+            toRestaurantMenu?.restorantsId = idSender
+            toRestaurantMenu?.backImageResiver = restorantBackImageSender
             
-            
+            toRestaurantMenu?.logoResiver = logoSener
+            toRestaurantMenu?.nameResiver = nameSender
+            toRestaurantMenu?.raitingResiver = raitingSender
+            toRestaurantMenu?.minimumCostResiver = minimumCostSender
+            toRestaurantMenu?.deliveryCostResiver = deliveryCostSender
+            toRestaurantMenu?.deliveryMinTimeResiver = deliveryMinTimeSender
+            toRestaurantMenu?.deliveryMaxTimeResiver = deliveryMaxTimeSender
+            toRestaurantMenu?.promotedLabelResiver = promotedLabelSender
             
             
         }
+    
+    
         func downloadRestorantData(_ FromURL: String) {
             if let urlData = URL(string: FromURL) {
                 let urlSession = URLSession(configuration: .default)
@@ -139,9 +142,9 @@ class ViewController: UIViewController {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             idSender = restorants.data[indexPath.row].id
             
+            let cell = tableView.cellForRow(at: indexPath) as? resturantCell
             
-            
-            restorantBackImageSender = restorants.data[indexPath.row].image
+            restorantBackImageSender = cell?.resturantImageView.image
             logoSener = restorants.data[indexPath.row].resturant_image
             nameSender = restorants.data[indexPath.row].name
             

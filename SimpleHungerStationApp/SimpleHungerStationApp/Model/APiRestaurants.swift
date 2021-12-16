@@ -34,7 +34,7 @@ struct Offer:Codable {
     var value:String
     var spend:Int
 }
-// Menus JSON
+
 struct Menus:Codable {
     var menu:[MenusData]
 }

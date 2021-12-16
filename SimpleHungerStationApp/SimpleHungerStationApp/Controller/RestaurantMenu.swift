@@ -4,34 +4,17 @@ class RestaurantMenu: UIViewController {
 
     
     @IBOutlet weak var menuTabelView: UITableView!
-    @IBOutlet weak var backGroundImage: UIImageView! {
-
-    didSet {
-        if let imageUrl = URL(string: backImageResiver) {
-            DispatchQueue.global().async {
-                if let imageData = try? Data(contentsOf: imageUrl) {
-                    DispatchQueue.main.async {
-                        if let imageHolder = UIImage(data: imageData) {
-                            self.backGroundImage.image = imageHolder
-                        }
-                    }
-                }
-            }
-        }
-          }
-}
-    
+    @IBOutlet weak var backGroundImage: UIImageView!
     
 
-
-    @IBOutlet weak var restorantLogo: UIImageView! {
+    @IBOutlet weak var resturantLogoImageView: UIImageView! {
     didSet {
         if let imageUrl = URL(string: logoResiver) {
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: imageUrl) {
                     DispatchQueue.main.async {
                         if let imageHolder = UIImage(data: imageData) {
-                            self.restorantLogo.image = imageHolder
+                            self.resturantLogoImageView.image = imageHolder
                           }
                     }
                 }
@@ -39,7 +22,7 @@ class RestaurantMenu: UIViewController {
               }
            }
       }
-    
+   
 
     @IBOutlet weak var promotedLabel: UILabel!
     
@@ -48,7 +31,7 @@ class RestaurantMenu: UIViewController {
             if promotedLabelResiver == "" {
                 promotedLabel.isHidden = true
             }else {
-            promotedLabel.text = promotedLabelResiver
+                promotedLabel.text = promotedLabelResiver
             }
             promotedLabel.layer.masksToBounds = true
             promotedLabel.layer.cornerRadius = 10
@@ -56,47 +39,47 @@ class RestaurantMenu: UIViewController {
     }
 
 
-    @IBOutlet weak var restorantRaiting: UILabel!
+    @IBOutlet weak var resturantRatingLabel: UILabel!
     
 
-    @IBOutlet weak var restorantName: UILabel! {
+    @IBOutlet weak var resturantNameLabel: UILabel! {
     didSet {
-        restorantName.text = nameResiver
+        resturantNameLabel.text = nameResiver
     }
 }
 
-    @IBOutlet weak var restorantContant: UILabel! {
+    @IBOutlet weak var resturantContantLabel: UILabel! {
     didSet {
-        restorantContant.text = contantResiver
-    }
-}
-    
-
-    @IBOutlet weak var minimumCost: UILabel! {
-    
-    didSet {
-        minimumCost.text = "\(minimumCostResiver) SR"
+        resturantContantLabel.text = contantResiver
     }
 }
     
 
-    @IBOutlet weak var delivery: UILabel! {
+    @IBOutlet weak var minimumCostLabel: UILabel! {
+    
+    didSet {
+        minimumCostLabel.text = "\(minimumCostResiver) SR"
+    }
+}
+    
+
+    @IBOutlet weak var deliveryLabel: UILabel! {
 
     didSet {
-        delivery.text = "\(deliveryCostResiver) SR"
+        deliveryLabel.text = "\(deliveryCostResiver) SR"
     }
 }
     
     
-    @IBOutlet weak var deliveryTime: UILabel! {
+    @IBOutlet weak var deliveryTimeLabel: UILabel! {
     didSet {
-        deliveryTime.text = "\(deliveryMinTimeResiver) - \(deliveryMaxTimeResiver) minutes"
+        deliveryTimeLabel.text = "\(deliveryMinTimeResiver) - \(deliveryMaxTimeResiver) minutes"
     }
 }
 
     
     var idResiver = 0
-    var backImageResiver = ""
+    var backImageResiver : UIImage?
     var logoResiver = ""
     var nameResiver = ""
     var raitingResiver:Float = 0
@@ -118,6 +101,8 @@ class RestaurantMenu: UIViewController {
     var restorantBackImage = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        backGroundImage.image = backImageResiver
+    //    print(backImageResiver, "Error0000000000")
         menuTabelView.delegate = self
         menuTabelView.dataSource = self
         downloadRestorantMenuData(restorantsId)
@@ -143,6 +128,7 @@ class RestaurantMenu: UIViewController {
                     }
                 }
             }
+            
             urlTask.resume()
         }
     }
@@ -156,25 +142,25 @@ extension RestaurantMenu:UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menu") as! MenuCell
-            cell.mainText.text = restorantMenu.menu[indexPath.row].title
+            cell.textOneLabel.text = restorantMenu.menu[indexPath.row].title
             if let subTitle = restorantMenu.menu[indexPath.row].subtitle {
-                cell.secondaryText.text = subTitle
+                cell.textTwoLabel.text = subTitle
             }else {
-                cell.secondaryText.isHidden = true
+                cell.textTwoLabel.isHidden = true
             }
-            cell.price.text = "\(restorantMenu.menu[indexPath.row].price.value) \(restorantMenu.menu[indexPath.row].price.currency)"
+            cell.priceLabel.text = "\(restorantMenu.menu[indexPath.row].price.value) \(restorantMenu.menu[indexPath.row].price.currency)"
             if let kalorise = restorantMenu.menu[indexPath.row].calories {
-                cell.kaloris.text = " \(kalorise) Kcal"
+                cell.kalorisLabel.text = " \(kalorise) Kcal"
             }else {
-                cell.kaloris.isHidden = true
-                cell.trashImage.isHidden = true
+                cell.kalorisLabel.isHidden = true
+                cell.flameImageView.isHidden = true
             }
             if let foodImage = URL(string: restorantMenu.menu[indexPath.row].image) {
                 DispatchQueue.global().async {
                     if let foodImage = try? Data(contentsOf: foodImage) {
                         let image = foodImage
                         DispatchQueue.main.async {
-                            cell.foodImage.image = UIImage(data: image)
+                            cell.foodImageView.image = UIImage(data: image)
                         }
                     }
                 }

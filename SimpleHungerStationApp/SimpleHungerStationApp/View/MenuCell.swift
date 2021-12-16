@@ -5,13 +5,10 @@ import UIKit
 
 class MenuCell: UITableViewCell {
 
-    @IBOutlet weak var foodImage: UIImageView!
-    @IBOutlet weak var kaloris: UILabel!
-    @IBOutlet weak var secondaryText: UILabel!
-    @IBOutlet weak var mainText: UILabel!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var trashImage: UIImageView!
+    @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var kalorisLabel: UILabel!
+    @IBOutlet weak var textTwoLabel: UILabel!
+    @IBOutlet weak var textOneLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var flameImageView: UIImageView!
 }
-
-    
-
