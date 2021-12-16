@@ -16,7 +16,7 @@ class MenuViewController:UIViewController {
             attributeView.layer.masksToBounds = true
             attributeView.layer.cornerRadius = 15
           
-        
+        // shadow
    attributeView.layer.masksToBounds = false
    attributeView.layer.shadowOffset = CGSize(width: 0, height: 0)
    attributeView.layer.shadowColor = UIColor.black.cgColor
@@ -29,11 +29,10 @@ class MenuViewController:UIViewController {
     @IBOutlet weak var scroolView2: NSLayoutConstraint!
     @IBOutlet weak var scroolImage: NSLayoutConstraint!
 
-//    // var coverHeightConstraint.constant = 0
-    //var largeNavigateBarHeight:CGFloat = 0
+    
     var previousOFFsetState:CGFloat = 0
-    var maxhightView :CGFloat = 50
-    var minhightView:CGFloat = 80
+//    var maxhightView :CGFloat = 50
+//    var minhightView:CGFloat = 80
     @IBOutlet weak var viewDetels: UIView! {
         didSet{
             viewDetels.layer.masksToBounds = true
@@ -71,12 +70,8 @@ class MenuViewController:UIViewController {
         super.viewDidLoad()
         
         
-//        attributeView.layer.cornerRadius = 0.1 * attributeView.bounds.size.height
-//        hightView = attributeView.bounds.size.height
-        
         if let item = selected{
-            print("******\(item.image)")
-//photoResturantImage.image = item.image
+           // print("******\(item.image)")
 if let imageURL = URL(string:item.image){
         DispatchQueue.global().async {
                let data = try? Data(contentsOf: imageURL)
@@ -84,7 +79,6 @@ if let imageURL = URL(string:item.image){
                    let image = UIImage(data: data)
                    DispatchQueue.main.async {
                        self.photoResturantImage.image = image
-
                    }
                  }
                }
@@ -98,7 +92,6 @@ if let imageURL = URL(string:item.image){
                                let image = UIImage(data: data)
                                DispatchQueue.main.async {
                                    self.logoSellectImage.image = image
-
                                }
                              }
                            }
@@ -108,8 +101,7 @@ if let imageURL = URL(string:item.image){
             levelResturantLabel.text = "\(item.rating)"
             descriptionResturantLabel.text = item.category
             deliveryTimeLabel.text = "\(item.delivery.time.max) - \(item.delivery.time.min) Minutes"
-            //"\(item.delivery.cost.value)\(item.delivery.cost.currency)"
-            //caloresLabel.text = item.
+
             if let value = item.offer  {
                 detelsOffers.text = " \(value.value)(Spend \(value.spend) SAR)"
                 
@@ -125,9 +117,9 @@ if let imageURL = URL(string:item.image){
 }
     func getDtaaAPI(with endpoint:String){
     let link = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
-        print(link)
+      //  print(link)
         if let url = URL(string: link + endpoint){
-            print(url)
+          //  print(url)
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
                 if let error = error {
@@ -213,13 +205,11 @@ extension MenuViewController:UITableViewDataSource {
         cell.backgroundView?.layer.cornerRadius = 5
         cell.backgroundView?.clipsToBounds = true
         
-        //cell.contentConfiguration = content
         cell.accessoryType = .disclosureIndicator
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-    
 
 }
