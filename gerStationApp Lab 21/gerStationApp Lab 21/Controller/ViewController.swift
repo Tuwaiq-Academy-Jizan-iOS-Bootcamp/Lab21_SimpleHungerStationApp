@@ -7,93 +7,93 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var itemTableVieww: UITableView!
-    {
+class ViewController: UIViewController{
+    var dataHanger = Welcome(data: [])
+    var selectedData: Datum?
+    
+    @IBOutlet weak var itemTableVieww: UITableView!{
         didSet {
             
             itemTableVieww.delegate = self
             itemTableVieww.dataSource = self
+//                        itemTableVieww.register(UINib(nibName: "DataCell", bundle: nil),forCellReuseIdentifier: "ReuseCell")
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func viewsegue(segue: UIStoryboardSegue) {
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let distenationVC = segue.destination as! DetailsViewController
-        distenationVC.selectedItem = selectedItem
-    }
-
-    var data:[Item] = Item.data
-    var selectedItem:Item?
-}
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! ItemTableView
+        APIManager.shared.getData(endPoint: "/restaurants") { dataHanger in
+                        self.dataHanger = dataHanger
+            
+            DispatchQueue.main.async {
+                self.itemTableVieww.reloadData()
+                
+            }
+        }
         
-//        let image = UIImage(named: data[indexPath.row].imageName)
-        cell.restaurantName.text = data[indexPath.row].title
-        cell.typeFoods.text = data[indexPath.row].typeFood
-        cell.timeDelivery.text = data[indexPath.row].deliveryTime
-        cell.evaluationNamber.text = data[indexPath.row].evaluation
-        cell.liveTracking.text = "Live Tracking"
-        cell.itemImageView.image = UIImage(named: data[indexPath.row].imageName)
-//        cell.accessoryType = .disclosureIndicator
-//        cell.restaurantImage.image = UIImage(named: data[indexPath.row].imageName)
-//        cell.restaurantNameLabel.text = data[indexPath.row].title
-//        cell.DeliveryLabel.text = data[indexPath.row].deliveryCost
-//        cell.DeliveryTimeLabel.text = data[indexPath.row].title
-        return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sender = segue.destination as? DetailsViewController
+        sender!.selectedData = selectedData
+        
+    }
+    @IBAction func segueX(segue: UIStoryboardSegue){
+        
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedItem = data[indexPath.row]
-        performSegue(withIdentifier: "VC2", sender: self)
+        selectedData = dataHanger.data[indexPath.row]
+        performSegue(withIdentifier: "ReuseCell", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
-    }
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 20
-//    }
 }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-//        let headerView = UIImageView(image: hanger1)
-//        let headerImage = UIImage(named: “hanger1”)!
-//        headerView.frame = CGRect(x: 20, y: 35, width: 340, height: 80)
-//        view.addSubview(headerView)
-//       let label = UILabel(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width, height: 40))
-//        label.textColor = UIColor.black
-//        label.frame = CGRect(x: 10, y: 8, width: 200, height: 20)
-//        view.addSubview(label)
-//        return view
-//        view.backgroundColor = .systemYellow
-//        let label = UILabel(frame: CGRect(x: 10, y: 0, width: UIScreen.main.bounds.width, height: 50))
-////        label.text = sectionTitles[section]
-//        label.textColor = .black
-//      label.textAlignment = .center
-//        view.addSubview(label)
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataHanger.data.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"ReuseCell", for: indexPath) as! ItemTableView
+        cell.restaurantName.text = "\(dataHanger.data[indexPath.row].name)"
+        cell.rating.text = "\(dataHanger.data[indexPath.row].rating)"
+        cell.delivery.text = "\(dataHanger.data[indexPath.row].delivery.cost.value) \(dataHanger.data[indexPath.row].delivery.cost.currency)"
+        cell.time.text = "\(dataHanger.data[indexPath.row].delivery.time.max) -\(dataHanger.data[indexPath.row].delivery.time.min) minutes"
+        cell.category.text = dataHanger.data[indexPath.row].category
+        cell.restaurantImage.loadImageUsingCache(with: dataHanger.data[indexPath.row].image)
+        cell.logoImg.loadImageUsingCache(with: dataHanger.data[indexPath.row].resturant_image)
+       
+        if dataHanger.data[indexPath.row].is_promoted{
+            cell.permted.text = "Promoted"
+        }else {
+            cell.permted.isHidden = true
+        }
+        if  let v = dataHanger.data[indexPath.row].offer?.value , let c = dataHanger.data[indexPath.row].offer?.spend {
+            cell.offerLabel.text = "\(v) \(c)"
 
-//              label.text = “text”
-//              label.font = UIFont(name:“Helvetica Neue” , size: 17)
+            let bezierPath = UIBezierPath()
+            bezierPath.move(to: CGPoint(x: 300, y: 0))
+            bezierPath.move(to: CGPoint(x: 260, y: 25))
+            bezierPath.move(to: CGPoint(x: 0, y: 25))
+
+            let shape = CAShapeLayer()
+            shape.path = bezierPath.cgPath
+            shape.fillColor = UIColor.systemBlue.cgColor
+            cell.offerView.layer.addSublayer(shape)
+            cell.offerView.addSubview(cell.offerLabel)
+        }else {
+            cell.offerView.isHidden = true
+        }
+        return cell
+    }
+}
+
     
-//    }
-//}
-//func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//    return 200
-//}
-//func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "MY HANGERSTAION"
-//    }
 //
+//        }
