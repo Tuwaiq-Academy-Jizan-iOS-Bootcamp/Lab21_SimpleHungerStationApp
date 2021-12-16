@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA2EF052276B0F7700C58E66 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2EF051276B0F7700C58E66 /* MenuCell.swift */; };
 		BA42BF942746673B00D22EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA42BF932746673B00D22EA8 /* Assets.xcassets */; };
 		BA677F6D2743CA0E00BAE01F /* TheRestruantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */; };
 		BA7057122744EA7E00F2360F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA2EF051276B0F7700C58E66 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		BA42BF932746673B00D22EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../TuwaiqAcademy/AbdulrhmanCC/AbdulrhmanCC/Assets.xcassets; sourceTree = "<group>"; };
 		BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRestruantCell.swift; sourceTree = "<group>"; };
 		BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8CC4852742CBB8003CDD0C /* RestrantData.swift */,
+				BA2EF051276B0F7700C58E66 /* MenuCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				BA8CC45B2742C242003CDD0C /* Main.storyboard */,
-				BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */,
-				BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */,
+				BAD019B82769C61D006592F2 /* RestruantCell */,
+				BAD019B92769C652006592F2 /* MenuCell */,
 				BA8CC4892742CF31003CDD0C /* Controller */,
 			);
 			path = View;
@@ -161,6 +164,22 @@
 				BA7057132744F57500F2360F /* MenuRestruantData.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAD019B82769C61D006592F2 /* RestruantCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA677F6C2743CA0E00BAE01F /* TheRestruantCell.swift */,
+			);
+			path = RestruantCell;
+			sourceTree = "<group>";
+		};
+		BAD019B92769C652006592F2 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA7057112744EA7E00F2360F /* MenuTableViewCell.swift */,
+			);
+			path = MenuCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +319,7 @@
 				BA677F6D2743CA0E00BAE01F /* TheRestruantCell.swift in Sources */,
 				BA8CC4862742CBB8003CDD0C /* RestrantData.swift in Sources */,
 				BA8CC4582742C242003CDD0C /* SceneDelegate.swift in Sources */,
+				BA2EF052276B0F7700C58E66 /* MenuCell.swift in Sources */,
 				BA7057142744F57500F2360F /* MenuRestruantData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,8 +495,8 @@
 		BA8CC47D2742C243003CDD0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -502,8 +522,8 @@
 		BA8CC47E2742C243003CDD0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
