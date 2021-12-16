@@ -19,40 +19,56 @@ class ViewControllerTwo: UIViewController {
     @IBOutlet weak var deliveryTimeLabel2: UILabel!
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var resturantDiscountLabel2: UILabel!
-
+    @IBOutlet weak var viewResturantInformation: UIView!
+    
+    
     var resturantMenu = [Menu]()
-
     var selectResturant : ResturantData?
+    
     override func viewDidLoad() {
+        
+// ............namvigation bar hidden............
+        self.navigationController?.isNavigationBarHidden = true
+        
+// ............tableview and viewresturant information corner...........
+        self.menuTableView.layer.cornerRadius = 5
+        self.viewResturantInformation.layer.cornerRadius = 5
+        self.resturantDiscountLabel2.layer.cornerRadius = 5
+        
+// ............menutableview....................................
         menuTableView.delegate = self
         menuTableView.dataSource = self
- 
-
-       if let resturant = selectResturant {
-           resturantImageView2.loadImageUsingCache(with: resturant.image)
-           resturantLogoImageView2.loadImageUsingCache(with: resturant.resturant_image)
-           resturantNamelabel2.text = resturant.name
-           resturantRatinglabel2.text = "\(resturant.rating)"
-           resturantTypeLabel2.text = resturant.category
-           deliveryPriceLabel2.text = "\(resturant.delivery.cost.value)\(resturant.delivery.cost.currency)"
-           deliveryTimeLabel2.text = "\(resturant.delivery.time.min) -\(resturant.delivery.time.max)"
-           minumumMealPriceLabel2.text = "\(resturant.delivery.cost.value) \(resturant.delivery.cost.currency)"
-           resturantDiscountLabel2.text = resturant.offer?.value
-           resturantDiscountLabel2.text = "\(resturant.offer?.spend)"
-           if resturant.offer == nil{
-            resturantDiscountLabel2.isHidden = true
-           }else{
-            resturantDiscountLabel2.text =
-            resturant.offer?.value
-            "\(resturant.offer?.spend)"
+        
+// ............for view resturant information get from viewcontroller one........
+    if let resturant = selectResturant {
+        resturantImageView2.loadImageUsingCache(with: resturant.image)
+        resturantImageView2.layer.cornerRadius = 10
            
+        resturantLogoImageView2.loadImageUsingCache(with: resturant.resturant_image)
+        resturantLogoImageView2.layer.cornerRadius = 15
+           
+        resturantNamelabel2.text = resturant.name
+        resturantRatinglabel2.text = "\(resturant.rating)"
+        resturantTypeLabel2.text = resturant.category
+        deliveryPriceLabel2.text = "\(resturant.delivery.cost.value)\(resturant.delivery.cost.currency)"
+        deliveryTimeLabel2.text = "\(resturant.delivery.time.min) -\(resturant.delivery.time.max)"
+        minumumMealPriceLabel2.text = "\(resturant.delivery.cost.value) \(resturant.delivery.cost.currency)"
+           
+    if resturant.offer != nil {
+        let value = resturant.offer?.value
+        let spend = resturant.offer?.spend
+        resturantDiscountLabel2.text = value! + " (Spend \(spend!) SAR)"
+        }else{
+        resturantDiscountLabel2.isHidden = true
            }
            
-           getData(id: resturant.id)
+// ..........call function fitch data....................
+        getData(id: resturant.id)
 
         }
     }
-
+    
+// ..........function fitch data...................
     func getData (id:Int){
         print("is this work")
         if let url = URL(string: "https://hungerstation-api.herokuapp.com/api/v1/restaurants/\(id)"){
@@ -82,31 +98,39 @@ class ViewControllerTwo: UIViewController {
         task.resume()
     }
 }
-
-    
 }
-//    
-//
-//
+
+// ......................display data...............................
+
 extension ViewControllerTwo:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return resturantMenu.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellViewController
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellViewController
         cell.mealNameLabel.text = resturantMenu[indexPath.row].title
         cell.mealDescrptionLabel.text = resturantMenu[indexPath.row].subtitle
-        if resturantMenu[indexPath.row].calories != nil {
+        
+    if resturantMenu[indexPath.row].calories != nil {
         cell.mealCalorisLabel.text = "\(resturantMenu[indexPath.row].calories!)"
             
-        }else{
+    }else{
         cell.mealCalorisLabel.isHidden = true
         cell.framLabel.isHidden = true
         }
         cell.mealPriceLabel.text = "\(resturantMenu[indexPath.row].price.value) \(resturantMenu[indexPath.row].price.currency)"
+        
         cell.mealImageView.loadImageUsingCache(with: resturantMenu[indexPath.row].image)
-
+        cell.mealImageView.layer.cornerRadius = 5
+        
+        
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
+        cell.layer.shadowRadius = 8.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOpacity = 0.10
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
         
         
         return cell

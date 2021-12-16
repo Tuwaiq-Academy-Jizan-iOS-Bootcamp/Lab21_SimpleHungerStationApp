@@ -9,8 +9,6 @@ import Foundation
 struct MenuData: Codable {
     let menu: [Menu]
 }
-
-
 struct Menu: Codable {
     let id: Int
     let title: String
@@ -19,7 +17,6 @@ struct Menu: Codable {
     let price: Price
     let image: String
 }
-
 struct Price: Codable {
     let value: Int
     let currency: String

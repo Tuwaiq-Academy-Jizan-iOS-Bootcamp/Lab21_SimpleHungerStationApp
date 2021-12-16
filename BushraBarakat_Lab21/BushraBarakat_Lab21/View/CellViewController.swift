@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 class CellViewController:UITableViewCell {
-//Resturant
+//Resturant cell
     @IBOutlet weak var resturantImageView: UIImageView!
     @IBOutlet weak var resturantLogoImageView: UIImageView!
     @IBOutlet weak var resturantRatingLabel: UILabel!
@@ -18,12 +18,14 @@ class CellViewController:UITableViewCell {
     @IBOutlet weak var resturantDeliveryTimeLabel: UILabel!
     @IBOutlet weak var resturantDeliveryPriceLabel: UILabel!
     @IBOutlet weak var resturantPromoted: UILabel!
+    @IBOutlet weak var resturantDescountView: UIView!
     
-    //Menu
+//Menu cell
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealPriceLabel: UILabel!
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealDescrptionLabel: UILabel!
     @IBOutlet weak var mealCalorisLabel: UILabel!
     @IBOutlet weak var framLabel: UIImageView!
+
 }

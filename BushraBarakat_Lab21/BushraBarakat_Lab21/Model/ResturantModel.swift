@@ -23,25 +23,17 @@ struct ResturantData: Codable {
     let resturant_image: String
 
 }
-
-
 struct Delivery: Codable {
     let time: Time
     let cost: Cost
 }
-
-
 struct Cost: Codable {
     let value: Double
     let currency: String
 }
-
-
 struct Time: Codable {
     let min, max: Int
 }
-
-
 struct Offer: Codable {
     let value: String
     let spend: Int
