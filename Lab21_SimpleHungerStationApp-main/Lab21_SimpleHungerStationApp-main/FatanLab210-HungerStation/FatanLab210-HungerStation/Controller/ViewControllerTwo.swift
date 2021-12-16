@@ -32,11 +32,17 @@ override func viewDidLoad() {
     TableViewTwo.dataSource = self
 if let selectR  = selectR {
 RestaurantNameVT.text = selectR.name
-DeliveryTimeVT.text = "\(selectR.delivery.time.min) : \(selectR.delivery.time.max)"
-DeliveryPriceVT.text = "\(selectR.delivery.cost.value)\(selectR.delivery.cost.currency)"
+DeliveryTimeVT.text = "\(selectR.delivery.time.min) - \(selectR.delivery.time.max)"
+DeliveryPriceVT.text = "\(selectR.delivery.cost.value) - \(selectR.delivery.cost.currency)"
 EvaluationVT.text = "\(selectR.rating)"
 MealTypeVT.text = selectR.category
-    
+    if let offer = selectR.offer {
+        let V = selectR.offer?.value
+        let s = selectR.offer?.spend
+        theOfferVT.text = "\(V!) (Spend \(s!) SAR)"
+    }else{
+        theOfferVT.isHidden = true
+    }
         
     if let image = URL(string: selectR.image){
                 DispatchQueue.global().async {
@@ -68,8 +74,7 @@ MealTypeVT.text = selectR.category
     
     
 }
-       
-       
+    
     
     func getData(id : Int){
         if let baseURL = URL(string: "https://hungerstation-api.herokuapp.com/api/v1/restaurants/\(id)") {
@@ -125,7 +130,7 @@ extension ViewControllerTwo:UITableViewDelegate, UITableViewDataSource {
         
         
         cell.MealName.text = arrayHS[indexPath.row].title
-        cell.MealPrice.text = "\(arrayHS[indexPath.row].price)"
+        cell.MealPrice.text = "\(arrayHS[indexPath.row].price.currency) \(arrayHS[indexPath.row].price.value)"
 //        Subtitle
         if let subb = arrayHS[indexPath.row].subtitle {
             cell.MealDescription.text = "\(subb)"
@@ -138,7 +143,7 @@ extension ViewControllerTwo:UITableViewDelegate, UITableViewDataSource {
             cell.Calories.text = "\(calories0)"
         }else {
             cell.Calories.isHidden = true
-           
+            cell.imageCL.isHidden = true
         }
         
 //image
@@ -160,6 +165,6 @@ extension ViewControllerTwo:UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath:IndexPath)->CGFloat {
-        return 250
+        return 150
     }
 }

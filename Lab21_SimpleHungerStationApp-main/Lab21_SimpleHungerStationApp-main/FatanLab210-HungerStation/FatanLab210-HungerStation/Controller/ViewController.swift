@@ -18,7 +18,14 @@ override func viewDidLoad() {
     
     TableViewOne.delegate = self
     TableViewOne.dataSource = self
-   
+    
+  let back = UIBarButtonItem(title: "", style: .plain,
+   target: nil, action: nil)
+ navigationItem.backBarButtonItem = back
+navigationController!.navigationBar.titleTextAttributes = [
+    .foregroundColor: UIColor.white,
+   ]
+
     getData()
 }
 
@@ -78,14 +85,16 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath:IndexPath) -> UI
 
 let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath) as! DataTVCell
     
-    if let offer = arrayHS[indexPath.row].offer{
-        cell.theOffer.text = "\(offer.value) (Spend \(offer.spend))"
+    
+    if let offer = arrayHS[indexPath.row].offer {
+        let V = arrayHS[indexPath.row].offer?.value
+        let s = arrayHS[indexPath.row].offer?.spend
+        cell.theOffer.text = "\(V!) (Spend \(s!) SAR)"
     }else{
         cell.theOffer.isHidden = true
     }
         
-        
-       
+    
    if let image = URL(string: arrayHS[indexPath.row].image){
        DispatchQueue.global().async {
            let data = try? Data(contentsOf: image)
@@ -112,10 +121,13 @@ let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath) 
         cell.RestaurantName.text = arrayHS[indexPath.row].name
         cell.MealType.text = arrayHS[indexPath.row].category
         cell.Evaluation.text = "\(arrayHS[indexPath.row].rating)"
-        cell.DeliveryTime.text = "\(arrayHS[indexPath.row].delivery.time)"
-        cell.DeliveryPrice.text = "\(arrayHS[indexPath.row].delivery.cost)"
-         
-           return cell
+    
+      cell.DeliveryTime.text = "\(arrayHS[indexPath.row].delivery.time.min) -  \(arrayHS[indexPath.row].delivery.time.max)"
+    
+      cell.DeliveryPrice.text = "\(arrayHS[indexPath.row].delivery.cost.value) - \(arrayHS[indexPath.row].delivery.cost.currency)"
+    
+   
+   return cell
         
     
 }

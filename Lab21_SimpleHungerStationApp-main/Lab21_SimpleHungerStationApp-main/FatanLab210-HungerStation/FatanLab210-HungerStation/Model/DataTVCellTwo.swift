@@ -13,4 +13,5 @@ class DataTVCellTwo:UITableViewCell {
 @IBOutlet weak var MealDescription: UILabel!
 @IBOutlet weak var MealPrice: UILabel!
 @IBOutlet weak var Calories: UILabel!
+    @IBOutlet weak var imageCL: UIImageView!
 }
