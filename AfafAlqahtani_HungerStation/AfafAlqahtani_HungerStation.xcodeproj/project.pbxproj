@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21218F427621D8400911472 /* HungerStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21218F327621D8400911472 /* HungerStation.swift */; };
 		A23C28D82744BF12009600E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23C28D72744BF12009600E4 /* AppDelegate.swift */; };
 		A23C28DA2744BF12009600E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23C28D92744BF12009600E4 /* SceneDelegate.swift */; };
 		A23C28DC2744BF12009600E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23C28DB2744BF12009600E4 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A21218F327621D8400911472 /* HungerStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungerStation.swift; sourceTree = "<group>"; };
 		A23C28D42744BF12009600E4 /* AfafAlqahtani_HungerStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfafAlqahtani_HungerStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A23C28D72744BF12009600E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A23C28D92744BF12009600E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A21218F027621CAF00911472 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A23C28DB2744BF12009600E4 /* ViewController.swift */,
+				A23C28EB2744D586009600E4 /* CillViewController.swift */,
+				A244116A2745831700ECBB5C /* ConnectingOfViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A21218F127621CE900911472 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A21218F327621D8400911472 /* HungerStation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A21218F227621D1D00911472 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A23C28DD2744BF12009600E4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A23C28CB2744BF12009600E4 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +90,9 @@
 			children = (
 				A23C28D72744BF12009600E4 /* AppDelegate.swift */,
 				A23C28D92744BF12009600E4 /* SceneDelegate.swift */,
-				A23C28DB2744BF12009600E4 /* ViewController.swift */,
-				A23C28DD2744BF12009600E4 /* Main.storyboard */,
-				A244116A2745831700ECBB5C /* ConnectingOfViewController.swift */,
-				A23C28EB2744D586009600E4 /* CillViewController.swift */,
+				A21218F127621CE900911472 /* Model */,
+				A21218F227621D1D00911472 /* View */,
+				A21218F027621CAF00911472 /* Controller */,
 				A23C28E02744BF13009600E4 /* Assets.xcassets */,
 				A23C28E22744BF13009600E4 /* LaunchScreen.storyboard */,
 				A23C28E52744BF13009600E4 /* Info.plist */,
@@ -145,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A244116B2745831700ECBB5C /* ConnectingOfViewController.swift in Sources */,
+				A21218F427621D8400911472 /* HungerStation.swift in Sources */,
 				A23C28DC2744BF12009600E4 /* ViewController.swift in Sources */,
 				A23C28D82744BF12009600E4 /* AppDelegate.swift in Sources */,
 				A23C28EC2744D586009600E4 /* CillViewController.swift in Sources */,
