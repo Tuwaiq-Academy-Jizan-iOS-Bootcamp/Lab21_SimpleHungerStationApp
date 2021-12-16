@@ -84,7 +84,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="7We-gR-tIn"/>
             <connections>
-                <outlet property="foodImage" destination="lQL-J3-0DG" id="mv0-eV-iFE"/>
+                <outlet property="foodImage" destination="lQL-J3-0DG" id="XMq-DQ-SKr"/>
                 <outlet property="kaloris" destination="5g8-Sn-0oJ" id="lTB-pE-Kne"/>
                 <outlet property="mainText" destination="zNA-fv-nsR" id="fHf-0n-ShO"/>
                 <outlet property="price" destination="CK7-VV-yWX" id="ctc-pR-TQ0"/>

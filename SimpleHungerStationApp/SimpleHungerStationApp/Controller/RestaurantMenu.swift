@@ -4,7 +4,114 @@ class RestaurantMenu: UIViewController {
 
     
     @IBOutlet weak var menuTabelView: UITableView!
-    @IBOutlet weak var backGroundImage: UIImageView!
+    @IBOutlet weak var backGroundImage: UIImageView! {
+
+    didSet {
+        if let imageUrl = URL(string: backImageResiver) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageUrl) {
+                    DispatchQueue.main.async {
+                        if let imageHolder = UIImage(data: imageData) {
+                            self.backGroundImage.image = imageHolder
+                        }
+                    }
+                }
+            }
+        }
+          }
+}
+    
+    
+
+
+    @IBOutlet weak var restorantLogo: UIImageView! {
+    didSet {
+        if let imageUrl = URL(string: logoResiver) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageUrl) {
+                    DispatchQueue.main.async {
+                        if let imageHolder = UIImage(data: imageData) {
+                            self.restorantLogo.image = imageHolder
+                          }
+                    }
+                }
+            }
+              }
+           }
+      }
+    
+
+    @IBOutlet weak var promotedLabel: UILabel!
+    
+    {
+        didSet {
+            if promotedLabelResiver == "" {
+                promotedLabel.isHidden = true
+            }else {
+            promotedLabel.text = promotedLabelResiver
+            }
+            promotedLabel.layer.masksToBounds = true
+            promotedLabel.layer.cornerRadius = 10
+        }
+    }
+
+
+    @IBOutlet weak var restorantRaiting: UILabel!
+    
+
+    @IBOutlet weak var restorantName: UILabel! {
+    didSet {
+        restorantName.text = nameResiver
+    }
+}
+
+    @IBOutlet weak var restorantContant: UILabel! {
+    didSet {
+        restorantContant.text = contantResiver
+    }
+}
+    
+
+    @IBOutlet weak var minimumCost: UILabel! {
+    
+    didSet {
+        minimumCost.text = "\(minimumCostResiver) SR"
+    }
+}
+    
+
+    @IBOutlet weak var delivery: UILabel! {
+
+    didSet {
+        delivery.text = "\(deliveryCostResiver) SR"
+    }
+}
+    
+    
+    @IBOutlet weak var deliveryTime: UILabel! {
+    didSet {
+        deliveryTime.text = "\(deliveryMinTimeResiver) - \(deliveryMaxTimeResiver) minutes"
+    }
+}
+
+    
+    var idResiver = 0
+    var backImageResiver = ""
+    var logoResiver = ""
+    var nameResiver = ""
+    var raitingResiver:Float = 0
+    var contantResiver = ""
+    var minimumCostResiver:Double = 0
+    var deliveryCostResiver:Double = 0
+    var deliveryMinTimeResiver = 0
+    var deliveryMaxTimeResiver = 0
+    var promotedLabelResiver = ""
+
+    
+    
+    
+    
+    
     
     var restorantMenu: Menus = Menus(menu: [])
     var restorantsId = 0

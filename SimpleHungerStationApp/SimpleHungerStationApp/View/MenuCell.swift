@@ -1,9 +1,5 @@
-//
-//  MenuCell.swift
-//  SimpleHungerStationApp
-//
-//  Created by Abdulrahman Gazwani on 13/12/2021.
-//
+
+
 
 import UIKit
 

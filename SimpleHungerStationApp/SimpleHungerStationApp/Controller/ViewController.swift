@@ -9,9 +9,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var restaurantTableView: UITableView!
     
         
-        var restorants: Restorants = Restorants(data: [])
-        var idSender = 0
-        var restorantBackImageSender = ""
+    var restorants: Restorants = Restorants(data: [])
+    var idSender = 0
+    var restorantBackImageSender = ""
+    
+   
+    var logoSener = ""
+    var nameSender = ""
+    var raitingSender:Float = 0
+    var contantSender = ""
+    var minimumCostSender:Double = 0
+    var deliveryCostSender:Double = 0
+    var deliveryMinTimeSender = 0
+    var deliveryMaxTimeSender = 0
+    var promotedLabelSender = ""
+    
+    
+    
+    
         let restorantsURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -23,6 +38,19 @@ class ViewController: UIViewController {
             let toMenu = segue.destination as? RestaurantMenu
             toMenu?.restorantsId = idSender
             toMenu?.restorantBackImage = restorantBackImageSender
+        
+            toMenu?.logoResiver = logoSener
+            toMenu?.nameResiver = nameSender
+            toMenu?.raitingResiver = raitingSender
+            toMenu?.minimumCostResiver = minimumCostSender
+            toMenu?.deliveryCostResiver = deliveryCostSender
+            toMenu?.deliveryMinTimeResiver = deliveryMinTimeSender
+            toMenu?.deliveryMaxTimeResiver = deliveryMaxTimeSender
+            toMenu?.promotedLabelResiver = promotedLabelSender
+            
+            
+            
+            
         }
         func downloadRestorantData(_ FromURL: String) {
             if let urlData = URL(string: FromURL) {
@@ -48,6 +76,7 @@ class ViewController: UIViewController {
             }
         }
     }
+
     extension ViewController: UITableViewDelegate, UITableViewDataSource {
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return restorants.data.count
@@ -59,32 +88,32 @@ class ViewController: UIViewController {
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = restaurantTableView.dequeueReusableCell(withIdentifier: "cell") as! resturantCell
-            cell.restorantName.text = restorants.data[indexPath.row].name
+            cell.resturantNameLabel.text = restorants.data[indexPath.row].name
             if restorants.data[indexPath.row].offer != nil {
                 if let offer = restorants.data[indexPath.row].offer {
                     if offer.value.contains("%") {
-                        cell.priceCondition.text = "  \(offer.value) Your Order (spend \(offer.spend) SAR)     "
+                        cell.priceConditionLabel.text = "  \(offer.value) Your Order (spend \(offer.spend) SAR)     "
                     }else {
-                        cell.priceCondition.text = "  \(offer.value) (spend \(offer.spend) SAR)     "
+                        cell.priceConditionLabel.text = "  \(offer.value) (spend \(offer.spend) SAR)     "
                     }
                 }
             }else{
-                cell.priceCondition.isHidden = true
+                cell.priceConditionLabel.isHidden = true
             }
             if restorants.data[indexPath.row].is_promoted == true {
-                cell.promoted.text = "Promoted"
+                cell.promotedLabel.text = "Promoted"
             }else{
-                cell.promoted.isHidden = true
+                cell.promotedLabel.isHidden = true
             }
-            cell.foodType.text = restorants.data[indexPath.row].category
-            cell.raiting.text = "\(restorants.data[indexPath.row].rating)"
-            cell.deliveryAndOtherThings.text = " \(restorants.data[indexPath.row].delivery.time.min) - \(restorants.data[indexPath.row].delivery.time.max) minutes | Delivery: \(restorants.data[indexPath.row].delivery.cost.value)\(restorants.data[indexPath.row].delivery.cost.currency) |"
+            cell.foodTypeLabel.text = restorants.data[indexPath.row].category
+            cell.ratingResturantLabel.text = "\(restorants.data[indexPath.row].rating)"
+            cell.deliveryLabel.text = " \(restorants.data[indexPath.row].delivery.time.min) - \(restorants.data[indexPath.row].delivery.time.max) minutes | Delivery: \(restorants.data[indexPath.row].delivery.cost.value)\(restorants.data[indexPath.row].delivery.cost.currency) |"
             if let restorantlogo = URL(string: restorants.data[indexPath.row].resturant_image) {
                 DispatchQueue.global().async {
                     if let restorantlogo = try? Data(contentsOf: restorantlogo) {
                         let logo = restorantlogo
                         DispatchQueue.main.async {
-                            cell.logo.image = UIImage(data: logo)
+                            cell.logoResturantImageView.image = UIImage(data: logo)
                         }
                     }
                 }
@@ -95,66 +124,56 @@ class ViewController: UIViewController {
                     if let restorantBackImage = try? Data(contentsOf: restorantBackImage) {
                         let backImage = restorantBackImage
                         DispatchQueue.main.async {
-                            cell.restorandFoodImage.image = UIImage(data: backImage)
+                            cell.resturantImageView.image = UIImage(data: backImage)
                         }
                     }
                 }
             }
     
-            cell.logo.layer.masksToBounds = true
-            cell.logo.layer.cornerRadius = 10
-            cell.promoted.layer.masksToBounds = true
-            cell.promoted.layer.cornerRadius = 6
+            cell.logoResturantImageView.layer.masksToBounds = true
+            cell.logoResturantImageView.layer.cornerRadius = 10
+            cell.promotedLabel.layer.masksToBounds = true
+            cell.promotedLabel.layer.cornerRadius = 6
             return cell
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             idSender = restorants.data[indexPath.row].id
+            
+            
+            
+            restorantBackImageSender = restorants.data[indexPath.row].image
+            logoSener = restorants.data[indexPath.row].resturant_image
+            nameSender = restorants.data[indexPath.row].name
+            
+           // raitingSender = restorants.data[indexPath.row].rating
+            
+            contantSender = restorants.data[indexPath.row].category
+            minimumCostSender = restorants.data[indexPath.row].delivery.cost.value
+            deliveryCostSender = restorants.data[indexPath.row].delivery.cost.value
+            deliveryMinTimeSender = restorants.data[indexPath.row].delivery.time.min
+            deliveryMaxTimeSender = restorants.data[indexPath.row].delivery.time.max
+            if restorants.data[indexPath.row].offer != nil {
+                if let offer = restorants.data[indexPath.row].offer {
+                    if offer.value.contains("%") {
+                        promotedLabelSender = " \(offer.value) Your Order (spend \(offer.spend) SAR) "
+                    }else {
+                        promotedLabelSender = " \(offer.value) (spend \(offer.spend) SAR) "
+                    }
+                }
+            }else {
+                promotedLabelSender = ""
+            }
+            
             performSegue(withIdentifier: "toMenu", sender: self)
         }
     }
 
-//    didSet {
-//        restaurantTableView.delegate = self
-//        restaurantTableView.dataSource = self
-//        restaurantTableView.register(UINib(nibName: "resturantCell", bundle: nil), forCellReuseIdentifier: "ReuseCell")
-//    }
-//
-//}
-//var restrnts = [RestorantsData]()
-//override func viewDidLoad() {
-//    super.viewDidLoad()
-//    // Do any additional setup after loading the view.
-//    APIManager.shared.getData(endPoint: "/restaurants") { rest in
-//        self.restrnts = rest
-//        DispatchQueue.main.async {
-//            self.restaurantTableView.reloadData()
-//        }
-//    }
-//}
-//
-//}
-//
-//
-//extension ViewController: UITableViewDelegate {
-//func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//    return 80
-//}
-//}
-//
-//extension ViewController: UITableViewDataSource {
-//func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    restrnts.count
-//}
-//
-//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let cell = tableView.dequeueReusableCell(withIdentifier:"ReuseCell", for: indexPath) as! resturantCell
-//    cell.nameResturant.text = restrnts[indexPath.row].name
-//    cell.typeFood.text = restrnts[indexPath.row].category
-//    //        cell.digimonImageView.image = nil
-//    cell.foodImage.loadImageUsingCache(with: restrnts[indexPath.row].image)
-//
-//    return cell
-//}
+
+
+
+
+
+
 
 
 
