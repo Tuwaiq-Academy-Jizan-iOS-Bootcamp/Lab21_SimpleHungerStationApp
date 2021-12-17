@@ -10,8 +10,7 @@ import SwiftUI
 class cellviewcontoroller: UITableViewCell {
    
     
-    
-
+    @IBOutlet weak var viewoflable: UIView!
     @IBOutlet weak var restaurantname: UILabel!
     @IBOutlet weak var restaurantrating: UILabel!
     @IBOutlet weak var timedelivery: UILabel!
@@ -20,5 +19,7 @@ class cellviewcontoroller: UITableViewCell {
     @IBOutlet weak var restaurantevaluation: UILabel!
     @IBOutlet weak var restaurantdiscount: UILabel!
     @IBOutlet weak var restaurantadvertising: UILabel!
-    @IBOutlet weak var restaurantimage: UIImageView!
+   
+    @IBOutlet weak var imageResturentbig: UIImageView!
+   
 }
