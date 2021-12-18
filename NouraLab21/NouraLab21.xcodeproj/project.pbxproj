@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD7E3F1F2742ACC100C8BF18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F1E2742ACC100C8BF18 /* AppDelegate.swift */; };
+		BD7E3F212742ACC100C8BF18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F202742ACC100C8BF18 /* SceneDelegate.swift */; };
+		BD7E3F232742ACC100C8BF18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F222742ACC100C8BF18 /* ViewController.swift */; };
+		BD7E3F262742ACC100C8BF18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E3F242742ACC100C8BF18 /* Main.storyboard */; };
+		BD7E3F282742ACC200C8BF18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7E3F272742ACC200C8BF18 /* Assets.xcassets */; };
+		BD7E3F2B2742ACC200C8BF18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7E3F292742ACC200C8BF18 /* LaunchScreen.storyboard */; };
+		BD7E3F362742ACC200C8BF18 /* NouraLab21Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F352742ACC200C8BF18 /* NouraLab21Tests.swift */; };
+		BD7E3F402742ACC200C8BF18 /* NouraLab21UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F3F2742ACC200C8BF18 /* NouraLab21UITests.swift */; };
+		BD7E3F422742ACC200C8BF18 /* NouraLab21UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F412742ACC200C8BF18 /* NouraLab21UITestsLaunchTests.swift */; };
+		BD7E3F512742CE5100C8BF18 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F502742CE5100C8BF18 /* DataTableViewCell.swift */; };
+		BD7E3F592742F83800C8BF18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3F582742F83800C8BF18 /* MenuViewController.swift */; };
+		BD87C4A62743ED55009F5806 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87C4A52743ED55009F5806 /* Menu.swift */; };
+		BD9637EB2745021800AD1A56 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9637EA2745021800AD1A56 /* ListTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD7E3F322742ACC200C8BF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD7E3F132742ACC100C8BF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD7E3F1A2742ACC100C8BF18;
+			remoteInfo = NouraLab21;
+		};
+		BD7E3F3C2742ACC200C8BF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD7E3F132742ACC100C8BF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD7E3F1A2742ACC100C8BF18;
+			remoteInfo = NouraLab21;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD7E3F1B2742ACC100C8BF18 /* NouraLab21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NouraLab21.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7E3F1E2742ACC100C8BF18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD7E3F202742ACC100C8BF18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD7E3F222742ACC100C8BF18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD7E3F252742ACC100C8BF18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD7E3F272742ACC200C8BF18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD7E3F2A2742ACC200C8BF18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD7E3F2C2742ACC200C8BF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7E3F312742ACC200C8BF18 /* NouraLab21Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouraLab21Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7E3F352742ACC200C8BF18 /* NouraLab21Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouraLab21Tests.swift; sourceTree = "<group>"; };
+		BD7E3F3B2742ACC200C8BF18 /* NouraLab21UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NouraLab21UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7E3F3F2742ACC200C8BF18 /* NouraLab21UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouraLab21UITests.swift; sourceTree = "<group>"; };
+		BD7E3F412742ACC200C8BF18 /* NouraLab21UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouraLab21UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD7E3F502742CE5100C8BF18 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		BD7E3F582742F83800C8BF18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		BD87C4A52743ED55009F5806 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		BD9637EA2745021800AD1A56 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD7E3F182742ACC100C8BF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F2E2742ACC200C8BF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F382742ACC200C8BF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD7E3F122742ACC100C8BF18 = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F1D2742ACC100C8BF18 /* NouraLab21 */,
+				BD7E3F342742ACC200C8BF18 /* NouraLab21Tests */,
+				BD7E3F3E2742ACC200C8BF18 /* NouraLab21UITests */,
+				BD7E3F1C2742ACC100C8BF18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD7E3F1C2742ACC100C8BF18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F1B2742ACC100C8BF18 /* NouraLab21.app */,
+				BD7E3F312742ACC200C8BF18 /* NouraLab21Tests.xctest */,
+				BD7E3F3B2742ACC200C8BF18 /* NouraLab21UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD7E3F1D2742ACC100C8BF18 /* NouraLab21 */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F1E2742ACC100C8BF18 /* AppDelegate.swift */,
+				BD7E3F202742ACC100C8BF18 /* SceneDelegate.swift */,
+				BD9637E92745001200AD1A56 /* model */,
+				BD9637E82744FFF300AD1A56 /* view */,
+				BD9637E72744FD7A00AD1A56 /* controller */,
+				BD7E3F272742ACC200C8BF18 /* Assets.xcassets */,
+				BD7E3F292742ACC200C8BF18 /* LaunchScreen.storyboard */,
+				BD7E3F2C2742ACC200C8BF18 /* Info.plist */,
+			);
+			path = NouraLab21;
+			sourceTree = "<group>";
+		};
+		BD7E3F342742ACC200C8BF18 /* NouraLab21Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F352742ACC200C8BF18 /* NouraLab21Tests.swift */,
+			);
+			path = NouraLab21Tests;
+			sourceTree = "<group>";
+		};
+		BD7E3F3E2742ACC200C8BF18 /* NouraLab21UITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F3F2742ACC200C8BF18 /* NouraLab21UITests.swift */,
+				BD7E3F412742ACC200C8BF18 /* NouraLab21UITestsLaunchTests.swift */,
+			);
+			path = NouraLab21UITests;
+			sourceTree = "<group>";
+		};
+		BD9637E72744FD7A00AD1A56 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F502742CE5100C8BF18 /* DataTableViewCell.swift */,
+				BD7E3F582742F83800C8BF18 /* MenuViewController.swift */,
+				BD9637EA2745021800AD1A56 /* ListTableViewCell.swift */,
+				BD7E3F222742ACC100C8BF18 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BD9637E82744FFF300AD1A56 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BD7E3F242742ACC100C8BF18 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		BD9637E92745001200AD1A56 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BD87C4A52743ED55009F5806 /* Menu.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD7E3F1A2742ACC100C8BF18 /* NouraLab21 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7E3F452742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21" */;
+			buildPhases = (
+				BD7E3F172742ACC100C8BF18 /* Sources */,
+				BD7E3F182742ACC100C8BF18 /* Frameworks */,
+				BD7E3F192742ACC100C8BF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NouraLab21;
+			productName = NouraLab21;
+			productReference = BD7E3F1B2742ACC100C8BF18 /* NouraLab21.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD7E3F302742ACC200C8BF18 /* NouraLab21Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7E3F482742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21Tests" */;
+			buildPhases = (
+				BD7E3F2D2742ACC200C8BF18 /* Sources */,
+				BD7E3F2E2742ACC200C8BF18 /* Frameworks */,
+				BD7E3F2F2742ACC200C8BF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD7E3F332742ACC200C8BF18 /* PBXTargetDependency */,
+			);
+			name = NouraLab21Tests;
+			productName = NouraLab21Tests;
+			productReference = BD7E3F312742ACC200C8BF18 /* NouraLab21Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD7E3F3A2742ACC200C8BF18 /* NouraLab21UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7E3F4B2742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21UITests" */;
+			buildPhases = (
+				BD7E3F372742ACC200C8BF18 /* Sources */,
+				BD7E3F382742ACC200C8BF18 /* Frameworks */,
+				BD7E3F392742ACC200C8BF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD7E3F3D2742ACC200C8BF18 /* PBXTargetDependency */,
+			);
+			name = NouraLab21UITests;
+			productName = NouraLab21UITests;
+			productReference = BD7E3F3B2742ACC200C8BF18 /* NouraLab21UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD7E3F132742ACC100C8BF18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					BD7E3F1A2742ACC100C8BF18 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					BD7E3F302742ACC200C8BF18 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BD7E3F1A2742ACC100C8BF18;
+					};
+					BD7E3F3A2742ACC200C8BF18 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BD7E3F1A2742ACC100C8BF18;
+					};
+				};
+			};
+			buildConfigurationList = BD7E3F162742ACC100C8BF18 /* Build configuration list for PBXProject "NouraLab21" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD7E3F122742ACC100C8BF18;
+			productRefGroup = BD7E3F1C2742ACC100C8BF18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD7E3F1A2742ACC100C8BF18 /* NouraLab21 */,
+				BD7E3F302742ACC200C8BF18 /* NouraLab21Tests */,
+				BD7E3F3A2742ACC200C8BF18 /* NouraLab21UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD7E3F192742ACC100C8BF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7E3F2B2742ACC200C8BF18 /* LaunchScreen.storyboard in Resources */,
+				BD7E3F282742ACC200C8BF18 /* Assets.xcassets in Resources */,
+				BD7E3F262742ACC100C8BF18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F2F2742ACC200C8BF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F392742ACC200C8BF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD7E3F172742ACC100C8BF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD9637EB2745021800AD1A56 /* ListTableViewCell.swift in Sources */,
+				BD7E3F232742ACC100C8BF18 /* ViewController.swift in Sources */,
+				BD7E3F592742F83800C8BF18 /* MenuViewController.swift in Sources */,
+				BD87C4A62743ED55009F5806 /* Menu.swift in Sources */,
+				BD7E3F1F2742ACC100C8BF18 /* AppDelegate.swift in Sources */,
+				BD7E3F512742CE5100C8BF18 /* DataTableViewCell.swift in Sources */,
+				BD7E3F212742ACC100C8BF18 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F2D2742ACC200C8BF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7E3F362742ACC200C8BF18 /* NouraLab21Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD7E3F372742ACC200C8BF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7E3F402742ACC200C8BF18 /* NouraLab21UITests.swift in Sources */,
+				BD7E3F422742ACC200C8BF18 /* NouraLab21UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD7E3F332742ACC200C8BF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD7E3F1A2742ACC100C8BF18 /* NouraLab21 */;
+			targetProxy = BD7E3F322742ACC200C8BF18 /* PBXContainerItemProxy */;
+		};
+		BD7E3F3D2742ACC200C8BF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD7E3F1A2742ACC100C8BF18 /* NouraLab21 */;
+			targetProxy = BD7E3F3C2742ACC200C8BF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD7E3F242742ACC100C8BF18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD7E3F252742ACC100C8BF18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD7E3F292742ACC200C8BF18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD7E3F2A2742ACC200C8BF18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD7E3F432742ACC200C8BF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD7E3F442742ACC200C8BF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD7E3F462742ACC200C8BF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NouraLab21/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD7E3F472742ACC200C8BF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NouraLab21/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD7E3F492742ACC200C8BF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouraLab21.app/NouraLab21";
+			};
+			name = Debug;
+		};
+		BD7E3F4A2742ACC200C8BF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NouraLab21.app/NouraLab21";
+			};
+			name = Release;
+		};
+		BD7E3F4C2742ACC200C8BF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NouraLab21;
+			};
+			name = Debug;
+		};
+		BD7E3F4D2742ACC200C8BF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Noura.NouraLab21UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NouraLab21;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD7E3F162742ACC100C8BF18 /* Build configuration list for PBXProject "NouraLab21" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7E3F432742ACC200C8BF18 /* Debug */,
+				BD7E3F442742ACC200C8BF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7E3F452742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7E3F462742ACC200C8BF18 /* Debug */,
+				BD7E3F472742ACC200C8BF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7E3F482742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7E3F492742ACC200C8BF18 /* Debug */,
+				BD7E3F4A2742ACC200C8BF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7E3F4B2742ACC200C8BF18 /* Build configuration list for PBXNativeTarget "NouraLab21UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7E3F4C2742ACC200C8BF18 /* Debug */,
+				BD7E3F4D2742ACC200C8BF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD7E3F132742ACC100C8BF18 /* Project object */;
+}
