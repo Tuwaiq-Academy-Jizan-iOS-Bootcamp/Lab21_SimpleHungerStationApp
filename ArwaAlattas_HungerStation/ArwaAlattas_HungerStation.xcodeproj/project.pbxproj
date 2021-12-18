@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF8F838127648AAE00C1381D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F838027648AAE00C1381D /* AppDelegate.swift */; };
+		AF8F838327648AAE00C1381D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F838227648AAE00C1381D /* SceneDelegate.swift */; };
+		AF8F838527648AAE00C1381D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F838427648AAE00C1381D /* ViewController.swift */; };
+		AF8F838827648AAE00C1381D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8F838627648AAE00C1381D /* Main.storyboard */; };
+		AF8F838A27648AB000C1381D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8F838927648AB000C1381D /* Assets.xcassets */; };
+		AF8F838D27648AB000C1381D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8F838B27648AB000C1381D /* LaunchScreen.storyboard */; };
+		AF8F839827648AB000C1381D /* ArwaAlattas_HungerStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F839727648AB000C1381D /* ArwaAlattas_HungerStationTests.swift */; };
+		AF8F83A227648AB000C1381D /* ArwaAlattas_HungerStationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83A127648AB000C1381D /* ArwaAlattas_HungerStationUITests.swift */; };
+		AF8F83A427648AB000C1381D /* ArwaAlattas_HungerStationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83A327648AB000C1381D /* ArwaAlattas_HungerStationUITestsLaunchTests.swift */; };
+		AF8F83B327648BDA00C1381D /* Resturants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83B227648BDA00C1381D /* Resturants.swift */; };
+		AF8F83B62764929200C1381D /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83B52764929200C1381D /* Menus.swift */; };
+		AF8F83B82765CD3700C1381D /* ResturantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83B72765CD3700C1381D /* ResturantView.swift */; };
+		AF8F83BA276609BF00C1381D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83B9276609BF00C1381D /* APIManager.swift */; };
+		AF8F83BC276675AB00C1381D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83BB276675AB00C1381D /* Extension.swift */; };
+		AF8F83FA2767394E00C1381D /* ResturantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83F92767394E00C1381D /* ResturantViewController.swift */; };
+		AF8F83FC276761C900C1381D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F83FB276761C900C1381D /* MenuView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF8F839427648AB000C1381D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8F837527648AAE00C1381D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8F837C27648AAE00C1381D;
+			remoteInfo = ArwaAlattas_HungerStation;
+		};
+		AF8F839E27648AB000C1381D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8F837527648AAE00C1381D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8F837C27648AAE00C1381D;
+			remoteInfo = ArwaAlattas_HungerStation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF8F837D27648AAE00C1381D /* ArwaAlattas_HungerStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArwaAlattas_HungerStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8F838027648AAE00C1381D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF8F838227648AAE00C1381D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF8F838427648AAE00C1381D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF8F838727648AAE00C1381D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF8F838927648AB000C1381D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF8F838C27648AB000C1381D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF8F838E27648AB000C1381D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8F839327648AB000C1381D /* ArwaAlattas_HungerStationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArwaAlattas_HungerStationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8F839727648AB000C1381D /* ArwaAlattas_HungerStationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArwaAlattas_HungerStationTests.swift; sourceTree = "<group>"; };
+		AF8F839D27648AB000C1381D /* ArwaAlattas_HungerStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArwaAlattas_HungerStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8F83A127648AB000C1381D /* ArwaAlattas_HungerStationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArwaAlattas_HungerStationUITests.swift; sourceTree = "<group>"; };
+		AF8F83A327648AB000C1381D /* ArwaAlattas_HungerStationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArwaAlattas_HungerStationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF8F83B227648BDA00C1381D /* Resturants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturants.swift; sourceTree = "<group>"; };
+		AF8F83B52764929200C1381D /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
+		AF8F83B72765CD3700C1381D /* ResturantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantView.swift; sourceTree = "<group>"; };
+		AF8F83B9276609BF00C1381D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AF8F83BB276675AB00C1381D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		AF8F83F92767394E00C1381D /* ResturantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantViewController.swift; sourceTree = "<group>"; };
+		AF8F83FB276761C900C1381D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF8F837A27648AAE00C1381D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F839027648AB000C1381D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F839A27648AB000C1381D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF8F837427648AAE00C1381D = {
+			isa = PBXGroup;
+			children = (
+				AF8F837F27648AAE00C1381D /* ArwaAlattas_HungerStation */,
+				AF8F839627648AB000C1381D /* ArwaAlattas_HungerStationTests */,
+				AF8F83A027648AB000C1381D /* ArwaAlattas_HungerStationUITests */,
+				AF8F837E27648AAE00C1381D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF8F837E27648AAE00C1381D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F837D27648AAE00C1381D /* ArwaAlattas_HungerStation.app */,
+				AF8F839327648AB000C1381D /* ArwaAlattas_HungerStationTests.xctest */,
+				AF8F839D27648AB000C1381D /* ArwaAlattas_HungerStationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF8F837F27648AAE00C1381D /* ArwaAlattas_HungerStation */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F838027648AAE00C1381D /* AppDelegate.swift */,
+				AF8F838227648AAE00C1381D /* SceneDelegate.swift */,
+				AF8F83FD27687CF700C1381D /* Extensions */,
+				AF8F83B427648BEC00C1381D /* Model */,
+				AF8F83B027648B4400C1381D /* Control */,
+				AF8F83B127648B6800C1381D /* View */,
+				AF8F838927648AB000C1381D /* Assets.xcassets */,
+				AF8F838B27648AB000C1381D /* LaunchScreen.storyboard */,
+				AF8F838E27648AB000C1381D /* Info.plist */,
+			);
+			path = ArwaAlattas_HungerStation;
+			sourceTree = "<group>";
+		};
+		AF8F839627648AB000C1381D /* ArwaAlattas_HungerStationTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F839727648AB000C1381D /* ArwaAlattas_HungerStationTests.swift */,
+			);
+			path = ArwaAlattas_HungerStationTests;
+			sourceTree = "<group>";
+		};
+		AF8F83A027648AB000C1381D /* ArwaAlattas_HungerStationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F83A127648AB000C1381D /* ArwaAlattas_HungerStationUITests.swift */,
+				AF8F83A327648AB000C1381D /* ArwaAlattas_HungerStationUITestsLaunchTests.swift */,
+			);
+			path = ArwaAlattas_HungerStationUITests;
+			sourceTree = "<group>";
+		};
+		AF8F83B027648B4400C1381D /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F83F92767394E00C1381D /* ResturantViewController.swift */,
+				AF8F838427648AAE00C1381D /* ViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		AF8F83B127648B6800C1381D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F83B72765CD3700C1381D /* ResturantView.swift */,
+				AF8F83FB276761C900C1381D /* MenuView.swift */,
+				AF8F838627648AAE00C1381D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF8F83B427648BEC00C1381D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F83B227648BDA00C1381D /* Resturants.swift */,
+				AF8F83B9276609BF00C1381D /* APIManager.swift */,
+				AF8F83B52764929200C1381D /* Menus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF8F83FD27687CF700C1381D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F83BB276675AB00C1381D /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF8F837C27648AAE00C1381D /* ArwaAlattas_HungerStation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8F83A727648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStation" */;
+			buildPhases = (
+				AF8F837927648AAE00C1381D /* Sources */,
+				AF8F837A27648AAE00C1381D /* Frameworks */,
+				AF8F837B27648AAE00C1381D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArwaAlattas_HungerStation;
+			productName = ArwaAlattas_HungerStation;
+			productReference = AF8F837D27648AAE00C1381D /* ArwaAlattas_HungerStation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF8F839227648AB000C1381D /* ArwaAlattas_HungerStationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8F83AA27648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStationTests" */;
+			buildPhases = (
+				AF8F838F27648AB000C1381D /* Sources */,
+				AF8F839027648AB000C1381D /* Frameworks */,
+				AF8F839127648AB000C1381D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8F839527648AB000C1381D /* PBXTargetDependency */,
+			);
+			name = ArwaAlattas_HungerStationTests;
+			productName = ArwaAlattas_HungerStationTests;
+			productReference = AF8F839327648AB000C1381D /* ArwaAlattas_HungerStationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF8F839C27648AB000C1381D /* ArwaAlattas_HungerStationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8F83AD27648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStationUITests" */;
+			buildPhases = (
+				AF8F839927648AB000C1381D /* Sources */,
+				AF8F839A27648AB000C1381D /* Frameworks */,
+				AF8F839B27648AB000C1381D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8F839F27648AB000C1381D /* PBXTargetDependency */,
+			);
+			name = ArwaAlattas_HungerStationUITests;
+			productName = ArwaAlattas_HungerStationUITests;
+			productReference = AF8F839D27648AB000C1381D /* ArwaAlattas_HungerStationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF8F837527648AAE00C1381D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					AF8F837C27648AAE00C1381D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					AF8F839227648AB000C1381D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = AF8F837C27648AAE00C1381D;
+					};
+					AF8F839C27648AB000C1381D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = AF8F837C27648AAE00C1381D;
+					};
+				};
+			};
+			buildConfigurationList = AF8F837827648AAE00C1381D /* Build configuration list for PBXProject "ArwaAlattas_HungerStation" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF8F837427648AAE00C1381D;
+			productRefGroup = AF8F837E27648AAE00C1381D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF8F837C27648AAE00C1381D /* ArwaAlattas_HungerStation */,
+				AF8F839227648AB000C1381D /* ArwaAlattas_HungerStationTests */,
+				AF8F839C27648AB000C1381D /* ArwaAlattas_HungerStationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF8F837B27648AAE00C1381D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8F838D27648AB000C1381D /* LaunchScreen.storyboard in Resources */,
+				AF8F838A27648AB000C1381D /* Assets.xcassets in Resources */,
+				AF8F838827648AAE00C1381D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F839127648AB000C1381D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F839B27648AB000C1381D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF8F837927648AAE00C1381D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8F838527648AAE00C1381D /* ViewController.swift in Sources */,
+				AF8F83B82765CD3700C1381D /* ResturantView.swift in Sources */,
+				AF8F83BA276609BF00C1381D /* APIManager.swift in Sources */,
+				AF8F838127648AAE00C1381D /* AppDelegate.swift in Sources */,
+				AF8F83B62764929200C1381D /* Menus.swift in Sources */,
+				AF8F83FC276761C900C1381D /* MenuView.swift in Sources */,
+				AF8F838327648AAE00C1381D /* SceneDelegate.swift in Sources */,
+				AF8F83B327648BDA00C1381D /* Resturants.swift in Sources */,
+				AF8F83FA2767394E00C1381D /* ResturantViewController.swift in Sources */,
+				AF8F83BC276675AB00C1381D /* Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F838F27648AB000C1381D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8F839827648AB000C1381D /* ArwaAlattas_HungerStationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8F839927648AB000C1381D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8F83A427648AB000C1381D /* ArwaAlattas_HungerStationUITestsLaunchTests.swift in Sources */,
+				AF8F83A227648AB000C1381D /* ArwaAlattas_HungerStationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF8F839527648AB000C1381D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8F837C27648AAE00C1381D /* ArwaAlattas_HungerStation */;
+			targetProxy = AF8F839427648AB000C1381D /* PBXContainerItemProxy */;
+		};
+		AF8F839F27648AB000C1381D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8F837C27648AAE00C1381D /* ArwaAlattas_HungerStation */;
+			targetProxy = AF8F839E27648AB000C1381D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF8F838627648AAE00C1381D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8F838727648AAE00C1381D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF8F838B27648AB000C1381D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8F838C27648AB000C1381D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF8F83A527648AB000C1381D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF8F83A627648AB000C1381D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF8F83A827648AB000C1381D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArwaAlattas_HungerStation/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF8F83A927648AB000C1381D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArwaAlattas_HungerStation/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF8F83AB27648AB000C1381D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArwaAlattas_HungerStation.app/ArwaAlattas_HungerStation";
+			};
+			name = Debug;
+		};
+		AF8F83AC27648AB000C1381D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArwaAlattas_HungerStation.app/ArwaAlattas_HungerStation";
+			};
+			name = Release;
+		};
+		AF8F83AE27648AB000C1381D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArwaAlattas_HungerStation;
+			};
+			name = Debug;
+		};
+		AF8F83AF27648AB000C1381D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GU4GP7U2DT;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Arwa-macbook-pro.ArwaAlattas-HungerStationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArwaAlattas_HungerStation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF8F837827648AAE00C1381D /* Build configuration list for PBXProject "ArwaAlattas_HungerStation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8F83A527648AB000C1381D /* Debug */,
+				AF8F83A627648AB000C1381D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8F83A727648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8F83A827648AB000C1381D /* Debug */,
+				AF8F83A927648AB000C1381D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8F83AA27648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8F83AB27648AB000C1381D /* Debug */,
+				AF8F83AC27648AB000C1381D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8F83AD27648AB000C1381D /* Build configuration list for PBXNativeTarget "ArwaAlattas_HungerStationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8F83AE27648AB000C1381D /* Debug */,
+				AF8F83AF27648AB000C1381D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF8F837527648AAE00C1381D /* Project object */;
+}
