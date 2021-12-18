@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Life Tracking"; ObjectID = "1Rx-qH-y8E"; */
+"1Rx-qH-y8E.text" = "Life Tracking";
+
+/* Class = "UINavigationItem"; title = "HungerStationApp"; ObjectID = "1eF-gh-3vf"; */
+"1eF-gh-3vf.title" = "HungerStationApp";
+
+/* Class = "UILabel"; text = "Fast Food"; ObjectID = "FzA-pb-VPe"; */
+"FzA-pb-VPe.text" = "Fast Food";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "Gxu-jU-Fay"; */
+"Gxu-jU-Fay.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Gxu-jU-Fay"; */
+"Gxu-jU-Fay.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "HoN-PR-jAz"; */
+"HoN-PR-jAz.text" = "00:00";
+
+/* Class = "UILabel"; text = ">>>>>>>>>>\\"; ObjectID = "IXG-BD-qiu"; */
+"IXG-BD-qiu.text" = ">>>>>>>>>>\\";
+
+/* Class = "UILabel"; text = "3.5"; ObjectID = "K9K-Ci-Jg6"; */
+"K9K-Ci-Jg6.text" = "3.5";
+
+/* Class = "UILabel"; text = "Delivery : 5 SR"; ObjectID = "bCX-xz-yHg"; */
+"bCX-xz-yHg.text" = "Delivery : 5 SR";
+
+/* Class = "UILabel"; text = "Herfy"; ObjectID = "eA4-an-pcd"; */
+"eA4-an-pcd.text" = "Herfy";
+
+/* Class = "UILabel"; text = "||"; ObjectID = "rvJ-G4-gb1"; */
+"rvJ-G4-gb1.text" = "||";
+
+/* Class = "UILabel"; text = "||"; ObjectID = "xqq-HU-3tp"; */
+"xqq-HU-3tp.text" = "||";
