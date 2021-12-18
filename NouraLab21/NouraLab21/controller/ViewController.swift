@@ -55,6 +55,7 @@ class ViewController: UIViewController {
             task.resume()
         }
     }
+    // code segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let sendData = segue.destination as! MenuViewController
         sendData.selectedHungerstation = selectedHungerstation
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
         print("Unwind to Root View Controller")
     }
 }
-// extension
+// extension VC1
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataRestorants1.count
@@ -90,10 +91,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! DataTableViewCell
         cell.restaurantNameLabel.text = dataRestorants1[indexPath.row].name
         cell.typeFoodLabel.text = dataRestorants1[indexPath.row].category
+        cell.restaurantRatingLable.text = "\(dataRestorants1[indexPath.row].rating)"
+        // delivery "Time"
         cell.timeLabel.text = "\(dataRestorants1[indexPath.row].delivery.time.max) - \(dataRestorants1[indexPath.row].delivery.time.min) Minutes"
+        // delivery "Cost"
         cell.costLabel.text =
         "\(dataRestorants1[indexPath.row].delivery.cost.currency) \(dataRestorants1[indexPath.row].delivery.cost.value)"
-        cell.restaurantRatingLable.text = "\(dataRestorants1[indexPath.row].rating)"
         // offer
         if  dataRestorants1[indexPath.row].offer != nil {
             let value = dataRestorants1[indexPath.row].offer?.value
@@ -106,7 +109,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         if dataRestorants1[indexPath.row].is_promoted == false {
             cell.promoted?.removeFromSuperview()
         }
-        // code size view
+        // code shape
         if dataRestorants1[indexPath.row].offer != nil {
             let bezierPath = UIBezierPath()
         bezierPath.move(to: .zero)

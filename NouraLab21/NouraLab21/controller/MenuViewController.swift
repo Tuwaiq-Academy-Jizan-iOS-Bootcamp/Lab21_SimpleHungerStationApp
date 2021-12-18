@@ -29,6 +29,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var hightView2: NSLayoutConstraint!
     @IBOutlet weak var ViewLarg: UIView!{
         didSet{
+            // code shado
             ViewLarg.layer.masksToBounds = true
             ViewLarg.layer.cornerRadius = 15
             ViewLarg.layer.masksToBounds = false
@@ -127,6 +128,7 @@ class MenuViewController: UIViewController {
         }
     }
 }
+// extension VC2
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu1.count
@@ -163,6 +165,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource{
         }
             }
         }
+        // code shado
        cellMenu.layer.masksToBounds = true
         cellMenu.layer.cornerRadius = 15
       return cellMenu
@@ -181,7 +184,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource{
                      hightView2.constant = newHeight
         }
         }else{
-            if ViewLarg.bounds.size.height < 171{
+            if ViewLarg.bounds.size.height < 150{
                 let offsetDiff = hightV - scrollView.contentOffset.y
                 let newHeight = hightView2.constant + offsetDiff
                      hightView2.constant = newHeight

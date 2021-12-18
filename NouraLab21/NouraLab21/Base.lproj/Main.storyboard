@@ -461,7 +461,7 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-3u-lku">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="top" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="rIN-Df-BTI">
                                                 <rect key="frame" x="8" y="13" width="351.5" height="50"/>
