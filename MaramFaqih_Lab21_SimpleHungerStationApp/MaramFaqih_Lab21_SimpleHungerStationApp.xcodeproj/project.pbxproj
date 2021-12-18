@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EED23FDA2742C004005E4258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FD92742C004005E4258 /* AppDelegate.swift */; };
+		EED23FDC2742C005005E4258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FDB2742C004005E4258 /* SceneDelegate.swift */; };
+		EED23FDE2742C005005E4258 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FDD2742C005005E4258 /* ViewController.swift */; };
+		EED23FE12742C005005E4258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED23FDF2742C005005E4258 /* Main.storyboard */; };
+		EED23FE32742C008005E4258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED23FE22742C008005E4258 /* Assets.xcassets */; };
+		EED23FE62742C008005E4258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED23FE42742C008005E4258 /* LaunchScreen.storyboard */; };
+		EED23FF12742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FF02742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.swift */; };
+		EED23FFB2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FFA2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift */; };
+		EED23FFD2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED23FFC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */; };
+		EED2400C2742DD49005E4258 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400B2742DD49005E4258 /* Resturant.swift */; };
+		EED2400F2742E9A7005E4258 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2400E2742E9A7005E4258 /* Menu.swift */; };
+		EED2401327438437005E4258 /* ResturantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2401227438436005E4258 /* ResturantView.swift */; };
+		EED240192743CA01005E4258 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED240182743CA01005E4258 /* MenuCell.swift */; };
+		EED2401B2743CB15005E4258 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2401A2743CB14005E4258 /* ResturantCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EED23FED2742C009005E4258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED23FCE2742C004005E4258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED23FD52742C004005E4258;
+			remoteInfo = MaramFaqih_Lab21_SimpleHungerStationApp;
+		};
+		EED23FF72742C009005E4258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED23FCE2742C004005E4258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED23FD52742C004005E4258;
+			remoteInfo = MaramFaqih_Lab21_SimpleHungerStationApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EED23FD62742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaramFaqih_Lab21_SimpleHungerStationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED23FD92742C004005E4258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EED23FDB2742C004005E4258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EED23FDD2742C005005E4258 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EED23FE02742C005005E4258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED23FE22742C008005E4258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED23FE52742C008005E4258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EED23FE72742C008005E4258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED23FEC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaramFaqih_Lab21_SimpleHungerStationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED23FF02742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaramFaqih_Lab21_SimpleHungerStationAppTests.swift; sourceTree = "<group>"; };
+		EED23FF62742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaramFaqih_Lab21_SimpleHungerStationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED23FFA2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift; sourceTree = "<group>"; };
+		EED23FFC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EED2400B2742DD49005E4258 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		EED2400E2742E9A7005E4258 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		EED2401227438436005E4258 /* ResturantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantView.swift; sourceTree = "<group>"; };
+		EED240182743CA01005E4258 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		EED2401A2743CB14005E4258 /* ResturantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED23FD32742C004005E4258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FE92742C009005E4258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FF32742C009005E4258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EED23FCD2742C004005E4258 = {
+			isa = PBXGroup;
+			children = (
+				EED23FD82742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */,
+				EED23FEF2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests */,
+				EED23FF92742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests */,
+				EED23FD72742C004005E4258 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED23FD72742C004005E4258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED23FD62742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp.app */,
+				EED23FEC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.xctest */,
+				EED23FF62742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED23FD82742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */ = {
+			isa = PBXGroup;
+			children = (
+				EED23FD92742C004005E4258 /* AppDelegate.swift */,
+				EED23FDB2742C004005E4258 /* SceneDelegate.swift */,
+				EED2400D2742DD4F005E4258 /* Model */,
+				EED240092742C03E005E4258 /* View */,
+				EED2400A2742C056005E4258 /* Controller */,
+				EED23FE22742C008005E4258 /* Assets.xcassets */,
+				EED23FE42742C008005E4258 /* LaunchScreen.storyboard */,
+				EED23FE72742C008005E4258 /* Info.plist */,
+			);
+			path = MaramFaqih_Lab21_SimpleHungerStationApp;
+			sourceTree = "<group>";
+		};
+		EED23FEF2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EED23FF02742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.swift */,
+			);
+			path = MaramFaqih_Lab21_SimpleHungerStationAppTests;
+			sourceTree = "<group>";
+		};
+		EED23FF92742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EED23FFA2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift */,
+				EED23FFC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */,
+			);
+			path = MaramFaqih_Lab21_SimpleHungerStationAppUITests;
+			sourceTree = "<group>";
+		};
+		EED240092742C03E005E4258 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EED23FDF2742C005005E4258 /* Main.storyboard */,
+				EED2401A2743CB14005E4258 /* ResturantCell.swift */,
+				EED240182743CA01005E4258 /* MenuCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EED2400A2742C056005E4258 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EED2401227438436005E4258 /* ResturantView.swift */,
+				EED23FDD2742C005005E4258 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EED2400D2742DD4F005E4258 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EED2400E2742E9A7005E4258 /* Menu.swift */,
+				EED2400B2742DD49005E4258 /* Resturant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED23FD52742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED240002742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationApp" */;
+			buildPhases = (
+				EED23FD22742C004005E4258 /* Sources */,
+				EED23FD32742C004005E4258 /* Frameworks */,
+				EED23FD42742C004005E4258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaramFaqih_Lab21_SimpleHungerStationApp;
+			productName = MaramFaqih_Lab21_SimpleHungerStationApp;
+			productReference = EED23FD62742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED23FEB2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED240032742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationAppTests" */;
+			buildPhases = (
+				EED23FE82742C009005E4258 /* Sources */,
+				EED23FE92742C009005E4258 /* Frameworks */,
+				EED23FEA2742C009005E4258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED23FEE2742C009005E4258 /* PBXTargetDependency */,
+			);
+			name = MaramFaqih_Lab21_SimpleHungerStationAppTests;
+			productName = MaramFaqih_Lab21_SimpleHungerStationAppTests;
+			productReference = EED23FEC2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EED23FF52742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED240062742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationAppUITests" */;
+			buildPhases = (
+				EED23FF22742C009005E4258 /* Sources */,
+				EED23FF32742C009005E4258 /* Frameworks */,
+				EED23FF42742C009005E4258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED23FF82742C009005E4258 /* PBXTargetDependency */,
+			);
+			name = MaramFaqih_Lab21_SimpleHungerStationAppUITests;
+			productName = MaramFaqih_Lab21_SimpleHungerStationAppUITests;
+			productReference = EED23FF62742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED23FCE2742C004005E4258 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					EED23FD52742C004005E4258 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					EED23FEB2742C009005E4258 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EED23FD52742C004005E4258;
+					};
+					EED23FF52742C009005E4258 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EED23FD52742C004005E4258;
+					};
+				};
+			};
+			buildConfigurationList = EED23FD12742C004005E4258 /* Build configuration list for PBXProject "MaramFaqih_Lab21_SimpleHungerStationApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EED23FCD2742C004005E4258;
+			productRefGroup = EED23FD72742C004005E4258 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED23FD52742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */,
+				EED23FEB2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests */,
+				EED23FF52742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED23FD42742C004005E4258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED23FE62742C008005E4258 /* LaunchScreen.storyboard in Resources */,
+				EED23FE32742C008005E4258 /* Assets.xcassets in Resources */,
+				EED23FE12742C005005E4258 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FEA2742C009005E4258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FF42742C009005E4258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED23FD22742C004005E4258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED23FDE2742C005005E4258 /* ViewController.swift in Sources */,
+				EED2401327438437005E4258 /* ResturantView.swift in Sources */,
+				EED23FDA2742C004005E4258 /* AppDelegate.swift in Sources */,
+				EED2400F2742E9A7005E4258 /* Menu.swift in Sources */,
+				EED2400C2742DD49005E4258 /* Resturant.swift in Sources */,
+				EED240192743CA01005E4258 /* MenuCell.swift in Sources */,
+				EED2401B2743CB15005E4258 /* ResturantCell.swift in Sources */,
+				EED23FDC2742C005005E4258 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FE82742C009005E4258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED23FF12742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED23FF22742C009005E4258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED23FFD2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift in Sources */,
+				EED23FFB2742C009005E4258 /* MaramFaqih_Lab21_SimpleHungerStationAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EED23FEE2742C009005E4258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED23FD52742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */;
+			targetProxy = EED23FED2742C009005E4258 /* PBXContainerItemProxy */;
+		};
+		EED23FF82742C009005E4258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED23FD52742C004005E4258 /* MaramFaqih_Lab21_SimpleHungerStationApp */;
+			targetProxy = EED23FF72742C009005E4258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EED23FDF2742C005005E4258 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED23FE02742C005005E4258 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED23FE42742C008005E4258 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED23FE52742C008005E4258 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EED23FFE2742C009005E4258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EED23FFF2742C009005E4258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EED240012742C009005E4258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72X8293LK3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MaramFaqih_Lab21_SimpleHungerStationApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and using app?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to use location when app in use?";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED240022742C009005E4258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72X8293LK3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MaramFaqih_Lab21_SimpleHungerStationApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and using app?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to use location when app in use?";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EED240042742C009005E4258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaramFaqih_Lab21_SimpleHungerStationApp.app/MaramFaqih_Lab21_SimpleHungerStationApp";
+			};
+			name = Debug;
+		};
+		EED240052742C009005E4258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaramFaqih_Lab21_SimpleHungerStationApp.app/MaramFaqih_Lab21_SimpleHungerStationApp";
+			};
+			name = Release;
+		};
+		EED240072742C009005E4258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MaramFaqih_Lab21_SimpleHungerStationApp;
+			};
+			name = Debug;
+		};
+		EED240082742C009005E4258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.MaramFaqih-Lab21-SimpleHungerStationAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MaramFaqih_Lab21_SimpleHungerStationApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED23FD12742C004005E4258 /* Build configuration list for PBXProject "MaramFaqih_Lab21_SimpleHungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED23FFE2742C009005E4258 /* Debug */,
+				EED23FFF2742C009005E4258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED240002742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED240012742C009005E4258 /* Debug */,
+				EED240022742C009005E4258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED240032742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED240042742C009005E4258 /* Debug */,
+				EED240052742C009005E4258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED240062742C009005E4258 /* Build configuration list for PBXNativeTarget "MaramFaqih_Lab21_SimpleHungerStationAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED240072742C009005E4258 /* Debug */,
+				EED240082742C009005E4258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EED23FCE2742C004005E4258 /* Project object */;
+}
