@@ -213,20 +213,24 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
       //up
         if   scrollView.contentOffset.y>0 {
             
             if viewInfoAboutResturantTwo.bounds.size.height > viewInfoAboutResturant.bounds.size.height * 1.1{
+                
                 //view
-               let ofStet = preSetOfState - scrollView.contentOffset.y
-               let  constHeight = hidViewConstraint.constant + ofStet
+               let  constHeight = hidViewConstraint.constant - scrollView.contentOffset.y
                hidViewConstraint.constant = constHeight
+                
                //image
-               let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
-               let constHeightImage = hidImageConstraint.constant + ofStetImage
+               let constHeightImage = hidImageConstraint.constant - scrollView.contentOffset.y
                hidImageConstraint.constant = constHeightImage
                 
+                
+                
             }
+          
         }
         
     //down
@@ -234,12 +238,11 @@ extension ResturantView: UITableViewDelegate , UITableViewDataSource{
             //view
             if viewInfoAboutResturantTwo.bounds.size.height <= preHeightView {
                 
-            let ofStet = preSetOfState - scrollView.contentOffset.y
-            let  constHeight = hidViewConstraint.constant + ofStet
+            let  constHeight = hidViewConstraint.constant - scrollView.contentOffset.y
             hidViewConstraint.constant = constHeight
+                
             //image
-            let ofStetImage = preSetOfStateImage - scrollView.contentOffset.y
-            let constHeightImage = hidImageConstraint.constant + ofStetImage
+            let constHeightImage = hidImageConstraint.constant - scrollView.contentOffset.y
             hidImageConstraint.constant = constHeightImage
             }
         }

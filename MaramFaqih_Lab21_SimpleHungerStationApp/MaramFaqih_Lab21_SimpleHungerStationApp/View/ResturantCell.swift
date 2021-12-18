@@ -7,10 +7,13 @@
 
 import UIKit
 class ResturntCell : UITableViewCell{
-    
+    let cornerRadius : CGFloat = 25.0
+
     @IBOutlet weak var viewOffer: UIView!
     @IBOutlet weak var nameCell: UILabel!
     @IBOutlet weak var viewForCell: UIView!
+    
+    @IBOutlet weak var ViewAlpha: UIView!
     @IBOutlet weak var deliveryTimeCell: UILabel!
     @IBOutlet weak var ratingCell: UILabel!
     @IBOutlet weak var cuisineCell: UILabel!
@@ -27,6 +30,7 @@ class ResturntCell : UITableViewCell{
         logoCell.layer.masksToBounds = true
         logoCell.image = nil
         imageCell.image = nil
+
     }
   
     override func setSelected(_ selected: Bool, animated: Bool) {

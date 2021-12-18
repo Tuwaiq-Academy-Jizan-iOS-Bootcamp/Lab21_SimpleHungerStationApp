@@ -13,7 +13,6 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     var locationManager  = CLLocationManager()
  
-    @IBOutlet weak var viewForHeadr: UIView!
     @IBOutlet weak var resturantsTableView: UITableView!
     @IBOutlet weak var headerImageView: UIImageView!
     
@@ -58,7 +57,6 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         if CLLocationManager.locationServicesEnabled() {
             print("Yes")
             locationManager.startUpdatingLocation()
-            print("Yes")
         }else{
             print("No")
         }
@@ -93,14 +91,14 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
              }
              
        
-             
-             headerImageView.layer.masksToBounds = true
-             headerImageView.layer.cornerRadius = 15
 
-            
+             headerImageView.layer.masksToBounds = true
+             headerImageView.layer.cornerRadius = 20
+
              resturantsTableView.delegate = self
              resturantsTableView.dataSource = self
-             
+
+
         headers = ["h1","h2","h3","h4"]
 
         getaData(with:"restaurants")
@@ -193,9 +191,20 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ResturntCell
+      
+        
+        cell.viewForCell.layer.masksToBounds = true
+        cell.viewForCell.layer.cornerRadius = 20
+        cell.ViewAlpha.layer.masksToBounds = true
+        cell.ViewAlpha.layer.cornerRadius = 20
+        cell.viewForCell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.viewForCell.layer.shadowOpacity = 0.5
+        cell.viewForCell.layer.shadowRadius = 4
+        cell.viewForCell.layer.masksToBounds = false
+        cell.imageCell.layer.masksToBounds = true
+        cell.imageCell.layer.cornerRadius = 20
 
-        tableView.backgroundColor = .systemGray6
-
+        cell.selectionStyle = .none
         cell.nameCell.text = resturantNameStruct[indexPath.row].name
         cell.deliveryTimeCell.text = String(resturantNameStruct[indexPath.row].delivery.time.min)+" - "+String(resturantNameStruct[indexPath.row].delivery.time.max)+" minutes"
         cell.ratingCell.text = String(resturantNameStruct[indexPath.row].rating)
@@ -274,32 +283,14 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = .systemGray6
+        //view.backgroundColor = .systemGray6
         
         return view
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        let verticalPadding: CGFloat = 10
 
-        let maskLayer = CALayer()
-        maskLayer.cornerRadius = 20
-        maskLayer.backgroundColor = UIColor.black.cgColor
-        
-        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 10 , dy: verticalPadding/2)
-        maskLayer.masksToBounds = false
-        maskLayer.shadowOffset = CGSize(width: 0, height: 0)
-        maskLayer.shadowOpacity = 0.5
-        maskLayer.shadowRadius = 4
-       cell.layer.mask = maskLayer
-    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! ResturntCell
-//        let sizeHeightView =  cell.viewForCell.bounds.size.height - 2
-//        let sizeWidthtView =  cell.viewForCell.bounds.size.width - 2
-//        cell.viewForCell.bounds.size.height = sizeHeightView
-//        cell.viewForCell.bounds.size.width = sizeWidthtView
+
         let arrPath = resturantNameStruct[indexPath.row]
         nameSelected = arrPath.name
         deliveryTimeSelected = String(arrPath.delivery.time.min)+" - "+String(arrPath.delivery.time.max)+" minutes"
@@ -323,6 +314,28 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         
         performSegue(withIdentifier: "toRestrunt", sender: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
 
+        UIView.animate(withDuration: 0.5) {
+               if let cell = tableView.cellForRow(at: indexPath) as? ResturntCell {
+                   cell.viewForCell.transform = .init(scaleX: 0.95, y: 0.95)
+                   cell.contentView.backgroundColor = UIColor(white: 1,  alpha: 1)
+                   cell.ViewAlpha.backgroundColor = UIColor(white: 1,  alpha: 0.5)
+               }
+           }
+
+    }
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.5){
+            if let cell = tableView.cellForRow(at: indexPath) as? ResturntCell {
+        cell.viewForCell.transform = .identity
+             cell.contentView.backgroundColor = .clear
+                cell.ViewAlpha.backgroundColor = .clear
+    }
 }
+    }    }
+
+
+
  
