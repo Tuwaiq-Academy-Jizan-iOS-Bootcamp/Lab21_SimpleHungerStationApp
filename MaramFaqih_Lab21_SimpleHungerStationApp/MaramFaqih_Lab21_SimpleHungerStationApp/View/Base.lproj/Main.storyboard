@@ -188,24 +188,35 @@
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdI-0b-VmK">
                                                                                                     <rect key="frame" x="78.5" y="0.0" width="4.5" height="15"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="width" constant="4.5" id="LyX-yt-Thz"/>
+                                                                                                    </constraints>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                                                     <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Delivery:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITL-HN-HW9">
-                                                                                                    <rect key="frame" x="92" y="0.0" width="50" height="15"/>
-                                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                                                                    <color key="textColor" systemColor="systemGreenColor"/>
-                                                                                                    <nil key="highlightedColor"/>
-                                                                                                </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-WM-m9a">
-                                                                                                    <rect key="frame" x="151" y="0.0" width="17" height="15"/>
-                                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                                                    <color key="textColor" systemColor="systemGreenColor"/>
-                                                                                                    <nil key="highlightedColor"/>
-                                                                                                </label>
+                                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="m59-NI-G48">
+                                                                                                    <rect key="frame" x="92" y="0.0" width="76" height="15"/>
+                                                                                                    <subviews>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Delivery:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITL-HN-HW9">
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="15"/>
+                                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                                                                            <color key="textColor" systemColor="systemGreenColor"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-WM-m9a">
+                                                                                                            <rect key="frame" x="59" y="0.0" width="17" height="15"/>
+                                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                                                            <color key="textColor" systemColor="systemGreenColor"/>
+                                                                                                            <nil key="highlightedColor"/>
+                                                                                                        </label>
+                                                                                                    </subviews>
+                                                                                                </stackView>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-mu-JEs">
                                                                                                     <rect key="frame" x="177" y="0.0" width="4.5" height="15"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="width" constant="4.5" id="SUe-6a-jFg"/>
+                                                                                                    </constraints>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                                                     <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                                                                     <nil key="highlightedColor"/>
