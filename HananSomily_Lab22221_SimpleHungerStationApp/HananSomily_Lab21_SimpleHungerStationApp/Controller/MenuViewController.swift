@@ -68,8 +68,8 @@ class MenuViewController:UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        //Details resturant
+        // Dispatch image
         if let item = selected{
            // print("******\(item.image)")
 if let imageURL = URL(string:item.image){
@@ -82,9 +82,7 @@ if let imageURL = URL(string:item.image){
                    }
                  }
                }
-            //  cell.imageProperties.maximumSize = CGSize(width: 60, height: 60)
              }
-            //logoSellectImage.image = item.resturant_image
             if let imageURL = URL(string:item.resturant_image){
                     DispatchQueue.global().async {
                            let data = try? Data(contentsOf: imageURL)
@@ -95,7 +93,6 @@ if let imageURL = URL(string:item.image){
                                }
                              }
                            }
-                        //  cell.imageProperties.maximumSize = CGSize(width: 60, height: 60)
                          }
             nameResturantLabel.text = item.name
             levelResturantLabel.text = "\(item.rating)"
@@ -111,10 +108,12 @@ if let imageURL = URL(string:item.image){
                 stackOfferView.isHidden = true
             }
         }
+        // get id of resturant select
         let id = selected?.id
 //print(id)
         getDtaaAPI(with: "/\(id!)")
 }
+    // API get data of menu
     func getDtaaAPI(with endpoint:String){
     let link = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
       //  print(link)
@@ -146,23 +145,22 @@ let decodedData = try decoder.decode(MenuData.self, from: safeData)
 }
 
 extension MenuViewController:UITableViewDelegate {
+    // fold view
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
-        if scrollView.contentOffset.y > 0{
-            if attributeView.bounds.size.height > 105{
-
+        if scrollView.contentOffset.y >= 0{
+            if attributeView.bounds.size.height >= 110{
         let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
         let hightView = scroolView1.constant + offSetDifrent
         scroolView1.constant = hightView
           print("scroll view = \(scrollView.contentOffset.y)")
             }
         }else {
-            if attributeView.bounds.size.height <= 209{
+            if attributeView.bounds.size.height <= 192{
                 let offSetDifrent = previousOFFsetState - scrollView.contentOffset.y
             let hightView = scroolView1.constant + offSetDifrent
             scroolView1.constant = hightView
             }}
-
         }
     }
 extension MenuViewController:UITableViewDataSource {
