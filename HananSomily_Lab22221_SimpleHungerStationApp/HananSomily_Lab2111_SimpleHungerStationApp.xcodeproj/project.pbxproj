@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D67C169276409E900A82A34 /* MuneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67C168276409E900A82A34 /* MuneTableViewCell.swift */; };
+		2DB2D3C32743D427002FD165 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2D3C22743D427002FD165 /* menu.swift */; };
+		2DB2D3C52743E9F9002FD165 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2D3C42743E9F9002FD165 /* MenuViewController.swift */; };
+		2DB2D3C7274479FF002FD165 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB2D3C6274479FF002FD165 /* ImageViewCell.swift */; };
+		2DF67CCC2742C33C00302F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CCB2742C33C00302F23 /* AppDelegate.swift */; };
+		2DF67CCE2742C33C00302F23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CCD2742C33C00302F23 /* SceneDelegate.swift */; };
+		2DF67CD02742C33C00302F23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CCF2742C33C00302F23 /* ViewController.swift */; };
+		2DF67CD32742C33C00302F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF67CD12742C33C00302F23 /* Main.storyboard */; };
+		2DF67CD52742C33D00302F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF67CD42742C33D00302F23 /* Assets.xcassets */; };
+		2DF67CD82742C33D00302F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF67CD62742C33D00302F23 /* LaunchScreen.storyboard */; };
+		2DF67CE32742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CE22742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.swift */; };
+		2DF67CED2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CEC2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.swift */; };
+		2DF67CEF2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CEE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */; };
+		2DF67CFF2742CF3300302F23 /* StructureHungerStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67CFE2742CF3300302F23 /* StructureHungerStation.swift */; };
+		2DF67D012742E5F200302F23 /* ClassHungerStationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF67D002742E5F200302F23 /* ClassHungerStationTableView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DF67CDF2742C33D00302F23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF67CC02742C33C00302F23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DF67CC72742C33C00302F23;
+			remoteInfo = HananSomily_Lab21_SimpleHungerStationApp;
+		};
+		2DF67CE92742C33D00302F23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DF67CC02742C33C00302F23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DF67CC72742C33C00302F23;
+			remoteInfo = HananSomily_Lab21_SimpleHungerStationApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D67C168276409E900A82A34 /* MuneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuneTableViewCell.swift; sourceTree = "<group>"; };
+		2DB2D3C22743D427002FD165 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		2DB2D3C42743E9F9002FD165 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2DB2D3C6274479FF002FD165 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		2DF67CC82742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HananSomily_Lab21_SimpleHungerStationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF67CCB2742C33C00302F23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DF67CCD2742C33C00302F23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DF67CCF2742C33C00302F23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DF67CD22742C33C00302F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2DF67CD42742C33D00302F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DF67CD72742C33D00302F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DF67CD92742C33D00302F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DF67CDE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HananSomily_Lab21_SimpleHungerStationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF67CE22742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HananSomily_Lab21_SimpleHungerStationAppTests.swift; sourceTree = "<group>"; };
+		2DF67CE82742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HananSomily_Lab21_SimpleHungerStationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF67CEC2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HananSomily_Lab21_SimpleHungerStationAppUITests.swift; sourceTree = "<group>"; };
+		2DF67CEE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2DF67CFE2742CF3300302F23 /* StructureHungerStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureHungerStation.swift; sourceTree = "<group>"; };
+		2DF67D002742E5F200302F23 /* ClassHungerStationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassHungerStationTableView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DF67CC52742C33C00302F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CDB2742C33D00302F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CE52742C33D00302F23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DF67CBF2742C33C00302F23 = {
+			isa = PBXGroup;
+			children = (
+				2DF67CCA2742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */,
+				2DF67CE12742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests */,
+				2DF67CEB2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests */,
+				2DF67CC92742C33C00302F23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DF67CC92742C33C00302F23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CC82742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp.app */,
+				2DF67CDE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.xctest */,
+				2DF67CE82742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DF67CCA2742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CCB2742C33C00302F23 /* AppDelegate.swift */,
+				2DF67CCD2742C33C00302F23 /* SceneDelegate.swift */,
+				2DF67CFC2742CE0A00302F23 /* Model */,
+				2DF67CFD2742CE0C00302F23 /* View */,
+				2DF67CD42742C33D00302F23 /* Assets.xcassets */,
+				2DF67CFB2742CE0600302F23 /* Controller */,
+				2DF67CD62742C33D00302F23 /* LaunchScreen.storyboard */,
+				2DF67CD92742C33D00302F23 /* Info.plist */,
+			);
+			path = HananSomily_Lab21_SimpleHungerStationApp;
+			sourceTree = "<group>";
+		};
+		2DF67CE12742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CE22742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.swift */,
+			);
+			path = HananSomily_Lab21_SimpleHungerStationAppTests;
+			sourceTree = "<group>";
+		};
+		2DF67CEB2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CEC2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.swift */,
+				2DF67CEE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift */,
+			);
+			path = HananSomily_Lab21_SimpleHungerStationAppUITests;
+			sourceTree = "<group>";
+		};
+		2DF67CFB2742CE0600302F23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CCF2742C33C00302F23 /* ViewController.swift */,
+				2DB2D3C42743E9F9002FD165 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DF67CFC2742CE0A00302F23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CFE2742CF3300302F23 /* StructureHungerStation.swift */,
+				2DF67D002742E5F200302F23 /* ClassHungerStationTableView.swift */,
+				2D67C168276409E900A82A34 /* MuneTableViewCell.swift */,
+				2DB2D3C6274479FF002FD165 /* ImageViewCell.swift */,
+				2DB2D3C22743D427002FD165 /* menu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DF67CFD2742CE0C00302F23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DF67CD12742C33C00302F23 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DF67CC72742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF67CF22742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationApp" */;
+			buildPhases = (
+				2DF67CC42742C33C00302F23 /* Sources */,
+				2DF67CC52742C33C00302F23 /* Frameworks */,
+				2DF67CC62742C33C00302F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HananSomily_Lab21_SimpleHungerStationApp;
+			productName = HananSomily_Lab21_SimpleHungerStationApp;
+			productReference = 2DF67CC82742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DF67CDD2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF67CF52742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationAppTests" */;
+			buildPhases = (
+				2DF67CDA2742C33D00302F23 /* Sources */,
+				2DF67CDB2742C33D00302F23 /* Frameworks */,
+				2DF67CDC2742C33D00302F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DF67CE02742C33D00302F23 /* PBXTargetDependency */,
+			);
+			name = HananSomily_Lab21_SimpleHungerStationAppTests;
+			productName = HananSomily_Lab21_SimpleHungerStationAppTests;
+			productReference = 2DF67CDE2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DF67CE72742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF67CF82742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationAppUITests" */;
+			buildPhases = (
+				2DF67CE42742C33D00302F23 /* Sources */,
+				2DF67CE52742C33D00302F23 /* Frameworks */,
+				2DF67CE62742C33D00302F23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DF67CEA2742C33D00302F23 /* PBXTargetDependency */,
+			);
+			name = HananSomily_Lab21_SimpleHungerStationAppUITests;
+			productName = HananSomily_Lab21_SimpleHungerStationAppUITests;
+			productReference = 2DF67CE82742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DF67CC02742C33C00302F23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					2DF67CC72742C33C00302F23 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					2DF67CDD2742C33D00302F23 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 2DF67CC72742C33C00302F23;
+					};
+					2DF67CE72742C33D00302F23 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 2DF67CC72742C33C00302F23;
+					};
+				};
+			};
+			buildConfigurationList = 2DF67CC32742C33C00302F23 /* Build configuration list for PBXProject "HananSomily_Lab2111_SimpleHungerStationApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DF67CBF2742C33C00302F23;
+			productRefGroup = 2DF67CC92742C33C00302F23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DF67CC72742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */,
+				2DF67CDD2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests */,
+				2DF67CE72742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DF67CC62742C33C00302F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF67CD82742C33D00302F23 /* LaunchScreen.storyboard in Resources */,
+				2DF67CD52742C33D00302F23 /* Assets.xcassets in Resources */,
+				2DF67CD32742C33C00302F23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CDC2742C33D00302F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CE62742C33D00302F23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DF67CC42742C33C00302F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF67D012742E5F200302F23 /* ClassHungerStationTableView.swift in Sources */,
+				2DF67CD02742C33C00302F23 /* ViewController.swift in Sources */,
+				2D67C169276409E900A82A34 /* MuneTableViewCell.swift in Sources */,
+				2DB2D3C32743D427002FD165 /* menu.swift in Sources */,
+				2DF67CCC2742C33C00302F23 /* AppDelegate.swift in Sources */,
+				2DB2D3C7274479FF002FD165 /* ImageViewCell.swift in Sources */,
+				2DF67CCE2742C33C00302F23 /* SceneDelegate.swift in Sources */,
+				2DB2D3C52743E9F9002FD165 /* MenuViewController.swift in Sources */,
+				2DF67CFF2742CF3300302F23 /* StructureHungerStation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CDA2742C33D00302F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF67CE32742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF67CE42742C33D00302F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF67CEF2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITestsLaunchTests.swift in Sources */,
+				2DF67CED2742C33D00302F23 /* HananSomily_Lab21_SimpleHungerStationAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DF67CE02742C33D00302F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DF67CC72742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */;
+			targetProxy = 2DF67CDF2742C33D00302F23 /* PBXContainerItemProxy */;
+		};
+		2DF67CEA2742C33D00302F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DF67CC72742C33C00302F23 /* HananSomily_Lab21_SimpleHungerStationApp */;
+			targetProxy = 2DF67CE92742C33D00302F23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DF67CD12742C33C00302F23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DF67CD22742C33C00302F23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2DF67CD62742C33D00302F23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DF67CD72742C33D00302F23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DF67CF02742C33D00302F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DF67CF12742C33D00302F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DF67CF32742C33D00302F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HananSomily_Lab21_SimpleHungerStationApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and usin app?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location updates while in background and usin user?";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DF67CF42742C33D00302F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HananSomily_Lab21_SimpleHungerStationApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Allow location updates while in background and usin app?";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location updates while in background and usin user?";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DF67CF62742C33D00302F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HananSomily_Lab21_SimpleHungerStationApp.app/HananSomily_Lab21_SimpleHungerStationApp";
+			};
+			name = Debug;
+		};
+		2DF67CF72742C33D00302F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HananSomily_Lab21_SimpleHungerStationApp.app/HananSomily_Lab21_SimpleHungerStationApp";
+			};
+			name = Release;
+		};
+		2DF67CF92742C33D00302F23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HananSomily_Lab21_SimpleHungerStationApp;
+			};
+			name = Debug;
+		};
+		2DF67CFA2742C33D00302F23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HVZQF48D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "w.HananSomily-Lab21-SimpleHungerStationAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HananSomily_Lab21_SimpleHungerStationApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DF67CC32742C33C00302F23 /* Build configuration list for PBXProject "HananSomily_Lab2111_SimpleHungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF67CF02742C33D00302F23 /* Debug */,
+				2DF67CF12742C33D00302F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF67CF22742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF67CF32742C33D00302F23 /* Debug */,
+				2DF67CF42742C33D00302F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF67CF52742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF67CF62742C33D00302F23 /* Debug */,
+				2DF67CF72742C33D00302F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF67CF82742C33D00302F23 /* Build configuration list for PBXNativeTarget "HananSomily_Lab21_SimpleHungerStationAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF67CF92742C33D00302F23 /* Debug */,
+				2DF67CFA2742C33D00302F23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DF67CC02742C33C00302F23 /* Project object */;
+}
