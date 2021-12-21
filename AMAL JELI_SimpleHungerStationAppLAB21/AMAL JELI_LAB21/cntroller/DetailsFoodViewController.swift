@@ -63,12 +63,12 @@ class DetailsViewController: UIViewController {
        var GuacamoleEgg = Mune(nameOfTheFood: "Guacamole egg", Price: "10RS", imageOfTheFood: "Guacamole egg")
        var CheesyOmelette = Mune(nameOfTheFood: "Cheesy omelette", Price: "9RS", imageOfTheFood: "Cheesy omelette")
         var OrangeJuice = Mune(nameOfTheFood: "Orange Juice", Price: "10RS", imageOfTheFood: "Orange Juice")
-    
+
     
         
         
-//        var meuneOfResturant:[Mune] = []
-//        var selectMenue:Food?
+        var meuneOfResturant:[Mune] = []
+        var selectMenue:Food?
         
         
         menueOceanBasket.append(kingPrawns)
@@ -109,15 +109,7 @@ class DetailsViewController: UIViewController {
         }
         
         
-        
-//       menueOceanBasket  = [Mune(nameOfTheFood: "king prawns", Price: "70 RS" , imageOfTheFood:UIImage(named: "king prawns")!, Mune(nameOfTheFood: "Fusion crunch sushi", Price: "175RS", imageOfTheFood: "Fusion crunch sushi"),Mune(nameOfTheFood: "Soup Tom Yum", Price: "30 RS", imageOfTheFood: "Soup Tom Yum"),Mune(nameOfTheFood: "Mojito juice", Price: "20RS", imageOfTheFood: "Mojito juice")]
-//
-//
-//    menueApplebees = Mune(nameOfTheFood: "Chili Cheese nachos", Price: "35RS", imageOfTheFood: "Chili Cheese nachos",Mune(nameOfTheFood: "Ribeye Steak", Price: "140RS", imageOfTheFood: "Ribeye Steak"),Mune(nameOfTheFood: "Ribs Applebees", Price: "98RS", imageOfTheFood: "Ribs Applebees")]
-//
-//     menuToastIt = Mune(nameOfTheFood: "Guacamole egg", Price: "10RS", imageOfTheFood: "Guacamole egg",Mune(nameOfTheFood: "Cheesy omelette", Price: "9RS", imageOfTheFood: "Cheesy omelette"),Mune(nameOfTheFood: "Orange Juice", Price: "10RS", imageOfTheFood: "Orange Juice")]
-//
-//
+  
     
   
     }

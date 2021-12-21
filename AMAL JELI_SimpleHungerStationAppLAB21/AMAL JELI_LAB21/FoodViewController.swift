@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         delivaryFood = [Food (imageFood1: UIImage(named:"Ocean basket")!, nameResturantLable1: "ocean basket", classificationFoodLabel1: "SeaFood", processingTimeLabel1: "40-50 minutes", foodDelivery1: "delivary 15 RS", liveTrackingLabel1: "liveTracking", restaurantEvaluation1: "3.8"),Food(imageFood1: UIImage(named: "Applebee's")!, nameResturantLable1: "Applebees", classificationFoodLabel1: "Grills,American", processingTimeLabel1: "45-50 minutes", foodDelivery1: "delivary10 RS", liveTrackingLabel1: "liveTracking", restaurantEvaluation1: "3.7"),Food(imageFood1:UIImage(named: "ToastIt")!, nameResturantLable1: "ToastIt", classificationFoodLabel1: "Fast Food", processingTimeLabel1: "30-40 minutes", foodDelivery1: "delivary 15 RS", liveTrackingLabel1: "liveTracking", restaurantEvaluation1: "4.4")]
         tableView.reloadData()
     }
-    
+//
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
         // TODO: - navigate to details screen
     }
@@ -87,3 +87,4 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
 }
+
