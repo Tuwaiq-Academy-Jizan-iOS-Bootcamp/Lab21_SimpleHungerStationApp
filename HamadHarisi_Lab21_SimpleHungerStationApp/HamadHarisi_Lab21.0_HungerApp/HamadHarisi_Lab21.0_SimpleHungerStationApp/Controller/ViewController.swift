@@ -11,11 +11,15 @@ class ViewController: UIViewController
 {
     @IBOutlet weak var restrantTableView: UITableView!
 
-        var restorants: Restorants = Restorants(data: [])
-        var idSender = 0
-        var backImageSender = ""
-        let restorantsURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
-        override func viewDidLoad()
+    var restorants: Restorants = Restorants(data: [])
+    var idSender = 0
+    var restorantBackImageSender = ""
+    var logoSener = ""
+    var nameSender = ""
+    var raitingSender:Float = 0
+    var promotedLabelSender = ""
+    let restorantsURL = "https://hungerstation-api.herokuapp.com/api/v1/restaurants"
+    override func viewDidLoad()
     {
             super.viewDidLoad()
             restrantTableView.delegate = self
@@ -23,12 +27,15 @@ class ViewController: UIViewController
             downloadRestorantData(restorantsURL)
             restrantTableView.register(UINib(nibName: "cell", bundle: nil), forCellReuseIdentifier: "recell")
         }
-
         override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-            let toMenu = segue.destination as? FoodMenu
-            toMenu?.restorantsId = idSender
-            toMenu?.restorantBackImage = backImageSender
+    let toMenu = segue.destination as? FoodMenu
+        toMenu?.restorantsId = idSender
+        toMenu?.backImageResiver = restorantBackImageSender
+        toMenu?.nameResiver = nameSender
+        toMenu?.logoResiver = logoSener
+        toMenu?.raitingResiver = raitingSender
+        toMenu?.promotedLabelResiver = promotedLabelSender
     }
     func downloadRestorantData(_ FromURL: String)
     {
@@ -122,48 +129,20 @@ class ViewController: UIViewController
         }
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             idSender = restorants.data[indexPath.row].id
+            nameSender = restorants.data[indexPath.row].name
+            logoSener = restorants.data[indexPath.row].resturant_image
+            raitingSender = Float(restorants.data[indexPath.row].rating)
+            restorantBackImageSender = restorants.data[indexPath.row].image
+//            promotedLabelSender = restorants.data[indexPath.row].
+            
+            
             performSegue(withIdentifier: "toVC2", sender: self)
         }
+            
     }
 
 
 
 
 
-
-
-//    var restaurants:Restorants = Restorants(data: [])
-//    override func viewDidLoad()
-//    {
-//        super.viewDidLoad()
-//
-//        APIManager.shared.getData(endPoint: "/restaurants") { [self] rest in
-//            self.restaurants = rest
-//            DispatchQueue.main.async {
-//            self.foodTableView.reloadData()
-//    }
-//    }
-//}
-//}
-//extension ViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-//    }
-//}
-//extension ViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        restaurants.data.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier:"ReuseCell", for: indexPath) as! restrantCell
-//        cell.foodType.text = restaurants.data[indexPath.row].category
-//        cell.restrantName.text = restaurants.data[indexPath.row].name
-//        cell.restrantImage.loadImageUsingCache(with: restaurants.data[indexPath.row].image)
-//
-//        return cell
-//    }
-//
-//
-//}
 

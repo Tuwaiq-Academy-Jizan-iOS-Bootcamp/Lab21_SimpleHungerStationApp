@@ -44,6 +44,7 @@ var value:String
 var spend:Int
 }
 
+
 struct Menus:Codable
 {
 var menu:[MenusData]
@@ -62,19 +63,3 @@ struct Price:Codable
 var value:Int
 var currency:String
 }
-//struct Restaurants
-//{
-//var restaurantName: String
-//var restaurantImage: UIImage
-//var deliveryTime:String
-//var ratingStars:String
-//var foodName:String
-//var foodImage:UIImage
-//}
-//
-//struct Menu
-//{
-//var price:String
-//var name:String
-//var mealImage:UIImage
-//}

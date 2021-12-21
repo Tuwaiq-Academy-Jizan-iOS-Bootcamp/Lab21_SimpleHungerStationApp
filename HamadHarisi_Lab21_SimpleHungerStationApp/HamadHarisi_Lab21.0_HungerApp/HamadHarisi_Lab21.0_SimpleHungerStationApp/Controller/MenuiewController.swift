@@ -12,22 +12,79 @@ class FoodMenu: UIViewController
 {
     @IBOutlet weak var menuTabelView: UITableView!
     
-    @IBOutlet weak var backButton: UIBarButtonItem!
+ //   @IBOutlet weak var backButton: UIBarButtonItem!
+    
+    @IBOutlet weak var restorantlogoImageInMenuVC: UIImageView!
+    {
+        didSet {
+        if let imageUrl = URL(string: logoResiver) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageUrl) {
+                    DispatchQueue.main.async {
+                        if let imageHolder = UIImage(data: imageData) {
+                            self.restorantlogoImageInMenuVC.image = imageHolder
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    @IBOutlet weak var restorantNameLabelInMenuVC: UILabel!
+    {
+        didSet
+        {
+            restorantNameLabelInMenuVC.text = nameResiver
+        }
+    }
+    @IBOutlet weak var raitingLabelInMenuVC: UILabel!
+    {
+    didSet {
+        raitingLabelInMenuVC.text = "\(raitingResiver)"
+    }
+}
+    @IBOutlet weak var priceConditionLabelInMenuVC: UILabel!
+    {
+       didSet {
+           priceConditionLabelInMenuVC.text = contantResiver
+       }
+   }
+    @IBOutlet weak var backimage: UIImageView!
+    {
+        didSet {
+        if let imageUrl = URL(string: backImageResiver) {
+            DispatchQueue.global().async {
+                if let imageData = try? Data(contentsOf: imageUrl) {
+                    DispatchQueue.main.async {
+                        if let imageHolder = UIImage(data: imageData) {
+                            self.backimage.image = imageHolder
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
     
     
-   // @IBOutlet weak var backGroundImage: UIImageView!
+    var idResiver = 0
+    var backImageResiver = ""
+    var logoResiver = ""
+    var nameResiver = ""
+    var raitingResiver:Float = 0
+    var contantResiver = ""
+    var minimumCostResiver:Double = 0
+    var deliveryCostResiver:Double = 0
+    var deliveryMinTimeResiver = 0
+    var deliveryMaxTimeResiver = 0
+    var promotedLabelResiver = ""
+    
     var restorantMenu: Menus = Menus(menu: [])
     var restorantsId = 0
     var restorantBackImage = ""
-  
-//    @IBAction func backButton(sender: AnyObject) {
-//        if((self.presentingViewController) != nil){
-//            self.dismiss(animated: false, completion: nil)
-//            print("done")
-//        }
-//    }
+
  
-    let add = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(getter: backButton))
+  //  let add = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(getter: backButton))
    
     
     
