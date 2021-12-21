@@ -70,7 +70,6 @@ class RestorantViewController: UIViewController {
         }
     }
 }
-
 // 1 define cache
 let imageCache = NSCache<NSString,UIImage>()
 extension UIImageView {
